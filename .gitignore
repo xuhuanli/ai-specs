@@ -1,0 +1,7 @@
+# 三端代码由各自的独立仓库管理，不纳入根目录文档仓库。
+/ios_doctor/
+/android_doctor/
+/hos_doctor/
+
+# 系统文件不参与文档版本记录。
+.DS_Store
