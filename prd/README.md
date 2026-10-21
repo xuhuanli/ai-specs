@@ -26,6 +26,6 @@ prd/
 
 ## 三端发布记录
 
-- [iOS 版本发布记录](../iOS版本发布记录.md)
-- [Android 版本发布记录](../Android版本发布记录.md)
-- [HarmonyOS 版本发布记录](../HarmonyOS版本发布记录.md)
+- [iOS 版本发布记录](../发布记录iOS.md)
+- [Android 版本发布记录](../发布记录Android.md)
+- [HarmonyOS 版本发布记录](../发布记录HarmonyOS.md)
