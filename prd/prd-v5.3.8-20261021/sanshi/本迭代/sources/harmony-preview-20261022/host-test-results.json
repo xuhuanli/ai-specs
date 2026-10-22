@@ -1,0 +1,175 @@
+{
+  "scope": "Production source transpiled to CommonJS; Harmony OS/network/navigation dependencies mocked; not ArkTS compile or device validation",
+  "pass": 28,
+  "fail": 0,
+  "results": [
+    {
+      "id": "AIT-HOS-M01",
+      "title": "请求最新预览并等待风险签名前置回调再动态进入",
+      "level": "host-production-source-mock",
+      "status": "pass"
+    },
+    {
+      "id": "AIT-HOS-M02",
+      "title": "预览请求中重复点击只发一次",
+      "level": "host-production-source-mock",
+      "status": "pass"
+    },
+    {
+      "id": "AIT-HOS-M03",
+      "title": "编辑内容在请求中变化则不展示旧响应",
+      "level": "host-production-source-mock",
+      "status": "pass"
+    },
+    {
+      "id": "AIT-HOS-M04",
+      "title": "销毁后晚到的预览响应不跳转",
+      "level": "host-production-source-mock",
+      "status": "pass"
+    },
+    {
+      "id": "AIT-HOS-M05",
+      "title": "预览接口异常可原位重试",
+      "level": "host-production-source-mock",
+      "status": "pass"
+    },
+    {
+      "id": "AIT-HOS-M06",
+      "title": "取消进入预览前确认不落单不跳转",
+      "level": "host-production-source-mock",
+      "status": "pass"
+    },
+    {
+      "id": "AIT-HOS-M07",
+      "title": "动态预览模块不可用保持原页并允许重试",
+      "level": "host-production-source-mock",
+      "status": "pass"
+    },
+    {
+      "id": "AIT-HOS-M08",
+      "title": "提交中二次生成被会话锁阻止",
+      "level": "host-production-source-mock",
+      "status": "pass"
+    },
+    {
+      "id": "AIT-HOS-M09",
+      "title": "网络提交失败保留预览并可重试成功",
+      "level": "host-production-source-mock",
+      "status": "pass"
+    },
+    {
+      "id": "AIT-HOS-M10",
+      "title": "业务失败保留预览和原编辑数据",
+      "level": "host-production-source-mock",
+      "status": "pass"
+    },
+    {
+      "id": "AIT-HOS-M11",
+      "title": "重复提交确认取消原位且解锁",
+      "level": "host-production-source-mock",
+      "status": "pass"
+    },
+    {
+      "id": "AIT-HOS-M12",
+      "title": "重复确认使用原参数force_commit后成功清栈",
+      "level": "host-production-source-mock",
+      "status": "pass"
+    },
+    {
+      "id": "AIT-HOS-M13",
+      "title": "屏蔽确认取消保留预览且不提交",
+      "level": "host-production-source-mock",
+      "status": "pass"
+    },
+    {
+      "id": "AIT-HOS-M14",
+      "title": "解除屏蔽失败不提交且保留屏蔽态",
+      "level": "host-production-source-mock",
+      "status": "pass"
+    },
+    {
+      "id": "AIT-HOS-M15",
+      "title": "关闭会话后旧确认回调不生成",
+      "level": "host-production-source-mock",
+      "status": "pass"
+    },
+    {
+      "id": "AIT-HOS-M16",
+      "title": "旧会话在提交中关闭晚到成功不影响新页面",
+      "level": "host-production-source-mock",
+      "status": "pass"
+    },
+    {
+      "id": "AIT-HOS-M17",
+      "title": "成功页预加载失败不调用提交且保留预览",
+      "level": "host-production-source-mock",
+      "status": "pass"
+    },
+    {
+      "id": "AIT-HOS-M18",
+      "title": "普通成功只清本次预览再沿原导航替换成功页",
+      "level": "host-production-source-mock",
+      "status": "pass"
+    },
+    {
+      "id": "AIT-HOS-M19",
+      "title": "新页面覆盖时仅清本次预览不劫持当前页面",
+      "level": "host-production-source-mock",
+      "status": "pass"
+    },
+    {
+      "id": "AIT-HOS-M20",
+      "title": "咨询成功清预览后返回咨询不进成功页",
+      "level": "host-production-source-mock",
+      "status": "pass"
+    },
+    {
+      "id": "AIT-HOS-M21",
+      "title": "旧Router普通入口沿外层Router替换成功页",
+      "level": "host-production-source-mock",
+      "status": "pass"
+    },
+    {
+      "id": "AIT-HOS-M22",
+      "title": "提交成功使用捕获的开方导航不跟随全局路由变化",
+      "level": "host-production-source-mock",
+      "status": "pass"
+    },
+    {
+      "id": "AIT-HOS-M23",
+      "title": "外用仅清请求副本医嘱不改编辑数据",
+      "level": "host-production-source-mock",
+      "status": "pass"
+    },
+    {
+      "id": "AIT-HOS-M24",
+      "title": "ViewModel生成角色、提交禁用和返回防重",
+      "level": "host-production-source-mock",
+      "status": "pass"
+    },
+    {
+      "id": "AIT-HOS-M25",
+      "title": "无效预览参数禁用生成并重置旧展示",
+      "level": "host-production-source-mock",
+      "status": "pass"
+    },
+    {
+      "id": "AIT-HOS-M26",
+      "title": "展示映射不产生编号行且快照只读",
+      "level": "host-production-source-mock",
+      "status": "pass"
+    },
+    {
+      "id": "AIT-HOS-M27",
+      "title": "AI预览/开方/附件隐藏退出普通路由恢复",
+      "level": "host-production-source-mock",
+      "status": "pass"
+    },
+    {
+      "id": "AIT-HOS-M28",
+      "title": "AI权限和临时隐藏限制不被预览恢复污染",
+      "level": "host-production-source-mock",
+      "status": "pass"
+    }
+  ]
+}

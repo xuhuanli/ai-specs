@@ -1,0 +1,298 @@
+{
+  "commit": "d02c171e5",
+  "baseGenerationCommit": "b1f3b08b3",
+  "device": {
+    "model": "ALN-AL00",
+    "os": "6.1.0.135",
+    "api": 24,
+    "resolution": "1260x2720"
+  },
+  "package": {
+    "bundle": "com.gancao.hm.doctor",
+    "versionName": "2.3.2.100",
+    "versionCode": 1000117,
+    "updateTime": "2026-10-22T15:37:28+08:00",
+    "compatibleAPI": 16,
+    "targetAPI": 19,
+    "buildSDK": "26.0.0.105"
+  },
+  "environmentEvidence": "药库介绍实际Web URL为dev.igancao.com；用户明确确认当前运行测试环境",
+  "newOrderCount": 1,
+  "newOrderMarker": {
+    "tail": "564093",
+    "created": "2026-10-22 15:51",
+    "amount": "355.18",
+    "status": "待付款",
+    "doses": 7
+  },
+  "pass": 20,
+  "fail": 0,
+  "notRun": 2,
+  "results": [
+    {
+      "id": "AIT-HOS-U01",
+      "title": "开方页预览与生成双入口且AI隐藏",
+      "level": "device-ui-automatic",
+      "status": "pass",
+      "evidence": [
+        "initial.json"
+      ],
+      "actual": "现有测试开方显示两个入口；无GlobalFloatSubWindow"
+    },
+    {
+      "id": "AIT-HOS-U02",
+      "title": "动态进入预览固定标题及单一普通医生生成按钮",
+      "level": "device-ui-automatic",
+      "status": "pass",
+      "evidence": [
+        "attachment-return.json"
+      ],
+      "actual": "预览处方、患者信息及唯一“生成处方并发送给患者”按钮"
+    },
+    {
+      "id": "AIT-HOS-U03",
+      "title": "预览不显示药方编号和订单专属入口",
+      "level": "device-ui-automatic",
+      "status": "pass",
+      "evidence": [
+        "attachment-return.json"
+      ],
+      "actual": "患者卡没有编号行及其复制入口；保留手机号复制图标"
+    },
+    {
+      "id": "AIT-HOS-U04",
+      "title": "预览AI悬浮球隐藏",
+      "level": "device-ui-automatic",
+      "status": "pass",
+      "evidence": [
+        "attachment-return.json",
+        "preview-bottom-confirmed.json"
+      ],
+      "actual": "预览顶部/底部均无GlobalFloatSubWindow"
+    },
+    {
+      "id": "AIT-HOS-U05",
+      "title": "附件打开及滑动两张图片",
+      "level": "device-ui-automatic",
+      "status": "pass",
+      "evidence": [
+        "attachment-open.json",
+        "attachment-second.json"
+      ],
+      "actual": "只读附件预览从1/2滑到2/2"
+    },
+    {
+      "id": "AIT-HOS-U06",
+      "title": "附件页及返回预览均隐藏AI",
+      "level": "device-ui-automatic",
+      "status": "pass",
+      "evidence": [
+        "attachment-open.json",
+        "attachment-return.json"
+      ],
+      "actual": "系统Back从附件返回原预览；没有生成或丢失数据"
+    },
+    {
+      "id": "AIT-HOS-U07",
+      "title": "药库介绍跳转与原AI规则",
+      "level": "device-ui-automatic",
+      "status": "pass",
+      "evidence": [
+        "storage-open.json"
+      ],
+      "actual": "进入dev.igancao.com药库介绍，按普通Web原规则显示AI"
+    },
+    {
+      "id": "AIT-HOS-U08",
+      "title": "药库介绍顶部返回原预览并隐藏AI",
+      "level": "device-ui-automatic",
+      "status": "pass",
+      "evidence": [
+        "storage-return-header.json"
+      ],
+      "actual": "顶部返回保留滚动位置/7剂/备注；AI隐藏"
+    },
+    {
+      "id": "AIT-HOS-U09",
+      "title": "新标药材换算前剂量显示和隐藏",
+      "level": "device-ui-automatic",
+      "status": "pass",
+      "evidence": [
+        "dose-original-confirmed.json",
+        "preview-bottom-confirmed.json"
+      ],
+      "actual": "展开看到原20克等，收回后不显示原剂量"
+    },
+    {
+      "id": "AIT-HOS-U10",
+      "title": "固定保险与条款页可访问",
+      "level": "device-ui-automatic",
+      "status": "pass",
+      "evidence": [
+        "preview-bottom-confirmed.json",
+        "insurance-open.json"
+      ],
+      "actual": "固定投保文案与现有保险条款页"
+    },
+    {
+      "id": "AIT-HOS-U11",
+      "title": "保险条款返回预览隐藏AI",
+      "level": "device-ui-automatic",
+      "status": "pass",
+      "evidence": [
+        "insurance-return.json"
+      ],
+      "actual": "顶部返回原保险/金额区；AI隐藏"
+    },
+    {
+      "id": "AIT-HOS-U12",
+      "title": "费用展开与新预览默认收起",
+      "level": "device-ui-automatic",
+      "status": "pass",
+      "evidence": [
+        "bill-expanded-visible.json",
+        "preview-dose8-real-bottom.json"
+      ],
+      "actual": "展开显示244.18+110+1=355.18，重新进入默认“明细”；未单独点击收起验证"
+    },
+    {
+      "id": "AIT-HOS-U13",
+      "title": "返回编辑保留剂数备注和金额",
+      "level": "device-ui-automatic",
+      "status": "pass",
+      "evidence": [
+        "editor-return.json"
+      ],
+      "actual": "返回原开方保持7剂/原备注/355.18，AI仍隐藏"
+    },
+    {
+      "id": "AIT-HOS-U14",
+      "title": "修改为8剂后重新预览最新内容和费用",
+      "level": "device-ui-automatic",
+      "status": "pass",
+      "evidence": [
+        "preview-dose8-real-bottom.json"
+      ],
+      "actual": "8剂/390.07/8天随访，未复用上次7剂数据"
+    },
+    {
+      "id": "AIT-HOS-U15",
+      "title": "生成前恢复原7剂和原金额",
+      "level": "device-ui-automatic",
+      "status": "pass",
+      "evidence": [
+        "editor-restored7-before-submit.json",
+        "actual-current-before-generation.json"
+      ],
+      "actual": "恢复7剂/外用测试B/355.18，重新进入预览后仅提交一次"
+    },
+    {
+      "id": "AIT-HOS-U16",
+      "title": "真实生成中保留预览并显示禁用样式",
+      "level": "device-ui-automatic",
+      "status": "pass",
+      "evidence": [
+        "generate-first-result.json",
+        "generate-first-result.png"
+      ],
+      "actual": "真实请求期间预览仍在，加载提示与灰色按钮呈禁用样式；未在真机注入第二次生成或返回，实际阻拦由M08/M24等隔离测试补充"
+    },
+    {
+      "id": "AIT-HOS-U17",
+      "title": "真实生成成功进入原成功页且隐藏AI",
+      "level": "device-ui-automatic",
+      "status": "pass",
+      "evidence": [
+        "generate-settled.json",
+        "generate-settled.png"
+      ],
+      "actual": "本轮单次生成成功；未付款、未微信分享"
+    },
+    {
+      "id": "AIT-HOS-U18",
+      "title": "成功返回首页且首页AI恢复",
+      "level": "device-ui-automatic",
+      "status": "pass",
+      "evidence": [
+        "success-home-return.json"
+      ],
+      "actual": "返回首页恢复GlobalFloatSubWindow，当前未见预览；全栈移除仅由M18等隔离测试补充"
+    },
+    {
+      "id": "AIT-HOS-U19",
+      "title": "真实订单记录与生成前预览对应",
+      "level": "device-ui-automatic",
+      "status": "pass",
+      "evidence": [
+        "records-loaded.json",
+        "generated-order-detail.json",
+        "generated-order-detail-bottom.json"
+      ],
+      "actual": "新订单尾号564093，15:51、待付款、7剂、外用测试B、355.18；订单详情保留编号/原操作"
+    },
+    {
+      "id": "AIT-HOS-U20",
+      "title": "底部安全区与按钮实际可点",
+      "level": "device-ui-automatic",
+      "status": "pass",
+      "evidence": [
+        "insurance-return.json",
+        "generate-first-result.json",
+        "generate-settled.json"
+      ],
+      "actual": "1260×2720屏幕CTA bounds[39,2441][1221,2584]，距屏底136px；实际点击成功进入提交"
+    },
+    {
+      "id": "AIT-HOS-U21",
+      "title": "费用明细单独点击收起",
+      "level": "device-ui-automatic",
+      "status": "not-run",
+      "reason": "已验证展开和新会话默认收起，本轮未单独点击“收起”后抓取状态"
+    },
+    {
+      "id": "AIT-HOS-U22",
+      "title": "首次冷加载/转场未完成即点击生成",
+      "level": "device-ui-automatic",
+      "status": "not-run",
+      "reason": "一次UI树仍在开方转场，安全断言阻止了提交；页面就绪后真实首个动作生成成功，不能视为该极端时序覆盖"
+    }
+  ],
+  "retryNotes": [
+    {
+      "stage": "hdc探测",
+      "actual": "沙箱内shell无响应，设备授权提升后正常；未据此判设备异常"
+    },
+    {
+      "stage": "药库Web返回",
+      "actual": "自动注入Back未退出Web，改用顶部返回成功；不将首次无响应计通过"
+    },
+    {
+      "stage": "8剂重预览定位",
+      "actual": "编辑后布局变化导致旧坐标未命中预览，重新读UI定位后通过；原流水保留"
+    },
+    {
+      "stage": "生成前同步",
+      "actual": "UI树仍在转场时断言失败，未执行生成；等页面稳定后才单次真实提交"
+    },
+    {
+      "stage": "记录入口",
+      "actual": "一次文字区域操作后实际出现空白新开方页，未编辑；退出至首页后按图标定位成功进入记录，不将前次计通过"
+    }
+  ],
+  "limitations": [
+    "没有重建或覆盖安装，安装更新时间晚于本地提交且版本/本地AgcDebug_Test产物时序吻合，但未读取安装包哈希，不能严格证明二进制与Git提交一一对应",
+    "真实医助/咨询入口、风险弹窗/签名全分支、网络失败/重复确认取消/提交中返回主要由主机隔离测试补充，未在设备完整执行",
+    "历史偶发返回开方且未落单本轮未复现，原因尚未证实，不能归因于误触或安全区修复",
+    "界面自动化覆盖当前账号、颗粒剂外用及该手机竖屏，其他剂型/权限/设备形态未做全面验收"
+  ],
+  "nonScopeObservations": [
+    {
+      "scope": "保险Web页",
+      "actual": "日志出现一次 appBack is not defined，顶部返回仍成功；未见本次预览流程JS崩溃/进程致命错误，不据此扩展修改"
+    },
+    {
+      "scope": "真实订单详情",
+      "actual": "待付款订单仍显示付款时间1970-01-01 08:00；预览不显示该行。本轮未改详情，作为范围外观察保留"
+    }
+  ]
+}

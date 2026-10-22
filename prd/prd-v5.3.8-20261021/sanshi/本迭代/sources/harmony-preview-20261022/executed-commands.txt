@@ -1,0 +1,194 @@
+2026-10-22T07:46:42.908462+00:00 hdc -t <本轮测试设备> shell uitest uiInput click 450 2170
+2026-10-22T07:46:43.856584+00:00 hdc -t <本轮测试设备> shell uitest dumpLayout -p /data/local/tmp/attachment-open.json
+2026-10-22T07:46:43.902242+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/attachment-open.json /private/tmp/harmony-preview-20261022/attachment-open.json
+2026-10-22T07:46:44.392392+00:00 hdc -t <本轮测试设备> shell uitest screenCap -p /data/local/tmp/attachment-open.png
+2026-10-22T07:46:44.470824+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/attachment-open.png /private/tmp/harmony-preview-20261022/attachment-open.png
+2026-10-22T07:46:59.123836+00:00 hdc -t <本轮测试设备> shell uitest uiInput swipe 1040 1350 220 1350 500
+2026-10-22T07:47:00.118889+00:00 hdc -t <本轮测试设备> shell uitest dumpLayout -p /data/local/tmp/attachment-second.json
+2026-10-22T07:47:00.157245+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/attachment-second.json /private/tmp/harmony-preview-20261022/attachment-second.json
+2026-10-22T07:47:00.664634+00:00 hdc -t <本轮测试设备> shell uitest screenCap -p /data/local/tmp/attachment-second.png
+2026-10-22T07:47:00.745156+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/attachment-second.png /private/tmp/harmony-preview-20261022/attachment-second.png
+2026-10-22T07:47:01.179748+00:00 hdc -t <本轮测试设备> shell uitest uiInput keyEvent Back
+2026-10-22T07:47:02.257170+00:00 hdc -t <本轮测试设备> shell uitest dumpLayout -p /data/local/tmp/attachment-return.json
+2026-10-22T07:47:02.301762+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/attachment-return.json /private/tmp/harmony-preview-20261022/attachment-return.json
+2026-10-22T07:47:02.777004+00:00 hdc -t <本轮测试设备> shell uitest screenCap -p /data/local/tmp/attachment-return.png
+2026-10-22T07:47:02.844114+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/attachment-return.png /private/tmp/harmony-preview-20261022/attachment-return.png
+2026-10-22T07:47:05.492942+00:00 hdc -t <本轮测试设备> shell uitest uiInput swipe 1000 2300 1000 650 1000
+2026-10-22T07:47:06.670579+00:00 hdc -t <本轮测试设备> shell uitest dumpLayout -p /data/local/tmp/preview-middle.json
+2026-10-22T07:47:06.719851+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/preview-middle.json /private/tmp/harmony-preview-20261022/preview-middle.json
+2026-10-22T07:47:07.167783+00:00 hdc -t <本轮测试设备> shell uitest screenCap -p /data/local/tmp/preview-middle.png
+2026-10-22T07:47:07.228753+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/preview-middle.png /private/tmp/harmony-preview-20261022/preview-middle.png
+2026-10-22T07:47:29.413467+00:00 hdc -t <本轮测试设备> shell uitest uiInput click 1090 910
+2026-10-22T07:47:30.341435+00:00 hdc -t <本轮测试设备> shell uitest dumpLayout -p /data/local/tmp/storage-open.json
+2026-10-22T07:47:30.390314+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/storage-open.json /private/tmp/harmony-preview-20261022/storage-open.json
+2026-10-22T07:47:30.739502+00:00 hdc -t <本轮测试设备> shell uitest screenCap -p /data/local/tmp/storage-open.png
+2026-10-22T07:47:30.788751+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/storage-open.png /private/tmp/harmony-preview-20261022/storage-open.png
+2026-10-22T07:47:31.184413+00:00 hdc -t <本轮测试设备> shell uitest uiInput keyEvent Back
+2026-10-22T07:47:32.276656+00:00 hdc -t <本轮测试设备> shell uitest dumpLayout -p /data/local/tmp/storage-return.json
+2026-10-22T07:47:32.321621+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/storage-return.json /private/tmp/harmony-preview-20261022/storage-return.json
+2026-10-22T07:47:32.872216+00:00 hdc -t <本轮测试设备> shell uitest screenCap -p /data/local/tmp/storage-return.png
+2026-10-22T07:47:33.022088+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/storage-return.png /private/tmp/harmony-preview-20261022/storage-return.png
+2026-10-22T07:47:33.394735+00:00 hdc -t <本轮测试设备> shell uitest uiInput click 1020 1070
+2026-10-22T07:47:34.476673+00:00 hdc -t <本轮测试设备> shell uitest dumpLayout -p /data/local/tmp/dose-original.json
+2026-10-22T07:47:34.519049+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/dose-original.json /private/tmp/harmony-preview-20261022/dose-original.json
+2026-10-22T07:47:34.935619+00:00 hdc -t <本轮测试设备> shell uitest screenCap -p /data/local/tmp/dose-original.png
+2026-10-22T07:47:35.040214+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/dose-original.png /private/tmp/harmony-preview-20261022/dose-original.png
+2026-10-22T07:47:35.355374+00:00 hdc -t <本轮测试设备> shell uitest uiInput click 1020 1070
+2026-10-22T07:47:37.757583+00:00 hdc -t <本轮测试设备> shell uitest uiInput swipe 1000 2290 1000 760 1000
+2026-10-22T07:47:38.898034+00:00 hdc -t <本轮测试设备> shell uitest dumpLayout -p /data/local/tmp/preview-bottom.json
+2026-10-22T07:47:38.940154+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/preview-bottom.json /private/tmp/harmony-preview-20261022/preview-bottom.json
+2026-10-22T07:47:39.400004+00:00 hdc -t <本轮测试设备> shell uitest screenCap -p /data/local/tmp/preview-bottom.png
+2026-10-22T07:47:39.474979+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/preview-bottom.png /private/tmp/harmony-preview-20261022/preview-bottom.png
+2026-10-22T07:47:55.132725+00:00 hdc -t <本轮测试设备> shell uitest uiInput click 77 204
+2026-10-22T07:47:56.221684+00:00 hdc -t <本轮测试设备> shell uitest dumpLayout -p /data/local/tmp/storage-return-header.json
+2026-10-22T07:47:56.269047+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/storage-return-header.json /private/tmp/harmony-preview-20261022/storage-return-header.json
+2026-10-22T07:47:56.736511+00:00 hdc -t <本轮测试设备> shell uitest screenCap -p /data/local/tmp/storage-return-header.png
+2026-10-22T07:47:56.795789+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/storage-return-header.png /private/tmp/harmony-preview-20261022/storage-return-header.png
+2026-10-22T07:48:08.025908+00:00 hdc -t <本轮测试设备> shell uitest uiInput click 1010 1071
+2026-10-22T07:48:09.252527+00:00 hdc -t <本轮测试设备> shell uitest dumpLayout -p /data/local/tmp/dose-original-confirmed.json
+2026-10-22T07:48:09.308398+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/dose-original-confirmed.json /private/tmp/harmony-preview-20261022/dose-original-confirmed.json
+2026-10-22T07:48:09.783906+00:00 hdc -t <本轮测试设备> shell uitest screenCap -p /data/local/tmp/dose-original-confirmed.png
+2026-10-22T07:48:09.860088+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/dose-original-confirmed.png /private/tmp/harmony-preview-20261022/dose-original-confirmed.png
+2026-10-22T07:48:10.257835+00:00 hdc -t <本轮测试设备> shell uitest uiInput click 1010 1071
+2026-10-22T07:48:13.025973+00:00 hdc -t <本轮测试设备> shell uitest uiInput swipe 1000 2280 1000 650 1000
+2026-10-22T07:48:14.186972+00:00 hdc -t <本轮测试设备> shell uitest dumpLayout -p /data/local/tmp/preview-bottom-confirmed.json
+2026-10-22T07:48:14.233526+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/preview-bottom-confirmed.json /private/tmp/harmony-preview-20261022/preview-bottom-confirmed.json
+2026-10-22T07:48:14.726862+00:00 hdc -t <本轮测试设备> shell uitest screenCap -p /data/local/tmp/preview-bottom-confirmed.png
+2026-10-22T07:48:14.790513+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/preview-bottom-confirmed.png /private/tmp/harmony-preview-20261022/preview-bottom-confirmed.png
+2026-10-22T07:48:37.239893+00:00 hdc -t <本轮测试设备> shell uitest uiInput click 650 1970
+2026-10-22T07:48:38.145896+00:00 hdc -t <本轮测试设备> shell uitest dumpLayout -p /data/local/tmp/insurance-open.json
+2026-10-22T07:48:38.185943+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/insurance-open.json /private/tmp/harmony-preview-20261022/insurance-open.json
+2026-10-22T07:48:38.521133+00:00 hdc -t <本轮测试设备> shell uitest screenCap -p /data/local/tmp/insurance-open.png
+2026-10-22T07:48:38.577607+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/insurance-open.png /private/tmp/harmony-preview-20261022/insurance-open.png
+2026-10-22T07:48:38.949406+00:00 hdc -t <本轮测试设备> shell uitest uiInput click 77 204
+2026-10-22T07:48:40.038994+00:00 hdc -t <本轮测试设备> shell uitest dumpLayout -p /data/local/tmp/insurance-return.json
+2026-10-22T07:48:40.087111+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/insurance-return.json /private/tmp/harmony-preview-20261022/insurance-return.json
+2026-10-22T07:48:40.534670+00:00 hdc -t <本轮测试设备> shell uitest screenCap -p /data/local/tmp/insurance-return.png
+2026-10-22T07:48:40.583829+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/insurance-return.png /private/tmp/harmony-preview-20261022/insurance-return.png
+2026-10-22T07:48:40.972087+00:00 hdc -t <本轮测试设备> shell uitest uiInput click 1070 2245
+2026-10-22T07:48:42.092786+00:00 hdc -t <本轮测试设备> shell uitest dumpLayout -p /data/local/tmp/bill-expanded.json
+2026-10-22T07:48:42.134567+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/bill-expanded.json /private/tmp/harmony-preview-20261022/bill-expanded.json
+2026-10-22T07:48:42.579463+00:00 hdc -t <本轮测试设备> shell uitest screenCap -p /data/local/tmp/bill-expanded.png
+2026-10-22T07:48:42.623929+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/bill-expanded.png /private/tmp/harmony-preview-20261022/bill-expanded.png
+2026-10-22T07:49:10.649535+00:00 hdc -t <本轮测试设备> shell uitest uiInput swipe 1000 2250 1000 950 1000
+2026-10-22T07:49:11.892419+00:00 hdc -t <本轮测试设备> shell uitest dumpLayout -p /data/local/tmp/bill-expanded-visible.json
+2026-10-22T07:49:11.937707+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/bill-expanded-visible.json /private/tmp/harmony-preview-20261022/bill-expanded-visible.json
+2026-10-22T07:49:12.383642+00:00 hdc -t <本轮测试设备> shell uitest screenCap -p /data/local/tmp/bill-expanded-visible.png
+2026-10-22T07:49:12.448055+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/bill-expanded-visible.png /private/tmp/harmony-preview-20261022/bill-expanded-visible.png
+2026-10-22T07:49:12.810010+00:00 hdc -t <本轮测试设备> shell uitest uiInput click 77 204
+2026-10-22T07:49:13.872054+00:00 hdc -t <本轮测试设备> shell uitest dumpLayout -p /data/local/tmp/editor-return.json
+2026-10-22T07:49:13.918160+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/editor-return.json /private/tmp/harmony-preview-20261022/editor-return.json
+2026-10-22T07:49:14.364271+00:00 hdc -t <本轮测试设备> shell uitest screenCap -p /data/local/tmp/editor-return.png
+2026-10-22T07:49:14.417218+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/editor-return.png /private/tmp/harmony-preview-20261022/editor-return.png
+2026-10-22T07:49:31.877679+00:00 hdc -t <本轮测试设备> shell uitest uiInput inputText 205 333 8
+2026-10-22T07:49:32.235713+00:00 hdc -t <本轮测试设备> shell uitest uiInput click 900 930
+2026-10-22T07:49:33.412647+00:00 hdc -t <本轮测试设备> shell uitest dumpLayout -p /data/local/tmp/editor-dose8.json
+2026-10-22T07:49:33.463026+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/editor-dose8.json /private/tmp/harmony-preview-20261022/editor-dose8.json
+2026-10-22T07:49:33.924634+00:00 hdc -t <本轮测试设备> shell uitest screenCap -p /data/local/tmp/editor-dose8.png
+2026-10-22T07:49:33.994466+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/editor-dose8.png /private/tmp/harmony-preview-20261022/editor-dose8.png
+2026-10-22T07:49:43.662097+00:00 hdc -t <本轮测试设备> shell uitest uiInput keyEvent Back
+2026-10-22T07:49:44.708987+00:00 hdc -t <本轮测试设备> shell uitest dumpLayout -p /data/local/tmp/editor-dose8-blur.json
+2026-10-22T07:49:44.760284+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/editor-dose8-blur.json /private/tmp/harmony-preview-20261022/editor-dose8-blur.json
+2026-10-22T07:49:45.194463+00:00 hdc -t <本轮测试设备> shell uitest screenCap -p /data/local/tmp/editor-dose8-blur.png
+2026-10-22T07:49:45.252860+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/editor-dose8-blur.png /private/tmp/harmony-preview-20261022/editor-dose8-blur.png
+2026-10-22T07:49:45.617901+00:00 hdc -t <本轮测试设备> shell uitest uiInput click 230 2532
+2026-10-22T07:49:46.779804+00:00 hdc -t <本轮测试设备> shell uitest dumpLayout -p /data/local/tmp/preview-dose8-top.json
+2026-10-22T07:49:46.827407+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/preview-dose8-top.json /private/tmp/harmony-preview-20261022/preview-dose8-top.json
+2026-10-22T07:49:47.245103+00:00 hdc -t <本轮测试设备> shell uitest screenCap -p /data/local/tmp/preview-dose8-top.png
+2026-10-22T07:49:47.300100+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/preview-dose8-top.png /private/tmp/harmony-preview-20261022/preview-dose8-top.png
+2026-10-22T07:49:48.952470+00:00 hdc -t <本轮测试设备> shell uitest uiInput swipe 1000 2280 1000 600 2000
+2026-10-22T07:49:50.560829+00:00 hdc -t <本轮测试设备> shell uitest uiInput swipe 1000 2280 1000 600 2000
+2026-10-22T07:49:51.668886+00:00 hdc -t <本轮测试设备> shell uitest dumpLayout -p /data/local/tmp/preview-dose8-bottom.json
+2026-10-22T07:49:51.716505+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/preview-dose8-bottom.json /private/tmp/harmony-preview-20261022/preview-dose8-bottom.json
+2026-10-22T07:49:52.179841+00:00 hdc -t <本轮测试设备> shell uitest screenCap -p /data/local/tmp/preview-dose8-bottom.png
+2026-10-22T07:49:52.231239+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/preview-dose8-bottom.png /private/tmp/harmony-preview-20261022/preview-dose8-bottom.png
+2026-10-22T07:50:03.866706+00:00 hdc -t <本轮测试设备> shell uitest uiInput click 230 2532
+2026-10-22T07:50:04.837090+00:00 hdc -t <本轮测试设备> shell uitest dumpLayout -p /data/local/tmp/preview-dose8-real-top.json
+2026-10-22T07:50:04.886664+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/preview-dose8-real-top.json /private/tmp/harmony-preview-20261022/preview-dose8-real-top.json
+2026-10-22T07:50:05.373445+00:00 hdc -t <本轮测试设备> shell uitest screenCap -p /data/local/tmp/preview-dose8-real-top.png
+2026-10-22T07:50:05.446756+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/preview-dose8-real-top.png /private/tmp/harmony-preview-20261022/preview-dose8-real-top.png
+2026-10-22T07:50:07.027293+00:00 hdc -t <本轮测试设备> shell uitest uiInput swipe 1000 2300 1000 500 2000
+2026-10-22T07:50:08.771196+00:00 hdc -t <本轮测试设备> shell uitest uiInput swipe 1000 2300 1000 500 2000
+2026-10-22T07:50:09.851734+00:00 hdc -t <本轮测试设备> shell uitest dumpLayout -p /data/local/tmp/preview-dose8-real-bottom.json
+2026-10-22T07:50:09.900587+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/preview-dose8-real-bottom.json /private/tmp/harmony-preview-20261022/preview-dose8-real-bottom.json
+2026-10-22T07:50:10.342485+00:00 hdc -t <本轮测试设备> shell uitest screenCap -p /data/local/tmp/preview-dose8-real-bottom.png
+2026-10-22T07:50:10.403166+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/preview-dose8-real-bottom.png /private/tmp/harmony-preview-20261022/preview-dose8-real-bottom.png
+2026-10-22T07:50:22.461030+00:00 hdc -t <本轮测试设备> shell uitest uiInput click 77 204
+2026-10-22T07:50:23.509564+00:00 hdc -t <本轮测试设备> shell uitest uiInput swipe 1000 500 1000 950 800
+2026-10-22T07:50:24.542275+00:00 hdc -t <本轮测试设备> shell uitest dumpLayout -p /data/local/tmp/editor-restore-dose-position.json
+2026-10-22T07:50:24.585617+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/editor-restore-dose-position.json /private/tmp/harmony-preview-20261022/editor-restore-dose-position.json
+2026-10-22T07:50:25.018340+00:00 hdc -t <本轮测试设备> shell uitest screenCap -p /data/local/tmp/editor-restore-dose-position.png
+2026-10-22T07:50:25.069728+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/editor-restore-dose-position.png /private/tmp/harmony-preview-20261022/editor-restore-dose-position.png
+2026-10-22T07:50:34.990868+00:00 hdc -t <本轮测试设备> shell uitest uiInput inputText 205 720 7
+2026-10-22T07:50:35.340334+00:00 hdc -t <本轮测试设备> shell uitest uiInput keyEvent Back
+2026-10-22T07:50:37.428566+00:00 hdc -t <本轮测试设备> shell uitest uiInput swipe 1000 2250 1000 600 1500
+2026-10-22T07:50:38.496565+00:00 hdc -t <本轮测试设备> shell uitest dumpLayout -p /data/local/tmp/editor-restored7-before-submit.json
+2026-10-22T07:50:38.549190+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/editor-restored7-before-submit.json /private/tmp/harmony-preview-20261022/editor-restored7-before-submit.json
+2026-10-22T07:50:38.994057+00:00 hdc -t <本轮测试设备> shell uitest screenCap -p /data/local/tmp/editor-restored7-before-submit.png
+2026-10-22T07:50:39.045209+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/editor-restored7-before-submit.png /private/tmp/harmony-preview-20261022/editor-restored7-before-submit.png
+2026-10-22T07:51:05.917460+00:00 hdc -t <本轮测试设备> shell uitest uiInput click 230 2532
+2026-10-22T07:51:06.953190+00:00 hdc -t <本轮测试设备> shell uitest dumpLayout -p /data/local/tmp/preview-before-generate.json
+2026-10-22T07:51:07.009203+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/preview-before-generate.json /private/tmp/harmony-preview-20261022/preview-before-generate.json
+2026-10-22T07:51:18.332291+00:00 hdc -t <本轮测试设备> shell uitest dumpLayout -p /data/local/tmp/actual-current-before-generation.json
+2026-10-22T07:51:18.371582+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/actual-current-before-generation.json /private/tmp/harmony-preview-20261022/actual-current-before-generation.json
+2026-10-22T07:51:18.860125+00:00 hdc -t <本轮测试设备> shell uitest screenCap -p /data/local/tmp/actual-current-before-generation.png
+2026-10-22T07:51:18.931369+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/actual-current-before-generation.png /private/tmp/harmony-preview-20261022/actual-current-before-generation.png
+2026-10-22T07:51:34.007952+00:00 hdc -t <本轮测试设备> shell uitest uiInput click 630 2510
+2026-10-22T07:51:34.975371+00:00 hdc -t <本轮测试设备> shell uitest dumpLayout -p /data/local/tmp/generate-first-result.json
+2026-10-22T07:51:35.013845+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/generate-first-result.json /private/tmp/harmony-preview-20261022/generate-first-result.json
+2026-10-22T07:51:35.484317+00:00 hdc -t <本轮测试设备> shell uitest screenCap -p /data/local/tmp/generate-first-result.png
+2026-10-22T07:51:35.544912+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/generate-first-result.png /private/tmp/harmony-preview-20261022/generate-first-result.png
+2026-10-22T07:51:51.655557+00:00 hdc -t <本轮测试设备> shell uitest dumpLayout -p /data/local/tmp/generate-settled.json
+2026-10-22T07:51:51.692231+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/generate-settled.json /private/tmp/harmony-preview-20261022/generate-settled.json
+2026-10-22T07:51:52.143070+00:00 hdc -t <本轮测试设备> shell uitest screenCap -p /data/local/tmp/generate-settled.png
+2026-10-22T07:51:52.220368+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/generate-settled.png /private/tmp/harmony-preview-20261022/generate-settled.png
+2026-10-22T07:52:27.458871+00:00 hdc -t <本轮测试设备> shell uitest uiInput click 350 880
+2026-10-22T07:52:28.599586+00:00 hdc -t <本轮测试设备> shell uitest dumpLayout -p /data/local/tmp/success-home-return.json
+2026-10-22T07:52:28.647382+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/success-home-return.json /private/tmp/harmony-preview-20261022/success-home-return.json
+2026-10-22T07:52:29.171101+00:00 hdc -t <本轮测试设备> shell uitest screenCap -p /data/local/tmp/success-home-return.png
+2026-10-22T07:52:29.275253+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/success-home-return.png /private/tmp/harmony-preview-20261022/success-home-return.png
+2026-10-22T07:53:09.822645+00:00 hdc -t <本轮测试设备> shell uitest uiInput click 485 612
+2026-10-22T07:53:10.852683+00:00 hdc -t <本轮测试设备> shell uitest dumpLayout -p /data/local/tmp/order-record-after-generation.json
+2026-10-22T07:53:10.898258+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/order-record-after-generation.json /private/tmp/harmony-preview-20261022/order-record-after-generation.json
+2026-10-22T07:53:11.377794+00:00 hdc -t <本轮测试设备> shell uitest screenCap -p /data/local/tmp/order-record-after-generation.png
+2026-10-22T07:53:11.462881+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/order-record-after-generation.png /private/tmp/harmony-preview-20261022/order-record-after-generation.png
+2026-10-22T07:54:54.716822+00:00 hdc -t <本轮测试设备> shell uitest uiInput click 77 204
+2026-10-22T07:54:55.763750+00:00 hdc -t <本轮测试设备> shell uitest dumpLayout -p /data/local/tmp/home-after-empty-editor-back.json
+2026-10-22T07:54:55.820497+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/home-after-empty-editor-back.json /private/tmp/harmony-preview-20261022/home-after-empty-editor-back.json
+2026-10-22T07:54:56.284068+00:00 hdc -t <本轮测试设备> shell uitest screenCap -p /data/local/tmp/home-after-empty-editor-back.png
+2026-10-22T07:54:56.341560+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/home-after-empty-editor-back.png /private/tmp/harmony-preview-20261022/home-after-empty-editor-back.png
+2026-10-22T07:55:19.226963+00:00 hdc -t <本轮测试设备> shell uitest uiInput click 77 204
+2026-10-22T07:55:20.320385+00:00 hdc -t <本轮测试设备> shell uitest dumpLayout -p /data/local/tmp/home-ready-record-entry.json
+2026-10-22T07:55:20.376714+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/home-ready-record-entry.json /private/tmp/harmony-preview-20261022/home-ready-record-entry.json
+2026-10-22T07:55:20.898054+00:00 hdc -t <本轮测试设备> shell uitest screenCap -p /data/local/tmp/home-ready-record-entry.png
+2026-10-22T07:55:21.002406+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/home-ready-record-entry.png /private/tmp/harmony-preview-20261022/home-ready-record-entry.png
+2026-10-22T07:55:45.760878+00:00 hdc -t <本轮测试设备> shell uitest uiInput click 485 465
+2026-10-22T07:55:46.733737+00:00 hdc -t <本轮测试设备> shell uitest dumpLayout -p /data/local/tmp/records-entry-retry.json
+2026-10-22T07:55:46.780815+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/records-entry-retry.json /private/tmp/harmony-preview-20261022/records-entry-retry.json
+2026-10-22T07:55:47.200998+00:00 hdc -t <本轮测试设备> shell uitest screenCap -p /data/local/tmp/records-entry-retry.png
+2026-10-22T07:55:47.276148+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/records-entry-retry.png /private/tmp/harmony-preview-20261022/records-entry-retry.png
+2026-10-22T07:56:15.669988+00:00 hdc -t <本轮测试设备> shell uitest dumpLayout -p /data/local/tmp/records-loaded.json
+2026-10-22T07:56:15.718359+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/records-loaded.json /private/tmp/harmony-preview-20261022/records-loaded.json
+2026-10-22T07:56:16.181033+00:00 hdc -t <本轮测试设备> shell uitest screenCap -p /data/local/tmp/records-loaded.png
+2026-10-22T07:56:16.248496+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/records-loaded.png /private/tmp/harmony-preview-20261022/records-loaded.png
+2026-10-22T07:56:16.649686+00:00 hdc -t <本轮测试设备> shell uitest uiInput click 630 720
+2026-10-22T07:56:17.644213+00:00 hdc -t <本轮测试设备> shell uitest dumpLayout -p /data/local/tmp/generated-order-detail.json
+2026-10-22T07:56:17.694527+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/generated-order-detail.json /private/tmp/harmony-preview-20261022/generated-order-detail.json
+2026-10-22T07:56:18.233512+00:00 hdc -t <本轮测试设备> shell uitest screenCap -p /data/local/tmp/generated-order-detail.png
+2026-10-22T07:56:18.306402+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/generated-order-detail.png /private/tmp/harmony-preview-20261022/generated-order-detail.png
+2026-10-22T07:57:16.882761+00:00 hdc -t <本轮测试设备> shell uitest uiInput swipe 1000 2300 1000 500 2000
+2026-10-22T07:57:18.517067+00:00 hdc -t <本轮测试设备> shell uitest uiInput swipe 1000 2300 1000 500 2000
+2026-10-22T07:57:19.640959+00:00 hdc -t <本轮测试设备> shell uitest dumpLayout -p /data/local/tmp/generated-order-detail-bottom.json
+2026-10-22T07:57:19.690494+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/generated-order-detail-bottom.json /private/tmp/harmony-preview-20261022/generated-order-detail-bottom.json
+2026-10-22T07:57:20.137315+00:00 hdc -t <本轮测试设备> shell uitest screenCap -p /data/local/tmp/generated-order-detail-bottom.png
+2026-10-22T07:57:20.195199+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/generated-order-detail-bottom.png /private/tmp/harmony-preview-20261022/generated-order-detail-bottom.png
+2026-10-22T07:58:49.330768+00:00 hdc -t <本轮测试设备> shell uitest uiInput click 77 204
+2026-10-22T07:58:50.465233+00:00 hdc -t <本轮测试设备> shell uitest dumpLayout -p /data/local/tmp/final-records.json
+2026-10-22T07:58:50.507704+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/final-records.json /private/tmp/harmony-preview-20261022/final-records.json
+2026-10-22T07:58:50.952866+00:00 hdc -t <本轮测试设备> shell uitest screenCap -p /data/local/tmp/final-records.png
+2026-10-22T07:58:51.016607+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/final-records.png /private/tmp/harmony-preview-20261022/final-records.png
+2026-10-22T07:58:51.388387+00:00 hdc -t <本轮测试设备> shell uitest uiInput click 77 204
+2026-10-22T07:58:52.525450+00:00 hdc -t <本轮测试设备> shell uitest dumpLayout -p /data/local/tmp/final-home.json
+2026-10-22T07:58:52.568824+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/final-home.json /private/tmp/harmony-preview-20261022/final-home.json
+2026-10-22T07:58:53.052142+00:00 hdc -t <本轮测试设备> shell uitest screenCap -p /data/local/tmp/final-home.png
+2026-10-22T07:58:53.177107+00:00 hdc -t <本轮测试设备> file recv /data/local/tmp/final-home.png /private/tmp/harmony-preview-20261022/final-home.png
