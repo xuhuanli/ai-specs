@@ -1,0 +1,92 @@
+{
+  "runId": "RUN-20261023-HOS-PREVIEW-EXTRA",
+  "scope": "真实Builder、UsageMapper、PreviewViewModel及风险分流方法体；系统、网络、账号、弹窗宿主使用替身；不等同真机、ArkTS编译或真实签名上传验证",
+  "pass": 14,
+  "fail": 0,
+  "results": [
+    {
+      "id": "HOS-EX-M01",
+      "title": "草稿恢复、药库待校验、缺总价时拒绝展示旧费用",
+      "status": "pass",
+      "level": "host-production-source-isolated"
+    },
+    {
+      "id": "HOS-EX-M02",
+      "title": "病历语义、附件空项过滤及快照映射不改原数据",
+      "status": "pass",
+      "level": "host-production-source-isolated"
+    },
+    {
+      "id": "HOS-EX-M03",
+      "title": "内外用切换不泄漏内服医嘱和禁忌、不改草稿",
+      "status": "pass",
+      "level": "host-production-source-isolated"
+    },
+    {
+      "id": "HOS-EX-M04",
+      "title": "国标转换分别消费q、派生克重及关闭状态，保留原克重",
+      "status": "pass",
+      "level": "host-production-source-isolated"
+    },
+    {
+      "id": "HOS-EX-M05",
+      "title": "特殊书写只在适用剂型且药库启用时展示每剂出包数",
+      "status": "pass",
+      "level": "host-production-source-isolated"
+    },
+    {
+      "id": "HOS-EX-M06",
+      "title": "成药独立条目保留数量规格价格，不展示中药剂数服法行",
+      "status": "pass",
+      "level": "host-production-source-isolated"
+    },
+    {
+      "id": "HOS-EX-M07",
+      "title": "协定方及本次药库响应覆盖显示，不使用旧总价",
+      "status": "pass",
+      "level": "host-production-source-isolated"
+    },
+    {
+      "id": "HOS-EX-M08",
+      "title": "药费扣减靠右、优惠券负额及费用分隔符保留",
+      "status": "pass",
+      "level": "host-production-source-isolated"
+    },
+    {
+      "id": "HOS-EX-M09",
+      "title": "随访咨询开关及医助审核文案来自当前快照",
+      "status": "pass",
+      "level": "host-production-source-isolated"
+    },
+    {
+      "id": "HOS-EX-M10",
+      "title": "膏方和颗粒膏方按1剂展示，出膏包数及包装方式保留",
+      "status": "pass",
+      "level": "host-production-source-isolated"
+    },
+    {
+      "id": "HOS-EX-M11",
+      "title": "丸剂规格包衣与服用天数、粉剂服法区分",
+      "status": "pass",
+      "level": "host-production-source-isolated"
+    },
+    {
+      "id": "HOS-EX-M12",
+      "title": "实际风险分流未确认不打开预览，取消返回修改",
+      "status": "pass",
+      "level": "host-production-source-isolated"
+    },
+    {
+      "id": "HOS-EX-M13",
+      "title": "无签名需签名时转签名，有签名确认后才准备预览",
+      "status": "pass",
+      "level": "host-production-source-isolated"
+    },
+    {
+      "id": "HOS-EX-M14",
+      "title": "空预览响应及失效回调均不能误入预览或生成",
+      "status": "pass",
+      "level": "host-production-source-isolated"
+    }
+  ]
+}

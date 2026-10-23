@@ -1,0 +1,266 @@
+{"time": "2026-10-23T14:02:32.389017+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:02:33.510100+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-initial.json"], "exitCode": 0}
+{"time": "2026-10-23T14:02:33.552430+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-initial.json", "/private/tmp/harmony-preview-extra-20261023/initial.json"], "exitCode": 0}
+{"time": "2026-10-23T14:04:23.643826+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:04:24.713850+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-editor-initial.json"], "exitCode": 0}
+{"time": "2026-10-23T14:04:24.768210+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-editor-initial.json", "/private/tmp/harmony-preview-extra-20261023/editor-initial.json"], "exitCode": 0}
+{"time": "2026-10-23T14:04:57.740549+08:00", "args": ["shell", "uitest", "screenCap", "-p", "/data/local/tmp/preview-extra-initial.png"], "exitCode": 0}
+{"time": "2026-10-23T14:04:57.789024+08:00", "args": ["file", "recv", "/data/local/tmp/preview-extra-initial.png", "/private/tmp/harmony-preview-extra-20261023/editor-initial.png"], "exitCode": 0}
+{"time": "2026-10-23T14:05:22.078250+08:00", "args": ["shell", "uitest", "uiInput", "swipe", "1120", "2320", "1120", "650", "600"], "exitCode": 0}
+{"time": "2026-10-23T14:05:22.181264+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:05:23.246748+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-editor-bottom-1.json"], "exitCode": 0}
+{"time": "2026-10-23T14:05:23.296322+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-editor-bottom-1.json", "/private/tmp/harmony-preview-extra-20261023/editor-bottom-1.json"], "exitCode": 0}
+{"time": "2026-10-23T14:05:41.641239+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:05:42.649214+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-drink-oral-preview-before.json"], "exitCode": 0}
+{"time": "2026-10-23T14:05:42.686800+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-drink-oral-preview-before.json", "/private/tmp/harmony-preview-extra-20261023/drink-oral-preview-before.json"], "exitCode": 0}
+{"time": "2026-10-23T14:05:42.985321+08:00", "args": ["shell", "uitest", "uiInput", "click", "229", "2627"], "exitCode": 0}
+{"time": "2026-10-23T14:05:43.092173+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:05:44.044923+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-drink-oral-preview-after.json"], "exitCode": 0}
+{"time": "2026-10-23T14:05:44.090169+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-drink-oral-preview-after.json", "/private/tmp/harmony-preview-extra-20261023/drink-oral-preview-after.json"], "exitCode": 0}
+{"time": "2026-10-23T14:07:21.768280+08:00", "args": ["shell", "uitest", "screenCap", "-p", "/data/local/tmp/preview-extra-drink.png"], "exitCode": 0}
+{"time": "2026-10-23T14:07:21.831820+08:00", "args": ["file", "recv", "/data/local/tmp/preview-extra-drink.png", "/private/tmp/harmony-preview-extra-20261023/drink-oral-preview.png"], "exitCode": 0}
+{"time": "2026-10-23T14:08:15.877372+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:08:16.925459+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-drink-oral-settled.json"], "exitCode": 0}
+{"time": "2026-10-23T14:08:16.960597+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-drink-oral-settled.json", "/private/tmp/harmony-preview-extra-20261023/drink-oral-settled.json"], "exitCode": 0}
+{"time": "2026-10-23T14:09:37.981017+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:09:38.985465+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-preview-relocate.json"], "exitCode": 0}
+{"time": "2026-10-23T14:09:39.022511+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-preview-relocate.json", "/private/tmp/harmony-preview-extra-20261023/preview-relocate.json"], "exitCode": 0}
+{"time": "2026-10-23T14:09:39.457086+08:00", "args": ["shell", "uitest", "screenCap", "-p", "/data/local/tmp/preview-relocate.png"], "exitCode": 0}
+{"time": "2026-10-23T14:09:39.510416+08:00", "args": ["file", "recv", "/data/local/tmp/preview-relocate.png", "/private/tmp/harmony-preview-extra-20261023/preview-relocate.png"], "exitCode": 0}
+{"time": "2026-10-23T14:10:27.596210+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:10:28.630740+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-drink-oral-settled.json"], "exitCode": 0}
+{"time": "2026-10-23T14:10:28.670551+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-drink-oral-settled.json", "/private/tmp/harmony-preview-extra-20261023/drink-oral-settled.json"], "exitCode": 0}
+{"time": "2026-10-23T14:10:32.744919+08:00", "args": ["shell", "uitest", "uiInput", "swipe", "1110", "2180", "1110", "650", "600"], "exitCode": 0}
+{"time": "2026-10-23T14:10:32.844894+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:10:33.874142+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-drink-oral-preview-scroll-0.json"], "exitCode": 0}
+{"time": "2026-10-23T14:10:33.917809+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-drink-oral-preview-scroll-0.json", "/private/tmp/harmony-preview-extra-20261023/drink-oral-preview-scroll-0.json"], "exitCode": 0}
+{"time": "2026-10-23T14:10:38.497710+08:00", "args": ["shell", "uitest", "uiInput", "swipe", "1110", "2180", "1110", "650", "600"], "exitCode": 0}
+{"time": "2026-10-23T14:10:38.603522+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:10:39.715744+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-drink-oral-preview-scroll-1.json"], "exitCode": 0}
+{"time": "2026-10-23T14:10:39.768294+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-drink-oral-preview-scroll-1.json", "/private/tmp/harmony-preview-extra-20261023/drink-oral-preview-scroll-1.json"], "exitCode": 0}
+{"time": "2026-10-23T14:10:44.392666+08:00", "args": ["shell", "uitest", "uiInput", "swipe", "1110", "2180", "1110", "650", "600"], "exitCode": 0}
+{"time": "2026-10-23T14:10:44.500914+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:10:45.559619+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-drink-oral-preview-scroll-2.json"], "exitCode": 0}
+{"time": "2026-10-23T14:10:45.596727+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-drink-oral-preview-scroll-2.json", "/private/tmp/harmony-preview-extra-20261023/drink-oral-preview-scroll-2.json"], "exitCode": 0}
+{"time": "2026-10-23T14:10:55.553967+08:00", "args": ["shell", "uitest", "uiInput", "swipe", "1160", "30", "1160", "1400", "500"], "exitCode": 0}
+{"time": "2026-10-23T14:10:55.646162+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:10:56.702744+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-network-controls-before.json"], "exitCode": 0}
+{"time": "2026-10-23T14:10:56.750441+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-network-controls-before.json", "/private/tmp/harmony-preview-extra-20261023/network-controls-before.json"], "exitCode": 0}
+{"time": "2026-10-23T14:13:07.769916+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:13:08.971985+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-offline-control-before.json"], "exitCode": 0}
+{"time": "2026-10-23T14:13:09.022391+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-offline-control-before.json", "/private/tmp/harmony-preview-extra-20261023/offline-control-before.json"], "exitCode": 0}
+{"time": "2026-10-23T14:13:09.352587+08:00", "args": ["shell", "uitest", "uiInput", "click", "760", "533"], "exitCode": 0}
+{"time": "2026-10-23T14:13:09.490198+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:13:10.584268+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-offline-control-disabled.json"], "exitCode": 0}
+{"time": "2026-10-23T14:13:10.620632+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-offline-control-disabled.json", "/private/tmp/harmony-preview-extra-20261023/offline-control-disabled.json"], "exitCode": 0}
+{"time": "2026-10-23T14:13:10.919112+08:00", "args": ["shell", "uitest", "uiInput", "keyEvent", "Back"], "exitCode": 0}
+{"time": "2026-10-23T14:13:11.025735+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:13:12.050268+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-offline-app-preview.json"], "exitCode": 0}
+{"time": "2026-10-23T14:13:12.092863+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-offline-app-preview.json", "/private/tmp/harmony-preview-extra-20261023/offline-app-preview.json"], "exitCode": 0}
+{"time": "2026-10-23T14:13:12.443410+08:00", "args": ["shell", "uitest", "uiInput", "keyEvent", "Back"], "exitCode": 0}
+{"time": "2026-10-23T14:13:12.541306+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:13:13.545057+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-offline-editor.json"], "exitCode": 0}
+{"time": "2026-10-23T14:13:13.590171+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-offline-editor.json", "/private/tmp/harmony-preview-extra-20261023/offline-editor.json"], "exitCode": 0}
+{"time": "2026-10-23T14:13:13.915597+08:00", "args": ["shell", "uitest", "uiInput", "click", "229", "2627"], "exitCode": 0}
+{"time": "2026-10-23T14:13:14.022156+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:13:14.983402+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-offline-preview-result.json"], "exitCode": 0}
+{"time": "2026-10-23T14:13:15.030966+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-offline-preview-result.json", "/private/tmp/harmony-preview-extra-20261023/offline-preview-result.json"], "exitCode": 0}
+{"time": "2026-10-23T14:13:19.618541+08:00", "args": ["shell", "uitest", "uiInput", "swipe", "1160", "30", "1160", "1400", "500"], "exitCode": 0}
+{"time": "2026-10-23T14:13:19.719051+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:13:20.796244+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-network-controls-current.json"], "exitCode": 0}
+{"time": "2026-10-23T14:13:20.844559+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-network-controls-current.json", "/private/tmp/harmony-preview-extra-20261023/network-controls-current.json"], "exitCode": 0}
+{"time": "2026-10-23T14:13:21.163124+08:00", "args": ["shell", "uitest", "uiInput", "click", "760", "533"], "exitCode": 0}
+{"time": "2026-10-23T14:13:22.289304+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:13:23.381496+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-network-restored-controls.json"], "exitCode": 0}
+{"time": "2026-10-23T14:13:23.428004+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-network-restored-controls.json", "/private/tmp/harmony-preview-extra-20261023/network-restored-controls.json"], "exitCode": 0}
+{"time": "2026-10-23T14:13:23.763092+08:00", "args": ["shell", "uitest", "uiInput", "keyEvent", "Back"], "exitCode": 0}
+{"time": "2026-10-23T14:14:50.185264+08:00", "args": ["shell", "uitest", "uiInput", "swipe", "1160", "30", "1160", "1400", "500"], "exitCode": 0}
+{"time": "2026-10-23T14:14:50.318126+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:14:51.374077+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-network-restore-recheck.json"], "exitCode": 0}
+{"time": "2026-10-23T14:14:51.420022+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-network-restore-recheck.json", "/private/tmp/harmony-preview-extra-20261023/network-restore-recheck.json"], "exitCode": 0}
+{"time": "2026-10-23T14:14:51.959937+08:00", "args": ["shell", "uitest", "screenCap", "-p", "/data/local/tmp/network-restore-recheck.png"], "exitCode": 0}
+{"time": "2026-10-23T14:14:52.084685+08:00", "args": ["file", "recv", "/data/local/tmp/network-restore-recheck.png", "/private/tmp/harmony-preview-extra-20261023/network-restore-recheck.png"], "exitCode": 0}
+{"time": "2026-10-23T14:18:37.667809+08:00", "args": ["shell", "uitest", "uiInput", "keyEvent", "Back"], "exitCode": 0}
+{"time": "2026-10-23T14:18:37.799978+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:18:38.836977+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-offline-online-retry-before.json"], "exitCode": 0}
+{"time": "2026-10-23T14:18:38.885653+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-offline-online-retry-before.json", "/private/tmp/harmony-preview-extra-20261023/offline-online-retry-before.json"], "exitCode": 0}
+{"time": "2026-10-23T14:21:14.645551+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:21:15.684811+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-online-editor-resume.json"], "exitCode": 0}
+{"time": "2026-10-23T14:21:15.721865+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-online-editor-resume.json", "/private/tmp/harmony-preview-extra-20261023/online-editor-resume.json"], "exitCode": 0}
+{"time": "2026-10-23T14:21:54.743056+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:21:55.769303+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-online-retry-editor-start.json"], "exitCode": 0}
+{"time": "2026-10-23T14:21:55.814956+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-online-retry-editor-start.json", "/private/tmp/harmony-preview-extra-20261023/online-retry-editor-start.json"], "exitCode": 0}
+{"time": "2026-10-23T14:21:59.965019+08:00", "args": ["shell", "uitest", "uiInput", "swipe", "1110", "2320", "1110", "650", "600"], "exitCode": 0}
+{"time": "2026-10-23T14:22:00.067448+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:22:01.109138+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-online-editor-scroll-0.json"], "exitCode": 0}
+{"time": "2026-10-23T14:22:01.155702+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-online-editor-scroll-0.json", "/private/tmp/harmony-preview-extra-20261023/online-editor-scroll-0.json"], "exitCode": 0}
+{"time": "2026-10-23T14:22:01.510104+08:00", "args": ["shell", "uitest", "uiInput", "click", "229", "2593"], "exitCode": 0}
+{"time": "2026-10-23T14:22:01.615364+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:22:02.575080+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-online-retry-preview-open.json"], "exitCode": 0}
+{"time": "2026-10-23T14:22:02.614961+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-online-retry-preview-open.json", "/private/tmp/harmony-preview-extra-20261023/online-retry-preview-open.json"], "exitCode": 0}
+{"time": "2026-10-23T14:22:03.347955+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:22:04.353598+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-online-retry-preview-settled.json"], "exitCode": 0}
+{"time": "2026-10-23T14:22:04.408207+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-online-retry-preview-settled.json", "/private/tmp/harmony-preview-extra-20261023/online-retry-preview-settled.json"], "exitCode": 0}
+{"time": "2026-10-23T14:28:52.834317+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:28:53.904643+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-helper-editor-initial.json"], "exitCode": 0}
+{"time": "2026-10-23T14:28:53.946023+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-helper-editor-initial.json", "/private/tmp/harmony-preview-extra-20261023/helper-editor-initial.json"], "exitCode": 0}
+{"time": "2026-10-23T14:30:13.277911+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:30:14.313654+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-helper-editor-before.json"], "exitCode": 0}
+{"time": "2026-10-23T14:30:14.350232+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-helper-editor-before.json", "/private/tmp/harmony-preview-extra-20261023/helper-editor-before.json"], "exitCode": 0}
+{"time": "2026-10-23T14:30:14.668142+08:00", "args": ["shell", "uitest", "uiInput", "click", "229", "2532"], "exitCode": 0}
+{"time": "2026-10-23T14:30:14.756291+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:30:15.733250+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-helper-preview-opening.json"], "exitCode": 0}
+{"time": "2026-10-23T14:30:15.778225+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-helper-preview-opening.json", "/private/tmp/harmony-preview-extra-20261023/helper-preview-opening.json"], "exitCode": 0}
+{"time": "2026-10-23T14:30:16.513380+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:30:17.507018+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-helper-preview-top.json"], "exitCode": 0}
+{"time": "2026-10-23T14:30:17.554544+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-helper-preview-top.json", "/private/tmp/harmony-preview-extra-20261023/helper-preview-top.json"], "exitCode": 0}
+{"time": "2026-10-23T14:30:18.020850+08:00", "args": ["shell", "uitest", "screenCap", "-p", "/data/local/tmp/helper-preview-top.png"], "exitCode": 0}
+{"time": "2026-10-23T14:30:18.062997+08:00", "args": ["file", "recv", "/data/local/tmp/helper-preview-top.png", "/private/tmp/harmony-preview-extra-20261023/helper-preview-top.png"], "exitCode": 0}
+{"time": "2026-10-23T14:30:18.407522+08:00", "args": ["shell", "uitest", "uiInput", "keyEvent", "Back"], "exitCode": 0}
+{"time": "2026-10-23T14:30:18.506686+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:30:19.613260+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-helper-editor-return.json"], "exitCode": 0}
+{"time": "2026-10-23T14:30:19.652386+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-helper-editor-return.json", "/private/tmp/harmony-preview-extra-20261023/helper-editor-return.json"], "exitCode": 0}
+{"time": "2026-10-23T14:30:19.978331+08:00", "args": ["shell", "uitest", "uiInput", "click", "229", "2532"], "exitCode": 0}
+{"time": "2026-10-23T14:30:20.069347+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:30:21.098925+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-helper-preview-reopen.json"], "exitCode": 0}
+{"time": "2026-10-23T14:30:21.146953+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-helper-preview-reopen.json", "/private/tmp/harmony-preview-extra-20261023/helper-preview-reopen.json"], "exitCode": 0}
+{"time": "2026-10-23T14:30:21.782796+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:30:22.838448+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-helper-preview-reopen-settled.json"], "exitCode": 0}
+{"time": "2026-10-23T14:30:22.886932+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-helper-preview-reopen-settled.json", "/private/tmp/harmony-preview-extra-20261023/helper-preview-reopen-settled.json"], "exitCode": 0}
+{"time": "2026-10-23T14:30:23.202417+08:00", "args": ["shell", "uitest", "uiInput", "keyEvent", "Back"], "exitCode": 0}
+{"time": "2026-10-23T14:30:23.317817+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:30:24.392180+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-helper-editor-final.json"], "exitCode": 0}
+{"time": "2026-10-23T14:30:24.429564+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-helper-editor-final.json", "/private/tmp/harmony-preview-extra-20261023/helper-editor-final.json"], "exitCode": 0}
+{"time": "2026-10-23T14:33:15.175919+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:33:16.233912+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-helper-submit-editor-before.json"], "exitCode": 0}
+{"time": "2026-10-23T14:33:16.271759+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-helper-submit-editor-before.json", "/private/tmp/harmony-preview-extra-20261023/helper-submit-editor-before.json"], "exitCode": 0}
+{"time": "2026-10-23T14:33:16.596899+08:00", "args": ["shell", "uitest", "uiInput", "click", "229", "2532"], "exitCode": 0}
+{"time": "2026-10-23T14:33:16.688377+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:33:17.677862+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-helper-submit-preview-opening.json"], "exitCode": 0}
+{"time": "2026-10-23T14:33:17.718012+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-helper-submit-preview-opening.json", "/private/tmp/harmony-preview-extra-20261023/helper-submit-preview-opening.json"], "exitCode": 0}
+{"time": "2026-10-23T14:33:18.347998+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:33:19.410790+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-helper-submit-preview-before.json"], "exitCode": 0}
+{"time": "2026-10-23T14:33:19.462186+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-helper-submit-preview-before.json", "/private/tmp/harmony-preview-extra-20261023/helper-submit-preview-before.json"], "exitCode": 0}
+{"time": "2026-10-23T14:33:19.803796+08:00", "args": ["shell", "uitest", "uiInput", "click", "630", "2512"], "exitCode": 0}
+{"time": "2026-10-23T14:33:19.913956+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:33:20.858486+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-helper-submit-result-0.json"], "exitCode": 0}
+{"time": "2026-10-23T14:33:20.902726+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-helper-submit-result-0.json", "/private/tmp/harmony-preview-extra-20261023/helper-submit-result-0.json"], "exitCode": 0}
+{"time": "2026-10-23T14:33:21.498926+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:33:22.387134+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-helper-submit-result-1.json"], "exitCode": 0}
+{"time": "2026-10-23T14:33:22.431373+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-helper-submit-result-1.json", "/private/tmp/harmony-preview-extra-20261023/helper-submit-result-1.json"], "exitCode": 0}
+{"time": "2026-10-23T14:33:23.071004+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:33:24.020541+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-helper-submit-result-2.json"], "exitCode": 0}
+{"time": "2026-10-23T14:33:24.063862+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-helper-submit-result-2.json", "/private/tmp/harmony-preview-extra-20261023/helper-submit-result-2.json"], "exitCode": 0}
+{"time": "2026-10-23T14:33:24.671278+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:33:25.113913+08:00", "args": ["shell", "uitest", "screenCap", "-p", "/data/local/tmp/helper-submit-final.png"], "exitCode": 0}
+{"time": "2026-10-23T14:33:25.155658+08:00", "args": ["file", "recv", "/data/local/tmp/helper-submit-final.png", "/private/tmp/harmony-preview-extra-20261023/helper-submit-final.png"], "exitCode": 0}
+{"time": "2026-10-23T14:37:00.105097+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:37:01.164313+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-doctor-review-ready.json"], "exitCode": 0}
+{"time": "2026-10-23T14:37:01.204898+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-doctor-review-ready.json", "/private/tmp/harmony-preview-extra-20261023/doctor-review-ready.json"], "exitCode": 0}
+{"time": "2026-10-23T14:38:30.260458+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:38:31.370605+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-doctor-review-before.json"], "exitCode": 0}
+{"time": "2026-10-23T14:38:31.411687+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-doctor-review-before.json", "/private/tmp/harmony-preview-extra-20261023/doctor-review-before.json"], "exitCode": 0}
+{"time": "2026-10-23T14:38:35.405160+08:00", "args": ["shell", "uitest", "uiInput", "swipe", "1110", "2190", "1110", "650", "600"], "exitCode": 0}
+{"time": "2026-10-23T14:38:35.517797+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:38:36.564063+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-doctor-review-scroll-0.json"], "exitCode": 0}
+{"time": "2026-10-23T14:38:36.610454+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-doctor-review-scroll-0.json", "/private/tmp/harmony-preview-extra-20261023/doctor-review-scroll-0.json"], "exitCode": 0}
+{"time": "2026-10-23T14:38:40.565998+08:00", "args": ["shell", "uitest", "uiInput", "swipe", "1110", "650", "1110", "2190", "600"], "exitCode": 0}
+{"time": "2026-10-23T14:38:40.665703+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:38:41.696739+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-doctor-review-restore-0.json"], "exitCode": 0}
+{"time": "2026-10-23T14:38:41.741015+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-doctor-review-restore-0.json", "/private/tmp/harmony-preview-extra-20261023/doctor-review-restore-0.json"], "exitCode": 0}
+{"time": "2026-10-23T14:45:42.574451+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:45:43.602823+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-consultation-editor-initial.json"], "exitCode": 0}
+{"time": "2026-10-23T14:45:43.635983+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-consultation-editor-initial.json", "/private/tmp/harmony-preview-extra-20261023/consultation-editor-initial.json"], "exitCode": 0}
+{"time": "2026-10-23T14:47:06.235236+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:47:07.305716+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-consultation-editor-before.json"], "exitCode": 0}
+{"time": "2026-10-23T14:47:07.355300+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-consultation-editor-before.json", "/private/tmp/harmony-preview-extra-20261023/consultation-editor-before.json"], "exitCode": 0}
+{"time": "2026-10-23T14:49:42.431616+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:49:43.567711+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-consultation-editor-before.json"], "exitCode": 0}
+{"time": "2026-10-23T14:49:43.607322+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-consultation-editor-before.json", "/private/tmp/harmony-preview-extra-20261023/consultation-editor-before.json"], "exitCode": 0}
+{"time": "2026-10-23T14:49:47.836576+08:00", "args": ["shell", "uitest", "uiInput", "swipe", "1110", "2290", "1110", "650", "600"], "exitCode": 0}
+{"time": "2026-10-23T14:49:47.948530+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:49:48.998695+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-consultation-editor-scroll-0.json"], "exitCode": 0}
+{"time": "2026-10-23T14:49:49.046325+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-consultation-editor-scroll-0.json", "/private/tmp/harmony-preview-extra-20261023/consultation-editor-scroll-0.json"], "exitCode": 0}
+{"time": "2026-10-23T14:49:53.766590+08:00", "args": ["shell", "uitest", "uiInput", "swipe", "1110", "2290", "1110", "650", "600"], "exitCode": 0}
+{"time": "2026-10-23T14:49:53.872062+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:49:54.999222+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-consultation-editor-scroll-1.json"], "exitCode": 0}
+{"time": "2026-10-23T14:49:55.050253+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-consultation-editor-scroll-1.json", "/private/tmp/harmony-preview-extra-20261023/consultation-editor-scroll-1.json"], "exitCode": 0}
+{"time": "2026-10-23T14:49:55.386564+08:00", "args": ["shell", "uitest", "uiInput", "click", "229", "2531"], "exitCode": 0}
+{"time": "2026-10-23T14:49:55.494969+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:49:56.518285+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-consultation-preview-opening.json"], "exitCode": 0}
+{"time": "2026-10-23T14:49:56.558517+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-consultation-preview-opening.json", "/private/tmp/harmony-preview-extra-20261023/consultation-preview-opening.json"], "exitCode": 0}
+{"time": "2026-10-23T14:49:57.289637+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:49:58.330738+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-consultation-preview-top.json"], "exitCode": 0}
+{"time": "2026-10-23T14:49:58.378871+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-consultation-preview-top.json", "/private/tmp/harmony-preview-extra-20261023/consultation-preview-top.json"], "exitCode": 0}
+{"time": "2026-10-23T14:55:42.977998+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:55:44.006598+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-consultation-editor-before.json"], "exitCode": 0}
+{"time": "2026-10-23T14:55:44.042548+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-consultation-editor-before.json", "/private/tmp/harmony-preview-extra-20261023/consultation-editor-before.json"], "exitCode": 0}
+{"time": "2026-10-23T14:55:44.373254+08:00", "args": ["shell", "uitest", "uiInput", "click", "229", "2532"], "exitCode": 0}
+{"time": "2026-10-23T14:55:44.483524+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:55:45.525080+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-consultation-preview-opening.json"], "exitCode": 0}
+{"time": "2026-10-23T14:55:45.567082+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-consultation-preview-opening.json", "/private/tmp/harmony-preview-extra-20261023/consultation-preview-opening.json"], "exitCode": 0}
+{"time": "2026-10-23T14:55:46.303657+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:55:47.386947+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-consultation-preview-top.json"], "exitCode": 0}
+{"time": "2026-10-23T14:55:47.432752+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-consultation-preview-top.json", "/private/tmp/harmony-preview-extra-20261023/consultation-preview-top.json"], "exitCode": 0}
+{"time": "2026-10-23T14:55:51.380743+08:00", "args": ["shell", "uitest", "uiInput", "swipe", "1110", "2190", "1110", "650", "600"], "exitCode": 0}
+{"time": "2026-10-23T14:55:51.494989+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:55:52.560161+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-consultation-preview-scroll-0.json"], "exitCode": 0}
+{"time": "2026-10-23T14:55:52.601614+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-consultation-preview-scroll-0.json", "/private/tmp/harmony-preview-extra-20261023/consultation-preview-scroll-0.json"], "exitCode": 0}
+{"time": "2026-10-23T14:55:56.984331+08:00", "args": ["shell", "uitest", "uiInput", "swipe", "1110", "2190", "1110", "650", "600"], "exitCode": 0}
+{"time": "2026-10-23T14:55:57.078080+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:55:58.144806+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-consultation-preview-scroll-1.json"], "exitCode": 0}
+{"time": "2026-10-23T14:55:58.195342+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-consultation-preview-scroll-1.json", "/private/tmp/harmony-preview-extra-20261023/consultation-preview-scroll-1.json"], "exitCode": 0}
+{"time": "2026-10-23T14:56:02.699918+08:00", "args": ["shell", "uitest", "uiInput", "swipe", "1110", "2190", "1110", "650", "600"], "exitCode": 0}
+{"time": "2026-10-23T14:56:02.802489+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:56:03.886127+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-consultation-preview-scroll-2.json"], "exitCode": 0}
+{"time": "2026-10-23T14:56:03.934175+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-consultation-preview-scroll-2.json", "/private/tmp/harmony-preview-extra-20261023/consultation-preview-scroll-2.json"], "exitCode": 0}
+{"time": "2026-10-23T14:56:04.258335+08:00", "args": ["shell", "uitest", "uiInput", "keyEvent", "Back"], "exitCode": 0}
+{"time": "2026-10-23T14:56:04.359693+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:56:05.480031+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-consultation-editor-return.json"], "exitCode": 0}
+{"time": "2026-10-23T14:56:05.534906+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-consultation-editor-return.json", "/private/tmp/harmony-preview-extra-20261023/consultation-editor-return.json"], "exitCode": 0}
+{"time": "2026-10-23T14:56:05.851757+08:00", "args": ["shell", "uitest", "uiInput", "click", "229", "2532"], "exitCode": 0}
+{"time": "2026-10-23T14:56:05.944389+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:56:07.021777+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-consultation-preview-reopen-opening.json"], "exitCode": 0}
+{"time": "2026-10-23T14:56:07.076297+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-consultation-preview-reopen-opening.json", "/private/tmp/harmony-preview-extra-20261023/consultation-preview-reopen-opening.json"], "exitCode": 0}
+{"time": "2026-10-23T14:56:07.803637+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:56:08.913570+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-consultation-preview-reopen.json"], "exitCode": 0}
+{"time": "2026-10-23T14:56:08.958913+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-consultation-preview-reopen.json", "/private/tmp/harmony-preview-extra-20261023/consultation-preview-reopen.json"], "exitCode": 0}
+{"time": "2026-10-23T14:56:09.324147+08:00", "args": ["shell", "uitest", "uiInput", "keyEvent", "Back"], "exitCode": 0}
+{"time": "2026-10-23T14:56:09.424335+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:56:10.506849+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-consultation-editor-final.json"], "exitCode": 0}
+{"time": "2026-10-23T14:56:10.548305+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-consultation-editor-final.json", "/private/tmp/harmony-preview-extra-20261023/consultation-editor-final.json"], "exitCode": 0}
+{"time": "2026-10-23T14:57:58.977840+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:58:00.073429+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-consultation-pack-editor-check-before.json"], "exitCode": 0}
+{"time": "2026-10-23T14:58:00.115992+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-consultation-pack-editor-check-before.json", "/private/tmp/harmony-preview-extra-20261023/consultation-pack-editor-check-before.json"], "exitCode": 0}
+{"time": "2026-10-23T14:58:04.133128+08:00", "args": ["shell", "uitest", "uiInput", "swipe", "1110", "650", "1110", "2200", "600"], "exitCode": 0}
+{"time": "2026-10-23T14:58:04.233557+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:58:05.272039+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-consultation-pack-editor-up-0.json"], "exitCode": 0}
+{"time": "2026-10-23T14:58:05.323300+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-consultation-pack-editor-up-0.json", "/private/tmp/harmony-preview-extra-20261023/consultation-pack-editor-up-0.json"], "exitCode": 0}
+{"time": "2026-10-23T14:58:09.440301+08:00", "args": ["shell", "uitest", "uiInput", "swipe", "1110", "2200", "1110", "650", "600"], "exitCode": 0}
+{"time": "2026-10-23T14:58:09.544610+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T14:58:10.648946+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-consultation-pack-editor-restore-0.json"], "exitCode": 0}
+{"time": "2026-10-23T14:58:10.692589+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-consultation-pack-editor-restore-0.json", "/private/tmp/harmony-preview-extra-20261023/consultation-pack-editor-restore-0.json"], "exitCode": 0}
+{"time": "2026-10-23T15:02:52.010878+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T15:02:53.111814+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-risk-editor-before.json"], "exitCode": 0}
+{"time": "2026-10-23T15:02:53.153361+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-risk-editor-before.json", "/private/tmp/harmony-preview-extra-20261023/risk-editor-before.json"], "exitCode": 0}
+{"time": "2026-10-23T15:02:53.492015+08:00", "args": ["shell", "uitest", "uiInput", "click", "229", "2532"], "exitCode": 0}
+{"time": "2026-10-23T15:02:53.590410+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T15:02:54.592166+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-risk-preview-opening.json"], "exitCode": 0}
+{"time": "2026-10-23T15:02:54.636634+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-risk-preview-opening.json", "/private/tmp/harmony-preview-extra-20261023/risk-preview-opening.json"], "exitCode": 0}
+{"time": "2026-10-23T15:02:55.274964+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T15:02:56.333736+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-risk-dialog-before-cancel.json"], "exitCode": 0}
+{"time": "2026-10-23T15:02:56.375135+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-risk-dialog-before-cancel.json", "/private/tmp/harmony-preview-extra-20261023/risk-dialog-before-cancel.json"], "exitCode": 0}
+{"time": "2026-10-23T15:02:56.713898+08:00", "args": ["shell", "uitest", "uiInput", "click", "325", "2538"], "exitCode": 0}
+{"time": "2026-10-23T15:02:56.810252+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T15:02:57.848586+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-risk-after-cancel.json"], "exitCode": 0}
+{"time": "2026-10-23T15:02:57.897814+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-risk-after-cancel.json", "/private/tmp/harmony-preview-extra-20261023/risk-after-cancel.json"], "exitCode": 0}
+{"time": "2026-10-23T15:02:58.522999+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T15:02:59.536397+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-risk-cancel-settled.json"], "exitCode": 0}
+{"time": "2026-10-23T15:02:59.576398+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-risk-cancel-settled.json", "/private/tmp/harmony-preview-extra-20261023/risk-cancel-settled.json"], "exitCode": 0}
+{"time": "2026-10-23T15:04:30.453918+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T15:04:31.595245+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-risk-drug-editor-verify.json"], "exitCode": 0}
+{"time": "2026-10-23T15:04:31.639607+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-risk-drug-editor-verify.json", "/private/tmp/harmony-preview-extra-20261023/risk-drug-editor-verify.json"], "exitCode": 0}
+{"time": "2026-10-23T15:04:31.950249+08:00", "args": ["shell", "uitest", "uiInput", "keyEvent", "Back"], "exitCode": 0}
+{"time": "2026-10-23T15:04:32.050852+08:00", "args": ["shell", "power-shell", "wakeup"], "exitCode": 0}
+{"time": "2026-10-23T15:04:33.110667+08:00", "args": ["shell", "uitest", "dumpLayout", "-p", "/data/local/tmp/v538-final-risk-prescription-editor-restored.json"], "exitCode": 0}
+{"time": "2026-10-23T15:04:33.158072+08:00", "args": ["file", "recv", "/data/local/tmp/v538-final-risk-prescription-editor-restored.json", "/private/tmp/harmony-preview-extra-20261023/risk-prescription-editor-restored.json"], "exitCode": 0}

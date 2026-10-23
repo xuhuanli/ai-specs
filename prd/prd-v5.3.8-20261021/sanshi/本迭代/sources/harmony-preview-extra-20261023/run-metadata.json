@@ -1,0 +1,15 @@
+{
+  "runId": "RUN-20261023-HOS-PREVIEW-EXTRA",
+  "dateBeijing": "2026-10-23",
+  "codeCommit": "8fd3ad334af983acce4a9efb4cd733466544b5dd",
+  "sourceChanges": false,
+  "buildOrInstallPerformed": false,
+  "previousPreviewFilesUnchanged": 14,
+  "scope": "仅鸿蒙预览特殊流程、数据分支与本地提测资料；Android暂停，不重跑已关闭U21/U22。",
+  "limitations": [
+    "主机检查模拟系统、网络、账号和弹窗宿主，不代表ArkTS编译或设备分支全部通过",
+    "未修改usage_time、is_special_writing、auxiliaryNotify请求规则",
+    "原始UI树、截图、SSID及患者信息仅保存在临时目录，不归档"
+  ],
+  "consultationRestriction": "本轮咨询预览不生成、不提交"
+}
