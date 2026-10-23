@@ -1,0 +1,39 @@
+{
+  "commit": "8fd3ad334af983acce4a9efb4cd733466544b5dd",
+  "files": {
+    "yzs_order/src/main/ets/pages/FollowUpPlanDialog.ets": "1bcfd853e2452f7f94e1b0672adbf107d0e5c0d27041cd583914b328dd36029b",
+    "yzs_order/src/main/ets/complete_feedback/CompleteFeedbackDialog.ets": "06cca01fd6cf8de331554415d5e91484c215101ecba0278da4ae9616030538e0",
+    "yzs_order/src/main/resources/base/media/copy_secondary_icon.png": "2e26cbaaf5664fff7a2e3ad15c52460ef09e0fb179c6e335dd2cbf4ea6d9d448"
+  },
+  "build": {
+    "product": "AgcDebug_Test",
+    "path": "/Users/hpt-sans/Desktop/allplatform/hos_doctor/yzs_order/build/AgcDebug_Test/outputs/default/yzs_order-default-signed.hsp",
+    "sha256": "9156dfc78f3a8399c09fcc3040be0b2f91c6e8e6d8c884595bf85a9d2fd7488a",
+    "mtimeBeijing": "2026-10-23T11:02:06.884038+08:00",
+    "command": "assembleHsp --mode module -p module=yzs_order@default -p product=AgcDebug_Test -p buildMode=debug --no-daemon --incremental",
+    "result": "BUILD SUCCESSFUL"
+  },
+  "appBeforeModuleUpdate": {
+    "versionCode": 1000117,
+    "versionName": "2.3.2.100",
+    "installTime": 1792637029918,
+    "updateTime": 1792723646684,
+    "installTimeBeijing": "2026-10-22T10:43:49.918000+08:00",
+    "updateTimeBeijing": "2026-10-23T10:47:26.684000+08:00"
+  },
+  "appAfterModuleUpdate": {
+    "versionCode": 1000117,
+    "versionName": "2.3.2.100",
+    "installTime": 1792637029918,
+    "updateTime": 1792724620953
+  },
+  "device": {
+    "model": "ALN-AL00",
+    "apiLevel": "24",
+    "orientation": "portrait",
+    "resolution": [
+      1260,
+      2720
+    ]
+  }
+}
