@@ -1,0 +1,15 @@
+2026-10-26，本地测试环境构建；未安装、未操作设备。
+DEVECO_SDK_HOME=/Applications/DevEco-Studio.app/Contents/sdk JAVA_HOME=/Applications/DevEco-Studio.app/Contents/jbr/Contents/Home /Applications/DevEco-Studio.app/Contents/tools/node/bin/node /Applications/DevEco-Studio.app/Contents/tools/hvigor/bin/hvigorw.js assembleHap --mode module -p module=entry@default -p product=AgcDebug_Test -p buildMode=debug --no-daemon --parallel --incremental
+
+> hvigor Finished :entry:default@CollectDebugSymbol... after 1 ms
+> hvigor Finished :entry:assembleHap... after 1 ms
+================================================
+buildTime  :1026_112119
+productName:AgcDebug_Test
+bundleName :com.gancao.hm.doctor
+versionCode:1000118
+versionName:2.3.2.100
+networkVersionCode:5.0.6
+> hvigor BUILD SUCCESSFUL in 21 s 405 ms
+
+578 tasks in total: 341 executed, 237 up-to-date

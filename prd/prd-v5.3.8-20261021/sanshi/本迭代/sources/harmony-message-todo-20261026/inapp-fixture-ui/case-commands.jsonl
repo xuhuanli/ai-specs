@@ -1,0 +1,64 @@
+{"op": ["want", "reset"], "code": 0}
+{"op": ["dump", "message-extra-origin"], "code": 0}
+{"op": ["tap", "message-extra-origin", "V538消息-extras反馈1"], "code": 0}
+{"op": ["dump", "message-extra-open_reply1-loaded"], "code": 0}
+{"op": ["dump", "message-extra-open_reply1-loaded"], "code": 0}
+{"op": ["state", "message-extra-open_reply1-loaded"], "code": 0}
+{"op": ["back"], "code": 0}
+{"op": ["dump", "message-extra-open_reply1-back-order"], "code": 0}
+{"op": ["state", "message-extra-open_reply1-back-order"], "code": 0}
+{"op": ["back"], "code": 0}
+{"op": ["dump", "message-extra-open_reply1-back-origin"], "code": 0}
+{"op": ["state", "message-extra-open_reply1-back-origin"], "code": 0}
+{"op": ["want", "reset"], "code": 0}
+{"op": ["dump", "message-zero-origin"], "code": 0}
+{"op": ["tap", "message-zero-origin", "V538消息-仅详情0"], "code": 0}
+{"op": ["dump", "message-zero-order"], "code": 0}
+{"op": ["state", "message-zero-order"], "code": 0}
+{"op": ["back"], "code": 0}
+{"op": ["dump", "message-zero-returned"], "code": 0}
+{"op": ["state", "message-zero-returned"], "code": 0}
+{"op": ["want", "reset"], "code": 0}
+{"op": ["dump", "message-missing-origin"], "code": 0}
+{"op": ["tap", "message-missing-origin", "V538消息-缺省仅详情"], "code": 0}
+{"op": ["dump", "message-missing-order"], "code": 0}
+{"op": ["state", "message-missing-order"], "code": 0}
+{"op": ["back"], "code": 0}
+{"op": ["dump", "message-missing-returned"], "code": 0}
+{"op": ["state", "message-missing-returned"], "code": 0}
+{"op": ["want", "todos"], "code": 0}
+{"op": ["dump", "todo-origin"], "code": 0}
+{"op": ["tap", "todo-origin", "已完成"], "code": 0}
+{"op": ["dump", "todo-done"], "code": 0}
+{"op": ["want", "reset"], "code": 0}
+{"op": ["tap", "todo-done", "V538待办-自动反馈"], "code": 0}
+{"op": ["dump", "todo-valid-order-loaded"], "code": 0}
+{"op": ["dump", "todo-valid-order-loaded"], "code": 0}
+{"op": ["state", "todo-valid-order-loaded"], "code": 0}
+{"op": ["back"], "code": 0}
+{"op": ["dump", "todo-valid-order-back-order"], "code": 0}
+{"op": ["state", "todo-valid-order-back-order"], "code": 0}
+{"op": ["back"], "code": 0}
+{"op": ["dump", "todo-valid-order-back-origin"], "code": 0}
+{"op": ["state", "todo-valid-order-back-origin"], "code": 0}
+{"op": ["dump", "todo-alias-origin"], "code": 0}
+{"op": ["tap", "todo-alias-origin", "V538待办-回访列表兼容"], "code": 0}
+{"op": ["dump", "todo-alias-loaded"], "code": 0}
+{"op": ["state", "todo-alias-loaded"], "code": 0}
+{"op": ["back"], "code": 0}
+{"op": ["dump", "todo-alias-returned"], "code": 0}
+{"op": ["state", "todo-alias-returned"], "code": 0}
+{"op": ["want", "notify1"], "code": 0}
+{"op": ["home"], "code": 0}
+{"op": ["shade"], "code": 0}
+{"op": ["dump", "system-one-card"], "code": 0}
+{"op": ["tap-card", "system-one-card", "538261"], "code": 0}
+{"op": ["dump", "system-one-loaded"], "code": 0}
+{"op": ["dump", "system-one-loaded"], "code": 0}
+{"op": ["state", "system-one-loaded"], "code": 0}
+{"op": ["close-feedback", "system-one-loaded"], "code": 0}
+{"op": ["dump", "system-one-back-order"], "code": 0}
+{"op": ["state", "system-one-back-order"], "code": 0}
+{"op": ["nav-back", "system-one-back-order"], "code": 0}
+{"op": ["dump", "system-one-back-home"], "code": 0}
+{"op": ["state", "system-one-back-home"], "code": 0}

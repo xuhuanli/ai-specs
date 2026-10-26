@@ -1,0 +1,108 @@
+{
+  "id": "OBS-NAV-FOCUS-001",
+  "status": "观察待确认，未修改焦点逻辑",
+  "observed": "本地通知唤起后直接注入Back键未弹出完整反馈，页面栈保持；UI树显示subwindow/GlobalFloatSubWindow获焦、pages/Index未获焦。页面关闭按钮和订单返回按钮可完成两级返回。",
+  "scope": "本轮设备及HDC返回键注入；未据此认定所有设备或物理侧滑返回都异常",
+  "focusSnapshots": {
+    "message-one-loaded": [
+      {
+        "pagePath": "pages/Index",
+        "bounds": "[0,124][1091,2720]",
+        "focused": "true"
+      },
+      {
+        "pagePath": "subwindow/GlobalFloatSubWindow",
+        "bounds": "[1091,1650][1260,1845]",
+        "focused": "false"
+      }
+    ],
+    "notification-one-loaded": [
+      {
+        "pagePath": "subwindow/GlobalFloatSubWindow",
+        "bounds": "[1091,1650][1260,1845]",
+        "focused": "true"
+      },
+      {
+        "pagePath": "pages/Index",
+        "bounds": "[0,124][1091,2720]",
+        "focused": "false"
+      }
+    ],
+    "notification-one-back-order": [
+      {
+        "pagePath": "subwindow/GlobalFloatSubWindow",
+        "bounds": "[1091,1650][1260,1845]",
+        "focused": "true"
+      },
+      {
+        "pagePath": "pages/Index",
+        "bounds": "[0,124][1091,2720]",
+        "focused": "false"
+      }
+    ]
+  },
+  "keyBackStates": {
+    "notification-one-back-order": {
+      "stack": [
+        "yzs_order/MakePrescribeDetailPage",
+        "yzs_order/CompleteFeedbackDialog"
+      ],
+      "orderMatched": true,
+      "openCompleteFeedbackOnLoad": true,
+      "orderSource": "systemNotification",
+      "feedbackSource": "systemNotification",
+      "events": [
+        {
+          "name": "order-request",
+          "time": 1792997062588
+        },
+        {
+          "name": "todo-fixtures",
+          "time": 1792997063350
+        },
+        {
+          "name": "feedback-request",
+          "time": 1792997063882
+        },
+        {
+          "name": "todo-fixtures",
+          "time": 1792997064127
+        }
+      ]
+    },
+    "notification-one-back-home": {
+      "stack": [
+        "yzs_order/MakePrescribeDetailPage",
+        "yzs_order/CompleteFeedbackDialog"
+      ],
+      "orderMatched": true,
+      "openCompleteFeedbackOnLoad": true,
+      "orderSource": "systemNotification",
+      "feedbackSource": "systemNotification",
+      "events": [
+        {
+          "name": "order-request",
+          "time": 1792997062588
+        },
+        {
+          "name": "todo-fixtures",
+          "time": 1792997063350
+        },
+        {
+          "name": "feedback-request",
+          "time": 1792997063882
+        },
+        {
+          "name": "todo-fixtures",
+          "time": 1792997064127
+        }
+      ]
+    }
+  },
+  "operatorIncident": {
+    "timeBeijing": "2026-10-26 14:41:02",
+    "action": "通知栏布局更新后使用旧坐标双击，误触清除通知",
+    "effect": "当时可清除系统通知被清除；未独立统计数量，未尝试恢复其他应用通知；没有执行应用内消息/待办删除",
+    "correction": "之后每次按最新UI树中本轮通知卡片ID定位点击，未再使用旧坐标或清除控制"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "dateBeijing": "2026-10-26",
+  "codeRepository": "hos_doctor",
+  "branch": "feature/sanshi/order-0518-Q42",
+  "commit": "2632b79be",
+  "subject": "feat: 完善消息与待办反馈跳转",
+  "codeFileCount": 11,
+  "excludedExistingChange": "AppScope/app.json5版本名2.3.2.100",
+  "verified": [
+    "测试环境构建",
+    "19组主机隔离回归",
+    "8项正常应用内Mock页面导航及页面按钮返回"
+  ],
+  "nextPhase": "用户确认真实数据在测试阶段执行",
+  "pending": [
+    "真实后台open_reply发布及消息中心数据",
+    "实际极光投递和SDK主回调",
+    "完整进程冷启动",
+    "有效订单号的真实待办数据",
+    "通知物理返回手势及焦点观察"
+  ],
+  "temporaryMockRemoved": true,
+  "pushPerformed": false,
+  "documentationRepository": "工作区根目录独立本地仓库"
+}

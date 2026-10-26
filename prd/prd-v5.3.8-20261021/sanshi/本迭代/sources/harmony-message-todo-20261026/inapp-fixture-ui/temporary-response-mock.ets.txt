@@ -1,0 +1,210 @@
+import { Want, wantAgent } from '@kit.AbilityKit'
+import { notificationManager } from '@kit.NotificationKit'
+import { hptRouter, dynamicPageRegistry } from 'hpt_scaffold'
+import { ModuleRouterName } from 'biz_middle_extension'
+import BuildProfile from 'BuildProfile'
+import { HPTNetwork, NetworkInterceptor, Request, Response, HttpClient, HPTResponse } from 'hpt_network'
+
+export interface FixtureEvent {
+  name: string
+  time: number
+}
+
+/** 仅替换两种列表的客户端输入；订单与反馈接口继续访问当前测试环境。 */
+export class NavigationFixtures implements NetworkInterceptor {
+  static orderId: string = ''
+  static events: FixtureEvent[] = []
+  private classes: Map<Request, string> = new Map()
+
+  private original: NetworkInterceptor
+
+  constructor(original: NetworkInterceptor) {
+    this.original = original
+  }
+
+  static resetEvents(): void {
+    NavigationFixtures.events = []
+  }
+
+  interceptForClient(client: HttpClient): HttpClient {
+    return this.original.interceptForClient(client)
+  }
+
+  interceptForRequest(request: Request): Request {
+    const url: string = String(request.url.url)
+    const body: Object | undefined = request.body?.content as Object | undefined
+    let className: string = ''
+    if (body !== undefined && body !== null && typeof body === 'object') {
+      const record = body as Record<string, Object>
+      className = String(record['class'] ?? '')
+    } else if (typeof body === 'string') {
+      try {
+        const record = JSON.parse(body) as Record<string, Object>
+        className = String(record['class'] ?? '')
+      } catch (_) {}
+    }
+    this.classes.set(request, className)
+    if (className === 'GET_MY_TODO_LIST') {
+      request.addHeader('X-V538-Client-Fixture', 'todo-list')
+    }
+    if (url.includes('acrecipel/getone')) {
+      NavigationFixtures.events.push({ name: 'order-request', time: Date.now() })
+    } else if (url.includes('invest/show_reply_detail')) {
+      NavigationFixtures.events.push({ name: 'feedback-request', time: Date.now() })
+    }
+    return this.original.interceptForRequest(request)
+  }
+
+  interceptForResponse<T>(origin: Response, response: HPTResponse<T>, disable: boolean): HPTResponse<T> | undefined {
+    const url: string = String(origin.request.url.url)
+    if (url.includes('msgsapp/doctor_get_list')) {
+      NavigationFixtures.events.push({ name: 'message-fixtures', time: Date.now() })
+      const fixture: HPTResponse<Record<string, Object>[]> = { status: '1', msg: '', data: this.messages() }
+      return JSON.parse(JSON.stringify(fixture)) as HPTResponse<T>
+    }
+    if (this.classes.get(origin.request) === 'GET_MY_TODO_LIST' ||
+      origin.request.headers['X-V538-Client-Fixture'] === 'todo-list') {
+      NavigationFixtures.events.push({ name: 'todo-fixtures', time: Date.now() })
+      const pageinfo: Record<string, Object> = { 'total': 2, 'page': 1, 'pagesize': 30 }
+      const data: Record<string, Object> = { 'list': this.todos(), 'pageinfo': pageinfo }
+      const fixture: HPTResponse<Record<string, Object>> = { status: '00000', msg: '', data: data }
+      return JSON.parse(JSON.stringify(fixture)) as HPTResponse<T>
+    }
+    return this.original.interceptForResponse(origin, response, disable)
+  }
+
+  private messages(): Record<string, Object>[] {
+    const common: Record<string, Object> = { 'orderid': NavigationFixtures.orderId, 'jpush_code': 'RECIPEL' }
+    const one: Record<string, Object> = {
+      'id': 'v538-fixture-message-one', 'status': '1', 'content': 'V538消息-自动反馈1',
+      'timeline': '2026-10-26 14:00', 'jpush_code': 'RECIPEL', 'orderid': NavigationFixtures.orderId, 'open_reply': 1
+    }
+    const replyExtras: Record<string, Object> = { 'orderid': NavigationFixtures.orderId, 'open_reply': '1' }
+    const extra: Record<string, Object> = {
+      'id': 'v538-fixture-message-extra', 'status': '1', 'content': 'V538消息-extras反馈1',
+      'timeline': '2026-10-26 14:00', 'jpush_code': 'RECIPEL',
+      'extras': replyExtras
+    }
+    const zero: Record<string, Object> = {
+      'id': 'v538-fixture-message-zero', 'status': '1', 'content': 'V538消息-仅详情0',
+      'timeline': '2026-10-26 14:00', 'jpush_code': 'RECIPEL', 'orderid': NavigationFixtures.orderId, 'open_reply': 0
+    }
+    const missing: Record<string, Object> = {
+      'id': 'v538-fixture-message-missing', 'status': '1', 'content': 'V538消息-缺省仅详情',
+      'timeline': '2026-10-26 14:00', 'jpush_code': 'RECIPEL', 'extras': common
+    }
+    return [one, extra, zero, missing]
+  }
+
+  private todos(): Record<string, Object>[] {
+    const rawParams: Record<string, Object> = { 'orderid': NavigationFixtures.orderId }
+    const params = encodeURIComponent(JSON.stringify(rawParams))
+    const one: Record<string, Object> = {
+      'todoc_entity_id': 'v538-fixture-todo-one', 'td_code': 'small_invest_reply_help_done',
+      'td_title': 'V538待办-自动反馈', 'btn_name': '查看',
+      'btn_jmp': 'igancao://prescribe/feedback?in=' + params, 'btn_jmp_close': '0', 'can_hand_close': '0',
+      'date_group': '测试数据'
+    }
+    const alias: Record<string, Object> = {
+      'todoc_entity_id': 'v538-fixture-todo-alias', 'td_code': 'small_invest_reply_help_complete',
+      'td_title': 'V538待办-回访列表兼容', 'btn_name': '查看',
+      'btn_jmp': 'igancao://prescribe/small_no_visit_list/', 'btn_jmp_close': '0', 'can_hand_close': '0',
+      'date_group': '测试数据'
+    }
+    return [one, alias]
+  }
+}
+
+/** 临时调试接线，验证完成后移除，不属于交付功能。 */
+export class NavigationFixtureWiring {
+  private static normal?: NetworkInterceptor
+  private static gapi?: NetworkInterceptor
+
+  static handleWant(want: Want): boolean {
+    if (!BuildProfile.DEVKIT_ENABLED) return false
+    const mode = String(want.parameters?.['v538FixtureMode'] ?? '')
+    if (mode.length === 0) return false
+    if (mode === 'state') {
+      NavigationFixtureWiring.printState()
+      return true
+    }
+    if (mode === 'off') {
+      if (NavigationFixtureWiring.normal) HPTNetwork.defaultRequestConfig.interceptor = NavigationFixtureWiring.normal
+      if (NavigationFixtureWiring.gapi) HPTNetwork.defaultGapiRequestConfig.interceptor = NavigationFixtureWiring.gapi
+      NavigationFixtureWiring.normal = undefined
+      NavigationFixtureWiring.gapi = undefined
+      void notificationManager.cancel(538261).catch(() => {})
+      void notificationManager.cancel(538260).catch(() => {})
+      console.info('[V538_FIXTURE] restored')
+      return true
+    }
+    if (mode === 'reset') {
+      NavigationFixtures.resetEvents()
+      return true
+    }
+    const orderId = String(want.parameters?.['v538FixtureOrder'] ?? '')
+    if (orderId.length === 0) {
+      console.error('[V538_FIXTURE] missing fixture order')
+      return true
+    }
+    NavigationFixtures.orderId = orderId
+    if (!NavigationFixtureWiring.normal && HPTNetwork.defaultRequestConfig.interceptor &&
+      HPTNetwork.defaultGapiRequestConfig.interceptor) {
+      NavigationFixtureWiring.normal = HPTNetwork.defaultRequestConfig.interceptor
+      NavigationFixtureWiring.gapi = HPTNetwork.defaultGapiRequestConfig.interceptor
+      HPTNetwork.defaultRequestConfig.interceptor = new NavigationFixtures(NavigationFixtureWiring.normal)
+      HPTNetwork.defaultGapiRequestConfig.interceptor = new NavigationFixtures(NavigationFixtureWiring.gapi!)
+    }
+    NavigationFixtures.resetEvents()
+    hptRouter.navigation.clear(false)
+    if (mode === 'messages') {
+      dynamicPageRegistry.push(ModuleRouterName.messageCenter)
+    } else if (mode === 'todos') {
+      dynamicPageRegistry.push(ModuleRouterName.toDoListPage)
+    } else if (mode === 'notify1' || mode === 'notify0') {
+      void NavigationFixtureWiring.publishNotification(mode === 'notify1' ? 1 : 0)
+        .catch((error: Error) => console.error('[V538_FIXTURE] notification failed: ' + error.message))
+    }
+    return true
+  }
+
+  private static params(name: string): Record<string, Object> {
+    const values = hptRouter.navigation.getParamByName(name)
+    const raw = (values[values.length - 1] ?? {}) as Record<string, Object>
+    return raw['data'] !== undefined ? raw['data'] as Record<string, Object> : raw
+  }
+
+  private static printState(): void {
+    const stack = hptRouter.navigation.getAllPathName()
+    const detail = NavigationFixtureWiring.params(ModuleRouterName.orderDetailPage)
+    const feedback = NavigationFixtureWiring.params(ModuleRouterName.completeFeedbackDialog)
+    const report: Record<string, Object> = {
+      'stack': stack,
+      'orderMatched': String(detail['orderId'] ?? '') === NavigationFixtures.orderId,
+      'openCompleteFeedbackOnLoad': detail['openCompleteFeedbackOnLoad'] === true,
+      'orderSource': String(detail['feedbackSource'] ?? ''),
+      'feedbackSource': String(feedback['feedbackSource'] ?? ''),
+      'events': NavigationFixtures.events
+    }
+    console.info('[V538_UI_STATE] ' + JSON.stringify(report))
+  }
+
+  private static async publishNotification(openReply: number): Promise<void> {
+    if (!await notificationManager.isNotificationEnabled()) throw new Error('notification permission is disabled')
+    const id = openReply === 1 ? 538261 : 538260
+    const agent = await wantAgent.getWantAgent({
+      wants: [{ bundleName: 'com.gancao.hm.doctor', abilityName: 'EntryAbility', parameters: {
+        jpush_code: 'RECIPEL', orderid: NavigationFixtures.orderId, open_reply: openReply,
+        notificationId: 'v538-fixture-' + Date.now().toString()
+      } }],
+      operationType: wantAgent.OperationType.START_ABILITY, requestCode: id,
+      wantAgentFlags: [wantAgent.WantAgentFlags.UPDATE_PRESENT_FLAG]
+    })
+    await notificationManager.publish({
+      id: id, wantAgent: agent, tapDismissed: true,
+      content: { notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
+        normal: { title: 'V538通知验证' + openReply.toString(), text: '测试订单跳转；仅本地构造数据' } }
+    })
+    console.info('[V538_FIXTURE] notification published ' + openReply.toString())
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "message-one-loaded": {
+    "completeFeedbackShown": true,
+    "feedbackBodyShown": true,
+    "displayedOrderMatchesRuntimeFixture": true
+  },
+  "message-extra-open_reply1-loaded": {
+    "completeFeedbackShown": true,
+    "feedbackBodyShown": true,
+    "displayedOrderMatchesRuntimeFixture": true
+  },
+  "todo-valid-order-loaded": {
+    "completeFeedbackShown": true,
+    "feedbackBodyShown": true,
+    "displayedOrderMatchesRuntimeFixture": true
+  },
+  "system-one-loaded": {
+    "completeFeedbackShown": true,
+    "feedbackBodyShown": true,
+    "displayedOrderMatchesRuntimeFixture": true
+  },
+  "message-zero-order": {
+    "orderDetailShown": true,
+    "completeFeedbackShown": false,
+    "displayedOrderMatchesRuntimeFixture": true
+  },
+  "message-missing-order": {
+    "orderDetailShown": true,
+    "completeFeedbackShown": false,
+    "displayedOrderMatchesRuntimeFixture": true
+  },
+  "notification-zero-loaded": {
+    "orderDetailShown": true,
+    "completeFeedbackShown": false,
+    "displayedOrderMatchesRuntimeFixture": true
+  },
+  "todo-alias-loaded": {
+    "existingFollowupManagerShown": true
+  }
+}

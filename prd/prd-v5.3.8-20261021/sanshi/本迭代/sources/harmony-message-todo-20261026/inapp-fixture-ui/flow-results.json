@@ -1,0 +1,98 @@
+[
+  {
+    "case": "message-top-open_reply1",
+    "passed": true,
+    "autoFeedback": true,
+    "source": "message",
+    "stackAtFeedback": [
+      "Message",
+      "yzs_order/MakePrescribeDetailPage",
+      "yzs_order/CompleteFeedbackDialog"
+    ],
+    "orderMatched": true,
+    "feedbackRequests": 1,
+    "returnedToSameOrder": true,
+    "returnedToOrigin": true
+  },
+  {
+    "case": "message-extra-open_reply1",
+    "passed": true,
+    "autoFeedback": true,
+    "source": "message",
+    "stackAtFeedback": [
+      "Message",
+      "yzs_order/MakePrescribeDetailPage",
+      "yzs_order/CompleteFeedbackDialog"
+    ],
+    "orderMatched": true,
+    "feedbackRequests": 1,
+    "returnedToSameOrder": true,
+    "returnedToOrigin": true
+  },
+  {
+    "case": "message-zero",
+    "passed": true,
+    "autoFeedback": false,
+    "orderMatched": true,
+    "feedbackRequests": 0,
+    "returnedToOrigin": true
+  },
+  {
+    "case": "message-missing",
+    "passed": true,
+    "autoFeedback": false,
+    "orderMatched": true,
+    "feedbackRequests": 0,
+    "returnedToOrigin": true
+  },
+  {
+    "case": "todo-valid-order",
+    "passed": true,
+    "autoFeedback": true,
+    "source": "todo",
+    "stackAtFeedback": [
+      "doctor_notice/ToDoListPage",
+      "yzs_order/MakePrescribeDetailPage",
+      "yzs_order/CompleteFeedbackDialog"
+    ],
+    "orderMatched": true,
+    "feedbackRequests": 1,
+    "returnedToSameOrder": true,
+    "returnedToOrigin": true
+  },
+  {
+    "case": "todo-trailing-slash-list",
+    "passed": true,
+    "stackAtTarget": [
+      "doctor_notice/ToDoListPage",
+      "yzs_order/VisitManagerPage"
+    ],
+    "returnedToOrigin": true
+  },
+  {
+    "case": "system-notification-zero",
+    "passed": true,
+    "autoFeedback": false,
+    "orderMatched": true,
+    "feedbackRequests": 0,
+    "returnedToOrigin": true,
+    "returnMethod": "页面返回按钮",
+    "dataSource": "本地系统通知→生产EntryAbility Want点击入口"
+  },
+  {
+    "case": "system-notification-one",
+    "passed": true,
+    "autoFeedback": true,
+    "orderMatched": true,
+    "source": "systemNotification",
+    "stackAtFeedback": [
+      "yzs_order/MakePrescribeDetailPage",
+      "yzs_order/CompleteFeedbackDialog"
+    ],
+    "feedbackRequests": 1,
+    "returnedToSameOrder": true,
+    "returnedToOrigin": true,
+    "returnMethod": "完整反馈关闭按钮→订单详情返回按钮",
+    "dataSource": "本地系统通知→生产EntryAbility Want点击入口"
+  }
+]

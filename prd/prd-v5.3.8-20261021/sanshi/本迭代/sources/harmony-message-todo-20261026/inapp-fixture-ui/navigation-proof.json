@@ -1,0 +1,447 @@
+{
+  "message-one-loaded": {
+    "stack": [
+      "Message",
+      "yzs_order/MakePrescribeDetailPage",
+      "yzs_order/CompleteFeedbackDialog"
+    ],
+    "orderMatched": true,
+    "openCompleteFeedbackOnLoad": true,
+    "orderSource": "message",
+    "feedbackSource": "message",
+    "events": [
+      {
+        "name": "message-fixtures",
+        "time": 1792996404173
+      },
+      {
+        "name": "order-request",
+        "time": 1792996444680
+      },
+      {
+        "name": "feedback-request",
+        "time": 1792996445681
+      }
+    ]
+  },
+  "message-one-back-order": {
+    "stack": [
+      "Message",
+      "yzs_order/MakePrescribeDetailPage"
+    ],
+    "orderMatched": true,
+    "openCompleteFeedbackOnLoad": true,
+    "orderSource": "message",
+    "feedbackSource": "",
+    "events": [
+      {
+        "name": "message-fixtures",
+        "time": 1792996404173
+      },
+      {
+        "name": "order-request",
+        "time": 1792996444680
+      },
+      {
+        "name": "feedback-request",
+        "time": 1792996445681
+      }
+    ]
+  },
+  "message-one-back-list": {
+    "stack": [
+      "Message"
+    ],
+    "orderMatched": false,
+    "openCompleteFeedbackOnLoad": false,
+    "orderSource": "",
+    "feedbackSource": "",
+    "events": [
+      {
+        "name": "message-fixtures",
+        "time": 1792996404173
+      },
+      {
+        "name": "order-request",
+        "time": 1792996444680
+      },
+      {
+        "name": "feedback-request",
+        "time": 1792996445681
+      }
+    ]
+  },
+  "message-extra-open_reply1-loaded": {
+    "stack": [
+      "Message",
+      "yzs_order/MakePrescribeDetailPage",
+      "yzs_order/CompleteFeedbackDialog"
+    ],
+    "orderMatched": true,
+    "openCompleteFeedbackOnLoad": true,
+    "orderSource": "message",
+    "feedbackSource": "message",
+    "events": [
+      {
+        "name": "order-request",
+        "time": 1792996664047
+      },
+      {
+        "name": "feedback-request",
+        "time": 1792996665142
+      }
+    ]
+  },
+  "message-extra-open_reply1-back-order": {
+    "stack": [
+      "Message",
+      "yzs_order/MakePrescribeDetailPage"
+    ],
+    "orderMatched": true,
+    "openCompleteFeedbackOnLoad": true,
+    "orderSource": "message",
+    "feedbackSource": "",
+    "events": [
+      {
+        "name": "order-request",
+        "time": 1792996664047
+      },
+      {
+        "name": "feedback-request",
+        "time": 1792996665142
+      }
+    ]
+  },
+  "message-extra-open_reply1-back-origin": {
+    "stack": [
+      "Message"
+    ],
+    "orderMatched": false,
+    "openCompleteFeedbackOnLoad": false,
+    "orderSource": "",
+    "feedbackSource": "",
+    "events": [
+      {
+        "name": "order-request",
+        "time": 1792996664047
+      },
+      {
+        "name": "feedback-request",
+        "time": 1792996665142
+      }
+    ]
+  },
+  "message-zero-order": {
+    "stack": [
+      "Message",
+      "yzs_order/MakePrescribeDetailPage"
+    ],
+    "orderMatched": true,
+    "openCompleteFeedbackOnLoad": false,
+    "orderSource": "",
+    "feedbackSource": "",
+    "events": [
+      {
+        "name": "order-request",
+        "time": 1792996674956
+      }
+    ]
+  },
+  "message-zero-returned": {
+    "stack": [
+      "Message"
+    ],
+    "orderMatched": false,
+    "openCompleteFeedbackOnLoad": false,
+    "orderSource": "",
+    "feedbackSource": "",
+    "events": [
+      {
+        "name": "order-request",
+        "time": 1792996674956
+      }
+    ]
+  },
+  "message-missing-order": {
+    "stack": [
+      "Message",
+      "yzs_order/MakePrescribeDetailPage"
+    ],
+    "orderMatched": true,
+    "openCompleteFeedbackOnLoad": false,
+    "orderSource": "",
+    "feedbackSource": "",
+    "events": [
+      {
+        "name": "order-request",
+        "time": 1792996682267
+      }
+    ]
+  },
+  "message-missing-returned": {
+    "stack": [
+      "Message"
+    ],
+    "orderMatched": false,
+    "openCompleteFeedbackOnLoad": false,
+    "orderSource": "",
+    "feedbackSource": "",
+    "events": [
+      {
+        "name": "order-request",
+        "time": 1792996682267
+      }
+    ]
+  },
+  "todo-valid-order-loaded": {
+    "stack": [
+      "doctor_notice/ToDoListPage",
+      "yzs_order/MakePrescribeDetailPage",
+      "yzs_order/CompleteFeedbackDialog"
+    ],
+    "orderMatched": true,
+    "openCompleteFeedbackOnLoad": true,
+    "orderSource": "todo",
+    "feedbackSource": "todo",
+    "events": [
+      {
+        "name": "order-request",
+        "time": 1792996691694
+      },
+      {
+        "name": "feedback-request",
+        "time": 1792996692360
+      }
+    ]
+  },
+  "todo-valid-order-back-order": {
+    "stack": [
+      "doctor_notice/ToDoListPage",
+      "yzs_order/MakePrescribeDetailPage"
+    ],
+    "orderMatched": true,
+    "openCompleteFeedbackOnLoad": true,
+    "orderSource": "todo",
+    "feedbackSource": "",
+    "events": [
+      {
+        "name": "order-request",
+        "time": 1792996691694
+      },
+      {
+        "name": "feedback-request",
+        "time": 1792996692360
+      }
+    ]
+  },
+  "todo-valid-order-back-origin": {
+    "stack": [
+      "doctor_notice/ToDoListPage"
+    ],
+    "orderMatched": false,
+    "openCompleteFeedbackOnLoad": false,
+    "orderSource": "",
+    "feedbackSource": "",
+    "events": [
+      {
+        "name": "order-request",
+        "time": 1792996691694
+      },
+      {
+        "name": "feedback-request",
+        "time": 1792996692360
+      }
+    ]
+  },
+  "todo-alias-loaded": {
+    "stack": [
+      "doctor_notice/ToDoListPage",
+      "yzs_order/VisitManagerPage"
+    ],
+    "orderMatched": false,
+    "openCompleteFeedbackOnLoad": false,
+    "orderSource": "",
+    "feedbackSource": "",
+    "events": [
+      {
+        "name": "order-request",
+        "time": 1792996691694
+      },
+      {
+        "name": "feedback-request",
+        "time": 1792996692360
+      }
+    ]
+  },
+  "todo-alias-returned": {
+    "stack": [
+      "doctor_notice/ToDoListPage"
+    ],
+    "orderMatched": false,
+    "openCompleteFeedbackOnLoad": false,
+    "orderSource": "",
+    "feedbackSource": "",
+    "events": [
+      {
+        "name": "order-request",
+        "time": 1792996691694
+      },
+      {
+        "name": "feedback-request",
+        "time": 1792996692360
+      }
+    ]
+  },
+  "notification-zero-loaded": {
+    "stack": [
+      "yzs_order/MakePrescribeDetailPage"
+    ],
+    "orderMatched": true,
+    "openCompleteFeedbackOnLoad": false,
+    "orderSource": "",
+    "feedbackSource": "",
+    "events": [
+      {
+        "name": "todo-fixtures",
+        "time": 1792997128992
+      },
+      {
+        "name": "order-request",
+        "time": 1792997284239
+      },
+      {
+        "name": "todo-fixtures",
+        "time": 1792997284804
+      },
+      {
+        "name": "todo-fixtures",
+        "time": 1792997285449
+      }
+    ]
+  },
+  "notification-zero-back-home": {
+    "stack": [],
+    "orderMatched": false,
+    "openCompleteFeedbackOnLoad": false,
+    "orderSource": "",
+    "feedbackSource": "",
+    "events": [
+      {
+        "name": "todo-fixtures",
+        "time": 1792997128992
+      },
+      {
+        "name": "order-request",
+        "time": 1792997284239
+      },
+      {
+        "name": "todo-fixtures",
+        "time": 1792997284804
+      },
+      {
+        "name": "todo-fixtures",
+        "time": 1792997285449
+      },
+      {
+        "name": "todo-fixtures",
+        "time": 1792997379315
+      }
+    ]
+  },
+  "system-one-loaded": {
+    "stack": [
+      "yzs_order/MakePrescribeDetailPage",
+      "yzs_order/CompleteFeedbackDialog"
+    ],
+    "orderMatched": true,
+    "openCompleteFeedbackOnLoad": true,
+    "orderSource": "systemNotification",
+    "feedbackSource": "systemNotification",
+    "events": [
+      {
+        "name": "todo-fixtures",
+        "time": 1792997456430
+      },
+      {
+        "name": "order-request",
+        "time": 1792997458948
+      },
+      {
+        "name": "todo-fixtures",
+        "time": 1792997459180
+      },
+      {
+        "name": "feedback-request",
+        "time": 1792997459534
+      },
+      {
+        "name": "todo-fixtures",
+        "time": 1792997459710
+      }
+    ]
+  },
+  "system-one-back-order": {
+    "stack": [
+      "yzs_order/MakePrescribeDetailPage"
+    ],
+    "orderMatched": true,
+    "openCompleteFeedbackOnLoad": true,
+    "orderSource": "systemNotification",
+    "feedbackSource": "",
+    "events": [
+      {
+        "name": "todo-fixtures",
+        "time": 1792997456430
+      },
+      {
+        "name": "order-request",
+        "time": 1792997458948
+      },
+      {
+        "name": "todo-fixtures",
+        "time": 1792997459180
+      },
+      {
+        "name": "feedback-request",
+        "time": 1792997459534
+      },
+      {
+        "name": "todo-fixtures",
+        "time": 1792997459710
+      }
+    ]
+  },
+  "system-one-back-home": {
+    "stack": [],
+    "orderMatched": false,
+    "openCompleteFeedbackOnLoad": false,
+    "orderSource": "",
+    "feedbackSource": "",
+    "events": [
+      {
+        "name": "todo-fixtures",
+        "time": 1792997456430
+      },
+      {
+        "name": "order-request",
+        "time": 1792997458948
+      },
+      {
+        "name": "todo-fixtures",
+        "time": 1792997459180
+      },
+      {
+        "name": "feedback-request",
+        "time": 1792997459534
+      },
+      {
+        "name": "todo-fixtures",
+        "time": 1792997459710
+      },
+      {
+        "name": "todo-fixtures",
+        "time": 1792997467092
+      }
+    ]
+  }
+}

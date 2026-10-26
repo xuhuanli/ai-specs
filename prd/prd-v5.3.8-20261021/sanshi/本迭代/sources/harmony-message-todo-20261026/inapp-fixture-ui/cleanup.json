@@ -1,0 +1,14 @@
+{
+  "businessSourceMatchesBeforeTest": true,
+  "entryAbilityRestored": true,
+  "temporaryMockSourceRemoved": true,
+  "ohosTestChangesReverted": true,
+  "privateFixtureResourceRemoved": true,
+  "instrumentedEntryTestModuleRemoved": true,
+  "originalNetworkInterceptorsRestoredBeforeReinstall": true,
+  "cleanDebugPackageRebuiltAndInstalled": true,
+  "normalResponseHandlingRestored": true,
+  "homeTodoCountRecheckedAfterRestore": false,
+  "commitPerformed": false,
+  "pushPerformed": false
+}
