@@ -1,0 +1,49 @@
+{
+  "baselineRef": "2632b79be2fd",
+  "oldListCombinations": 624,
+  "oldDetailCombinations": 104,
+  "sourceSha256": {
+    "yzs_order/src/main/ets/models/OrderStatusInfo.ets": "34fe834df7d9a3d7793200628028057a2c9fe26512912412abe2d141b2bd78c3",
+    "yzs_order/src/main/ets/view_models/OrderCardStatusHint.ets": "bc9efe73df2d300d9ef610646799d59610482a5ea71f3db2d608d959541e4798",
+    "yzs_order/src/main/ets/view_models/MakePrescribeDetail.ets": "d577c4da3ffb670750a43b4aefc8e56526149439db39ecc6c479332f418cc2ee",
+    "yzs_order/src/main/ets/components/OrderCardStatusHint.ets": "403ad69357c88e90a9109ffb44fff3ff6ef94ff34ae5b932296e271ce9c648f1",
+    "yzs_order/src/main/ets/models/PrescriptionInfoModel.ets": "a8e68d1152d1ca59934445b39401dc0c912b87a941711a1b6b2936de8234ea5b"
+  },
+  "method": "真实生产列表解析及AST提取的详情getter/组件配色方法在Node中执行；未渲染ArkUI",
+  "results": [
+    {
+      "name": "新增6：列表各诊后阶段与数字/字符串类型显示正确标签和secondary底色",
+      "status": "passed"
+    },
+    {
+      "name": "新增6：详情不额外限制阶段或依赖列表描述",
+      "status": "passed"
+    },
+    {
+      "name": "原有列表条件：阶段0/无效与空白描述仍隐藏整行",
+      "status": "passed"
+    },
+    {
+      "name": "原有超时规则：新标签不改变描述的待反馈超时标红",
+      "status": "passed"
+    },
+    {
+      "name": "原有1至5/空/未知值：列表全量状态、描述及超时组合与起点输出一致",
+      "status": "passed"
+    },
+    {
+      "name": "原有详情标签：1至5/空/未知值映射与起点输出一致",
+      "status": "passed"
+    },
+    {
+      "name": "数据复用：同一详情对象切换新旧标签与空值无旧标签残留",
+      "status": "passed"
+    },
+    {
+      "name": "secondary资源为#A56D5F且列表与详情仍使用现有白色字体",
+      "status": "passed"
+    }
+  ],
+  "passed": 8,
+  "failed": 0
+}

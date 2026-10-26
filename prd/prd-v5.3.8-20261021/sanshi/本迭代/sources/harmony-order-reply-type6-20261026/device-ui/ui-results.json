@@ -1,0 +1,98 @@
+{
+  "passed": 4,
+  "failed": 0,
+  "cases": [
+    {
+      "case": "list5",
+      "passed": true,
+      "reply_type": 6,
+      "reply_status": 5,
+      "phase": "已反馈",
+      "tag": "无明显变化",
+      "tagBounds": [
+        130,
+        1116,
+        352,
+        1181
+      ],
+      "expectedColor": "#A56D5F",
+      "jpegChannelTolerance": 4,
+      "nearSecondaryPixels": 4063,
+      "whiteTextPixels": 359,
+      "mostCommonColor": [
+        165,
+        109,
+        96
+      ]
+    },
+    {
+      "case": "detail5",
+      "passed": true,
+      "reply_type": 6,
+      "reply_status": 5,
+      "phase": "已反馈",
+      "tag": "无明显变化",
+      "tagBounds": [
+        332,
+        335,
+        554,
+        400
+      ],
+      "expectedColor": "#A56D5F",
+      "jpegChannelTolerance": 4,
+      "nearSecondaryPixels": 5597,
+      "whiteTextPixels": 482,
+      "mostCommonColor": [
+        165,
+        109,
+        96
+      ]
+    },
+    {
+      "case": "list6",
+      "passed": true,
+      "reply_type": 6,
+      "reply_status": 6,
+      "phase": "已完结",
+      "tag": "无明显变化",
+      "tagBounds": [
+        130,
+        1116,
+        352,
+        1181
+      ],
+      "expectedColor": "#A56D5F",
+      "jpegChannelTolerance": 4,
+      "nearSecondaryPixels": 4063,
+      "whiteTextPixels": 359,
+      "mostCommonColor": [
+        165,
+        109,
+        96
+      ]
+    },
+    {
+      "case": "detail6",
+      "passed": true,
+      "reply_type": 6,
+      "reply_status": 6,
+      "phase": "已完结",
+      "tag": "无明显变化",
+      "tagBounds": [
+        332,
+        335,
+        554,
+        400
+      ],
+      "expectedColor": "#A56D5F",
+      "jpegChannelTolerance": 4,
+      "nearSecondaryPixels": 5597,
+      "whiteTextPixels": 482,
+      "mostCommonColor": [
+        165,
+        109,
+        96
+      ]
+    }
+  ]
+}
