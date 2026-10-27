@@ -1,0 +1,11 @@
+{
+  "oh_modules/.ohpm/@ohos+httpclient@2.0.6/oh_modules/@ohos/httpclient/src/main/ets/Request.ts": "a5d2e7f27664e331fc9de3f4d43e01d2fba1fa1504265f39aa658e71f083ecd7",
+  "oh_modules/.ohpm/@ohos+httpclient@2.0.6/oh_modules/@ohos/httpclient/src/main/ets/RequestBody.ts": "f2c6813d712fdf2695f989b4f87e2c0e719bd94a910427f5384ee70af15763a1",
+  "hpt_network/src/main/ets/HPTNetwork.ts": "f44c7456eed7937c9afa0efda23f2ad9065439dfaea8891eb2b9b703956ad6dc",
+  "yzs_order/src/ohosTest/ets/test/ets/utils/tracking/FollowUpTracking.test.ets": "5a368f2278106429f12907786b7020a0a14e0c58b0fe187d84b726ced16bb402",
+  "yzs_order/src/main/ets/follow_up_tracking/FollowUpTrackingApi.ets": "fd3e8f4a0ce2076909cc7d65f77f33bf606b8e2dc319a19743e0141c226eff95",
+  "yzs_order/src/main/ets/follow_up_tracking/FollowUpTrackingService.ets": "4ca6d4f76637bc781c3133646bc3caa139834570460ffb08cbe563a1e25fd7f5",
+  "yzs_order/src/main/ets/follow_up_tracking/FollowUpTrackingTypes.ets": "3ea0d1e462aa27fd142ed001868044eae014aba05ce3bb6f4d4656cb10e03f89",
+  "yzs_order/src/main/ets/follow_up_tracking/FollowUpTrackingSession.ets": "c99c063b909bcc9fcea5f54499563fc4f2127a784e6492005caeb90b5572fb27",
+  "yzs_order/src/ohosTest/ets/test/List.test.ets": "d764452600537b8863904c76419e88202dcc335787493dd89ff47579e2acea96"
+}
