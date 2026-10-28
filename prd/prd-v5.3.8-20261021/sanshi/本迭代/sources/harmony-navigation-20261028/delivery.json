@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-28",
+  "scope": "消息中心、待办和活动Banner，按D01至D09已确认规则验证",
+  "repository": "hos_doctor",
+  "head": "f4c358cb8f3063a1bcca3b9d1e8c3d5c32264355",
+  "branch": "feature/sanshi/order-0518-Q42",
+  "host": {
+    "total": 129,
+    "passed": 129,
+    "failed": 0,
+    "groups": {
+      "existing": 24,
+      "message": 39,
+      "push": 17,
+      "todo": 11,
+      "bridge": 10,
+      "advertisement": 28
+    },
+    "sourceFilesHashed": 20,
+    "sourceHashesMatchAfterRun": true,
+    "boundary": "真实保存的ETS经TypeScript转译在Node运行；平台、页面导航目标、API及上报为隔离替身，不是ArkTS构建或设备UI测试"
+  },
+  "buildAttempts": [
+    {
+      "log": "main-build.log",
+      "status": "failed",
+      "errors": [
+        "Error Message: Cannot find the corresponding SDK version under the specified SDK path. SDK path: /Applications/DevEco-Studio.app/Contents/sdk/default."
+      ]
+    },
+    {
+      "log": "main-build-sdk-root.log",
+      "status": "failed",
+      "errors": [
+        "Error Message: Failed to execute node hook 'afterNodeEvaluate': 凭据配置缺失(环境 debug)，请在 local.secret.properties 或同名环境变量中提供: wsGwPwdDebug"
+      ]
+    }
+  ],
+  "device": {
+    "connectedCount": 1,
+    "newPackageInstalled": false,
+    "instrumentationExecuted": false,
+    "uiAutomationExecuted": false
+  },
+  "realBackendCalled": false,
+  "realPushDelivered": false,
+  "productionCodeModified": false,
+  "appScopeRestoredToBeforeBuild": true,
+  "gitStatusAfter": "",
+  "pending": [
+    "缺少调试凭据wsGwPwdDebug，当前源码对应测试包未生成，设备仪器化与UI未执行",
+    "D04真实投放旧协议和业务参数需真实数据测试核对",
+    "真实广告展示、Web内容、微信外部跳转、后台状态回写和远程Push尚未验证"
+  ]
+}
