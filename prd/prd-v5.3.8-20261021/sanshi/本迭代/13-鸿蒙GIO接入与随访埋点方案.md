@@ -1,10 +1,10 @@
 # 鸿蒙 GrowingIO 接入与随访埋点方案
 
-v1.0，2026-10-29，北京时间；本版文档已获用户确认，仅本地提交。关联产品需求 v1.15 的 SAN-REQ-009、SAN-AC-037～044；与既有 SAN-REQ-004、005、008 的随访业务及后台上报衔接。
+v1.1，2026-10-29，北京时间；本轮修订已获确认，仅本地提交。关联产品需求 v1.16 的 SAN-REQ-009、SAN-AC-037～044；与既有 SAN-REQ-004、005、008 的随访业务及后台上报衔接。
 
 本文件记录已确认架构、当前源码事实和供讨论的实施建议。本轮仅深度分析与更新文档，不创建模块、不修改生产代码、不安装依赖、不构建、不执行设备或接口验证。
 
-2026-10-29本轮评审与授权：先整理更新文档，交用户确认后仅在根文档仓库本地提交；文档提交完成后，再单独请求代码实施确认，取得该确认后才修改工程。用户现已确认本版文档，允许仅在根文档仓库本地提交；代码实施尚未授权，不安装SDK、不改代码。文档确认及提交只确认本版记录，不自动关闭SAN-Q-021至026；分享是否本期实施的业务确认也不等于代码实施授权。
+2026-10-29当前评审与授权：上版文档已本地提交5102793；用户现已确认本轮字段、分享与OHPM流程修订，授权仅本地提交文档、不推送。安装和同步须在文档提交后另行确认，当前不安装SDK、不sync、不改工程，未定元数据及平台条件继续分别维护。
 
 ## 1 本次目标与确认边界
 
@@ -15,7 +15,7 @@ v1.0，2026-10-29，北京时间；本版文档已获用户确认，仅本地提
 | 事项 | 当前结论 |
 | --- | --- |
 | GIO 业务清单 | 计划查看、微信分享、反馈查看、内容复制四项；事件标识符和属性以 06 号文档为准 |
-| 分享本期范围 | 保留在 GIO 清单；是否本期实施及可确认实际调起的节点仍待 SAN-Q-025，不因后台取消 APP 分享直报而删除 |
+| 分享本期范围 | 本期必须实施；用户确认沿用既有“成功唤起微信”逻辑，即真实dispatch后同次SDK成功与应用退后台共同成立，不采用sendReq单一判断 |
 | 通用 SDK 模块 | 用户确认手动创建 `hpt_analytics` 共享HSP；收尾已见shared脚手架和工程注册，SDK及统一工具尚未接入，本轮未代建或修改工程 |
 | SDK 与通用工具 | SDK 单一依赖、初始化实现及统一 `GioTracker` 工具位于 `hpt_analytics` |
 | 应用编排 | `entry` 调用通用工具，负责应用生命周期、授权、身份及环境配置的编排 |
@@ -23,7 +23,7 @@ v1.0，2026-10-29，北京时间；本版文档已获用户确认，仅本地提
 | AI 领域边界 | AI 业务仍由本领域维护；将来涉及的共用埋点放 `biz_ai/tracking`，本次不迁移或补齐历史 AI 点位 |
 | 后台上报 | 保留现有三项、字段、来源、防重、失败隔离和响应判断；分享仍由后台按原约定记录 |
 
-SDK 2.9.0、三项自动采集全部开启、具体授权持久化方案、医生身份采用 `D+id`、按包用途固定正式／测试数据源均属于此前讨论建议，尚未逐项确认为本期需求。实施前按 SAN-Q-021～026 收口，不能把建议写成已确认约束。
+SDK集成与版本策略已由用户确认：通过OHPM中心仓首次解析，第一次sync后核对实际版本，再固定精确版本，不预设2.9.0。三项自动采集全开、授权持久化、医生D+id及按包用途固定数据源仍为此前方案建议，尚未逐项确认。实施时按各任务相关的SAN-Q状态收口，Q021不加did已经关闭，不能把建议写成已确认约束。
 
 ## 2 核对基线与源码证据
 
@@ -69,7 +69,7 @@ SDK 初始化实现放 hpt，初始化时机由 entry 决定；这两个职责�
 
 保留现有 Service、Session、API 及字段类型的职责边界，在该目录增加随访 GIO 业务映射。计划、反馈、复制、分享使用清单规定的业务方法，不让页面拼接任意 GIO 字典。
 
-同一次业务行为先形成订单和属性快照，再分别交给 GIO 与后台通道；两路不互等成功、不互相决定是否发送。分享是否增加本地触发仍以 SAN-Q-025 为准。
+同一次业务行为先形成订单和属性快照，再分别交给 GIO 与后台通道；两路不互等成功、不互相决定是否发送。分享本期必须增加本地GIO触发，实际调起按用户确认的既有成功唤起规则执行，Q025关闭。
 
 现有跨业务入口通过既有路由进入最终随访页面，不能据此声称其他模块已直接调用随访上报；本次不为埋点重构消息、咨询、待办或开方路由。
 
@@ -81,7 +81,18 @@ AI 已有 [AIBehaviorTrackingService.ets:5](/Users/hpt-sans/Desktop/allplatform/
 
 ### 4.1 配置、启动与窗口监听
 
-建议核验并锁定 GrowingIO HarmonyOS SDK 2.9.0 的实际包接口；按新版 `configure` 与启动采集分离的能力设计，不混用不同版本示例。通用工具对配置和启动做进程级防重，页面刷新不重新初始化。
+用户已确认采用OHPM中心仓集成，版本流程按SAN-DEC-053执行。只有在文档确认提交后另行取得代码／依赖实施授权，才执行以下步骤；本轮没有安装或sync：
+
+1. 在`hpt_analytics`模块目录执行`ohpm install @growingio/analytics`，首次由中心仓解析，不预先指定2.9.0或猜测最新版本。
+2. 第一次sync完成后，核对模块锁文件和实际安装包元信息中的GIO版本，记录真实解析结果；不能只看依赖声明中的范围或线上文档版本。
+3. 将模块`oh-package.json5`中的直接依赖固定为首次实际解析的精确版本`X.Y.Z`，不保留`^`、`~`、`latest`等浮动声明；保留OHPM生成的对应锁文件，不手改锁文件版本制造一致。
+4. 再sync一次，确认声明、锁文件和实际包版本一致且未漂移；只处理本次GIO及必要传递依赖，不顺带升级其他SDK。若首次解析或同步失败，如实记录，不能宣称已锁版。
+
+项目当前未启用统一锁文件，按实际OHPM生成位置核对`hpt_analytics`模块锁文件；如工具实际生成位置不同，先核对配置而不是凭空补写。首次sync及锁版只证明依赖解析结果，不代表构建、设备或平台收数通过。
+
+当前代码仓库.gitignore忽略所有oh-package-lock.json5，现无已跟踪模块锁文件。本次“固定版本”以hpt_analytics依赖声明的精确版本为准，OHPM生成锁文件本地保留用于一致性核对，沿用现有忽略规则，不默认修改.gitignore或整体解禁锁文件。若后续要求连同传递依赖锁文件纳入版本记录，再明确该模块的单文件例外。
+
+初始化API与能力按这次最终锁定的实际包核对，不混用调研示例版本。通用工具对配置和启动做进程级防重，页面刷新不重新初始化。
 
 若确认开启无埋点，窗口监听放在 [EntryAbility.ets:197](/Users/hpt-sans/Desktop/allplatform/hos_doctor/entry/src/main/ets/entryability/EntryAbility.ets:197) 的 `loadContent` 成功回调，通过工具调用厂商窗口方法；加载失败不安装。按窗口对象防重复，窗口重建不能被一个永久布尔标志挡住。
 
@@ -97,7 +108,7 @@ AI 已有 [AIBehaviorTrackingService.ets:5](/Users/hpt-sans/Desktop/allplatform/
 
 建议在冷启动恢复和每次真实登录后同步当前身份，登出清除、切账号先清旧身份；相同身份的资料刷新不反复设置。医生 `D+id` 只是此前建议，不能与额外事件属性 `did` 混为同一约定。
 
-[Mine.ets:101](/Users/hpt-sans/Desktop/allplatform/hos_doctor/entry/src/main/ets/pages/Mine.ets:101) 已说明账号切换时 doctor 详情可能暂为旧账号。身份来源、医生／助手口径及是否增加 `did` 分别按 SAN-Q-021、026 确认，不读取旧详情补新账号信息。
+[Mine.ets:101](/Users/hpt-sans/Desktop/allplatform/hos_doctor/entry/src/main/ets/pages/Mine.ets:101) 已说明账号切换时 doctor 详情可能暂为旧账号。事件属性did已确认不增加；SDK身份来源及医生／助手口径仍按SAN-Q-026确认，不读取旧详情补新账号信息。
 
 ### 4.3 环境、依赖与配置
 
@@ -125,8 +136,8 @@ GIO 上传键为 `recipel_pay_orderid`，取模型或入口中已确认的支付
 
 | 字段／含义 | 已核对的客户端规则 | 方案边界 |
 | --- | --- | --- |
-| `reply_status` | [OrderStatusInfo.ets:9](/Users/hpt-sans/Desktop/allplatform/hos_doctor/yzs_order/src/main/ets/models/OrderStatusInfo.ets:9)：1运输中、2已签收、3服药中、4待反馈、5已反馈、6已完结；0在模型中覆盖非标准状态，枚举另作“全部”筛选值 | 不能自行给 GIO 的0编造业务文案；完整统计枚举待 SAN-Q-023 |
-| 状态展示文案 | [DoctorOrderListModel.ets:301](/Users/hpt-sans/Desktop/allplatform/hos_doctor/yzs_order/src/main/ets/models/DoctorOrderListModel.ets:301)：状态大于0且后台文案非空时优先用后台文案，再用已有兼容映射 | 页面显示规则不自动成为全部 GIO 统计枚举 |
+| `reply_status` | [OrderStatusInfo.ets:9](/Users/hpt-sans/Desktop/allplatform/hos_doctor/yzs_order/src/main/ets/models/OrderStatusInfo.ets:9)：1运输中、2已签收、3服药中、4待反馈、5已反馈、6已完结；0在模型中覆盖非标准状态，枚举另作“全部”筛选值 | 不能自行给 GIO 的0编造业务文案；GIO的1至6文案现按06清单9.3节；0及未知策略仍待SAN-Q-023 |
+| 状态展示文案 | [DoctorOrderListModel.ets:301](/Users/hpt-sans/Desktop/allplatform/hos_doctor/yzs_order/src/main/ets/models/DoctorOrderListModel.ets:301)：状态大于0且后台文案非空时优先用后台文案，再用已有兼容映射 | GIO已由用户指定1至6文案，不直接用任意后台文案覆盖；不改变原页面规则 |
 | `reply_type` | [OrderStatusInfo.ets:19](/Users/hpt-sans/Desktop/allplatform/hos_doctor/yzs_order/src/main/ets/models/OrderStatusInfo.ets:19)：1正常、2整体好转、3需关注、4客服回访中、5客服回访完结、6无明显变化 | 不能只抄旧端2～5映射，忽略当前鸿蒙已有6 |
 | 反馈标签 | [MakePrescribeDetail.ets:332](/Users/hpt-sans/Desktop/allplatform/hos_doctor/yzs_order/src/main/ets/view_models/MakePrescribeDetail.ets:332) 对2～6给标签，其他返回空 | UI空标签不等于 GIO 应上传空分类，未知／缺失处理待确认 |
 
@@ -142,7 +153,7 @@ GIO 上传键为 `recipel_pay_orderid`，取模型或入口中已确认的支付
 
 分享如纳入本期，应在版本同步前保存该次选择快照，保证上报对应同步成功并用于本次分享的版本，不能在异步返回后读取可能已切换的页签。
 
-`timeSpan` 的格式、单位与时区仍待 SAN-Q-024。此前 iOS 对照值不作为鸿蒙已确认约定；业务发生时刻与后台写入时刻分别表达，GIO 不以后台 `create_at` 冒充客户端发生时间。
+`timeSpan`已由用户确认使用字符串yyyy/MM/dd HH:mm:ss、精度到秒，统一使用Asia/Shanghai北京时间，Q024关闭。本次GIO不加did；复制accountType固定字符串"1"。这些是本轮直接确认，不是从iOS推定。业务发生时刻与后台写入时刻分别表达，不以create_at冒充客户端时间；完整规则见06清单9.3节。
 
 ## 6 四类事件的接入节点
 
@@ -151,23 +162,36 @@ GIO 上传键为 `recipel_pay_orderid`，取模型或入口中已确认的支付
 | 计划查看 | [FollowUpPlanDialog.ets:220](/Users/hpt-sans/Desktop/allplatform/hos_doctor/yzs_order/src/main/ets/pages/FollowUpPlanDialog.ets:220)：成功内容实际出现，并经 Session 校验可见、订单及加载令牌 | 在同一真实展示节点构造 GIO 快照；入口点击、加载失败和仅有 HTTP 成功不计 |
 | 反馈查看 | [CompleteFeedbackDialog.ets:198](/Users/hpt-sans/Desktop/allplatform/hos_doctor/yzs_order/src/main/ets/complete_feedback/CompleteFeedbackDialog.ets:198)：小结、答案、舌象或助手建议实际展示 | 复用最终反馈与来源透传，不在消息、咨询、中间详情各发一次 |
 | 内容复制 | [CompleteFeedbackDialog.ets:593](/Users/hpt-sans/Desktop/allplatform/hos_doctor/yzs_order/src/main/ets/complete_feedback/CompleteFeedbackDialog.ets:593)：系统剪贴板写入成功 | 三处复制沿用现有 UI 和成功节点；失败不发，同次回调不重复，每次主动成功复制可分别记录 |
-| 微信分享 | 版本同步后尝试调用分享；现有公开方法没有可供业务判断的返回结果 | 清单保留；是否本期实施和确切实际调起信号待 SAN-Q-025，不能暂用同步成功或方法返回充数 |
+| 微信分享 | 版本同步后走原生小程序分享，当前未接既有唤起Tracker | 本期必做，按BridgeWechatShareTracker同次SDK成功＋dispatch后的退后台结果记录，不用同步成功、void结束或仅sendReq计数 |
 
 不新增空内容过滤。问卷答案入口当前已有“暂无可复制内容”判断，其他复制继续按实际写入是否成功处理；如需改变空复制统计口径，须另行确认，不能照搬 iOS 非空限制。
 
 查看频次保留一次逻辑打开周期一次，同周期刷新、遮挡返回不重复，关闭后重开可计；不永久按订单去重。GIO 使用独立通道尝试状态，不能因后台已尝试、失败或未成功而决定是否统计 GIO。
 
-### 6.1 分享结果的具体缺口
+### 6.1 已核对的既有微信唤起成功链路
 
-`syncSelectedVersion()` 成功只证明版本同步接口成功，不证明微信调起；后台在该阶段记录的分享发起也不能证明客户端跳转。
+用户明确要求沿用既有“是否成功唤起微信”的逻辑，否决仅以sendReq返回值计数。当前现成规则在[BridgeWechatShareTracker.ets:117](/Users/hpt-sans/Desktop/allplatform/hos_doctor/biz_share/src/main/ets/utils/BridgeWechatShareTracker.ets:117)：同一次transaction的sdkAccepted和appBackgrounded都成立才完成success；不等待回前台、用户发送或患者收到。Q025按这一明确要求关闭，不重新设计统计门槛。
 
-直接小程序链路为 `ShareUtil.shareMiniProgram → sendMiniProgramRequest → WeChatShare.share → sendMessage → WeChatShareService.sendReq`。前两层丢弃结果；底层 [ShareWechat.ets:198](/Users/hpt-sans/Desktop/allplatform/hos_doctor/biz_share/src/main/ets/utils/ShareWechat.ets:198) 能取得 SDK 是否接受请求的布尔值。
+现有V2链路为ShareAction→shareWX：begin建立独立transaction并清理旧请求；[Share.ets:278](/Users/hpt-sans/Desktop/allplatform/hos_doctor/biz_share/src/main/ets/utils/Share.ets:278)在图片与缩略图准备完成、真正调用SDK前markDispatchStarted；SDK结果交给completeSend；[EntryAbility.ets:258](/Users/hpt-sans/Desktop/allplatform/hos_doctor/entry/src/main/ets/entryability/EntryAbility.ets:258)将onBackground发到eventHub。Tracker只给已开始dispatch的尝试关联后台信号，SDK结果与退后台先后顺序不限。
 
-最小改造候选是在原生分享路径增加可选结果／调起回调，保持既有调用方和提示，再由随访业务消费单次结果。SDK接受与真实调起是否等价须核对厂商契约并实机验证，不能仅把布尔值改名为“已跳转”。
+| 既有行为 | 本次复用要求 |
+| --- | --- |
+| 成功条件 | 同次真实dispatch后SDK成功＋应用退后台共同成立，单独任一信号不算 |
+| 准备阶段 | 下载／压图期间退后台不算本次微信唤起 |
+| 单次归属 | 新请求替换旧pending，旧结果不能完成新请求；使用本次支付订单和实际表单版本快照 |
+| 成功防重 | 完成时先清pending／定时器再通知，同次回调只完成一次，不按订单永久去重 |
+| 失败与清理 | SDK失败、异常等沿用原fail处理；现有10分钟到期静默清理、注销清理保持，不借超时补成功 |
+| 业务含义 | 按既有客户端成功唤起规则记录分享发起，不改为患者发送／送达或微信最终业务回执统计 |
 
-项目另有 [BridgeWechatShareTracker.ets:14](/Users/hpt-sans/Desktop/allplatform/hos_doctor/biz_share/src/main/ets/utils/BridgeWechatShareTracker.ets:14)，在 V2 Web 分享中关联真正开始发送、SDK接受与应用退后台。可评估复用该关联思路，但“两条件”及其超时值不是本需求已确认策略，也不是患者收到／发送成功的证明。
+`syncSelectedVersion()`成功只证明版本同步成功；[Share.ets:617](/Users/hpt-sans/Desktop/allplatform/hos_doctor/biz_share/src/main/ets/utils/Share.ets:617)的直接原生小程序入口目前未接Tracker，并且丢弃结果，不能用其await结束作为成功。Legacy的ShareSuccessCallBack（90010）在真正发送前就可能发出，也不能拿名称当成功证据。
 
-若最终采用异步调起回调，应按独立分享尝试关联，防止旧结果匹配新分享；准备图片期间切后台不能当成调起，SDK拒绝或异常不能误记。现有流程先关闭弹窗再分享，不能仅因页面已关闭就丢弃真实调起结果；保留所需快照，不依赖弹窗对象完成上报，也不把患者发送或收到作为本事件门槛。
+### 6.2 原生随访分享的最小接入方案
+
+在现有biz_share内为直接原生小程序分享增加可选的唤起结果回调，复用同一套dispatch、SDK结果、退后台关联、单次完成与清理规则。原V2的traceid/action及BridgeBizResponse回包保持；原生调用不伪造Web协议字段，不冒发Web回包，也不让随访模块自行监听全局90010或另写一套唤起判断。
+
+版本同步前保留本次订单及所选表单版本快照，成功同步后用于真实分享；分享层持有本次尝试，在同次最终success时通知随访业务，业务再调用hpt_analytics记录三项GIO属性。timeSpan取该成功唤起判定时刻，统一Asia/Shanghai北京时间，不取点击／版本同步时刻。
+
+当前流程先关闭随访弹窗再分享，因此分享尝试、回调及快照不依赖已关闭的查看Session。仅新增本次原生结果接入能力，保留其他分享调用方、失败提示及Web协议行为；未获代码实施确认前不改工程。
 
 ## 7 两通道的兼容、校验与失败隔离
 
@@ -185,22 +209,22 @@ GIO 的工具调用成功只能说明提交给 SDK，不能作为平台已入库
 
 ## 8 实施顺序与验证边界
 
-以下仅为取得单独代码实施确认后的执行计划。当前先完成文档审阅；用户确认后只提交根文档仓库，再请求代码实施确认。不得把文档确认、文档提交或分享业务确认替代代码授权。
+以下仅为取得单独工程实施确认后的计划。本轮文档已确认，先仅本地提交、不推送；完成后另请用户确认安装和sync。当前不执行安装、同步或工程修改，文档提交不替代工程授权。
 
 | 阶段 | 当前状态 | 进入下一阶段的条件 |
 | --- | --- | --- |
-| 文档整理与审阅 | 需求、方案及关联计划已更新，用户已确认本版内容 | 用户确认按本版内容本地提交；未定项可明确保留，不要求全部关闭 |
-| 根文档仓库本地提交 | 用户已授权；仅涉及本轮12份Markdown，执行结果以Git历史为准，不含原Excel或三个代码仓库 | 用户确认提交后执行本地commit，不配置远端、不推送 |
+| 文档整理与审阅 | 上版已提交5102793，用户已确认本轮修订 | 本轮仅授权本地提交文档，未定业务／平台条件保留 |
+| 根文档仓库本地提交 | 本轮已获授权，结果以Git历史为准，范围为12份Markdown | 仅本地commit、不推送，不含Excel或代码仓库；完成后另请用户确认安装／sync |
 | 代码实施 | 未授权、未执行 | 文档提交完成后，再单独请求并取得实施确认；按对应任务依赖开展，不默认授权代码commit或push |
 
 业务依赖按任务分开，不能把所有待确认项串成每一步的共同阻塞条件：
 
 | 工作 | 必要条件 | 不作为共同前置的事项 |
 | --- | --- | --- |
-| 018 SDK公共能力与entry接线 | 代码实施授权；Q026中与本阶段相关的SDK版本／产品线、采集与授权／身份方案确认。真实配置值齐备后再做运行联调 | 是否增加事件属性did（Q021）、随访属性完整规则（Q022至024）、分享本期范围（Q025）不阻塞与其无关的通用能力实现 |
-| 019 计划／反馈／复制GIO | 基础能力就绪；各事件对应类型／必填缺失、状态／关注及时间规则确认后逐项接入；若最终增加did，再补该字段契约 | Q025仅影响分享，不阻塞其余三项；Q021决定不增加did时仍可完成SDK登录身份功能 |
-| 020 分享条件任务 | 独立代码实施授权已取得；Q025确认纳入本期及实际调起判定，并具备该事件属性契约 | 不以iOS缺失或后台任务取消代替本次业务决定；未确认时只保留清单 |
-| 021 检查与联调 | 对已实施范围完成相应检查；真实GIO和后台环境具备后分别核对 | 未实施的分享保持条件项，不把它记为已通过，也不据此否定已完成独立范围 |
+| 018 SDK公共能力与entry接线 | 代码／依赖实施授权；OHPM中心仓首次sync后锁实际精确版本的策略已确认，实际版本执行后记录；平台产品线、采集／授权／身份方案按Q026收口，配置齐备后联调 | 不等待额外did（已不加）、随访属性或分享规则来确定通用能力；不以调研2.9.0代替实际解析版本 |
+| 019 计划／反馈／复制GIO | 基础能力及单独代码授权；按事件补齐余下元数据／关注分类和可靠来源；复制字符串1、六种诊后文案、北京时间格式及不加did均已定 | 不再等待Q021／024／025已确认业务；分享接线只影响020，SDK登录身份独立归Q026 |
+| 020 本期分享任务 | 单独代码实施授权及SDK／该事件数据条件；本期范围和既有唤起成功判定已确认，原生链路需接入同套规则 | 不以单独sendReq、版本同步或void方法结束代替最终success，不因页面已关闭丢失本次结果 |
+| 021 检查与联调 | 对已实施范围完成相应检查；真实GIO和后台环境具备后分别核对 | 分享本期及既有判定均已定，尚未接线／运行验证，不记已通过；相应接线不阻塞无关独立范围 |
 
 取得授权后的建议顺序：
 
@@ -208,7 +232,7 @@ GIO 的工具调用成功只能说明提交给 SDK，不能作为平台已入库
 2. 核对已出现的共享HSP脚手架、模块注册及用户原有改动，再补通用工具、唯一SDK依赖及必要构建配置；不重建或覆盖现有模块。
 3. 在 entry 衔接配置、授权、身份和窗口生命周期，先验证正式／测试隔离与 SDK 基础事件。
 4. 在 `yzs_order/follow_up_tracking` 补领域快照和 GIO 映射，按确认结果补齐模型数据；保留现有 GAPI 与路由。
-5. 仅在 SAN-Q-025 确认本期实施后，补分享结果的最小能力并接入业务事件。
+5. 分享已纳入本期且按既有成功唤起逻辑；获代码授权后补原生结果回调接线并接入事件。
 6. 执行与变更相关的静态检查、模块／主包构建和必要逻辑检查，再用真实设备及 GIO 平台核对实际数据。
 
 | 验证内容 | 对应验收 | 应验证的行为 |
@@ -217,7 +241,7 @@ GIO 的工具调用成功只能说明提交给 SDK，不能作为平台已入库
 | 计划查看 | SAN-AC-038 | 列表／详情来源，成功显示才计；失败、刷新、重开及迟到加载回调符合频次 |
 | 反馈查看 | SAN-AC-039 | 七类实际入口保留透传，最终原生反馈才计；不把中间详情和 H5 当作完整反馈 |
 | 复制 | SAN-AC-040 | 小结、舌象、问卷写入成功计；失败不计、重复回调不多计，不额外改变空内容 UI |
-| 分享条件验收 | SAN-AC-041 | 仅按 SAN-Q-025 收口后的范围和信号执行；同步成功但未调起不得误记，版本与本次尝试一致 |
+| 本期分享验收 | SAN-AC-041 | 仅SDK成功或仅退后台不计，准备阶段后台不计；同次两条件先后顺序均可成功且只计一次，失败／旧请求／超时不误计 |
 | 双通道 | SAN-AC-042 | 任一路失败或不可用不阻断另一路及业务；后台码判断、字段和无业务主动重试保持 |
 | 元数据 | SAN-AC-043 | 支付订单、状态、分类、实际表单版本及时间符合确认契约，消息等缺上下文入口不猜值 |
 | SDK 基础条件 | SAN-AC-044 | 按确认配置验证授权、身份、环境、窗口监听及自动采集，不以 SDK 日志代替事件验收 |
@@ -228,15 +252,17 @@ GIO 的工具调用成功只能说明提交给 SDK，不能作为平台已入库
 
 | 编号 | 实施前最少需要明确的内容 |
 | --- | --- |
-| SAN-Q-021 | 是否在十五项属性之外增加 `did`；其含义、医生／助手归属、类型及与登录身份的关系 |
-| SAN-Q-022 | 十五项属性的精确类型、必填性和缺失处理；不借此新增空复制限制 |
-| SAN-Q-023 | 状态和反馈关注分类的完整枚举、未知值处理，以及所有入口可用的可靠数据来源 |
-| SAN-Q-024 | `timeSpan` 格式、精度／单位及时区口径 |
-| SAN-Q-025 | 微信分享是否本期实施，以及怎样确认本次分享已实际调起；异步结果与失败边界 |
-| SAN-Q-026 | SDK 平台与数据源、版本和自动采集选项、身份、授权及正式／测试运行基础条件 |
+| SAN-Q-021 | 已关闭：不增加事件／公共业务属性did；不取消SDK内置登录身份 |
+| SAN-Q-022 | 复制accountType字符串"1"及timeSpan字符串格式已定；其余属性类型／必填缺失仍待补 |
+| SAN-Q-023 | 诊后1至6文案已定；0／空／未知策略、反馈关注accountType完整枚举及响应字段来源仍待补 |
+| SAN-Q-024 | 已关闭：字符串yyyy/MM/dd HH:mm:ss，精度到秒，统一Asia/Shanghai北京时间 |
+| SAN-Q-025 | 已关闭：分享本期必须做，按用户要求沿用既有成功唤起判定（同次真实dispatch后SDK成功＋退后台）；原生接线及验证仍待实施 |
+| SAN-Q-026 | 安装与版本流程已确认：OHPM首次sync后核对并固定实际精确版本。平台／鸿蒙应用配置、自动采集、身份、授权和环境分工仍待收口；实际版本是执行事实，当前不虚填 |
 
 产品与属性依据：[产品需求](01-产品需求.md)、[APP埋点清单](06-APP埋点清单.md)；后台既有分工：[后台协议对照与确认](10-随访埋点后台协议对照与确认.md)。
 
 SDK 来源：[用户提供的鸿蒙集成文档](https://help-center.growingio.com/@sdk-v4/docs/framework/harmonyos/index.html)、[GrowingIO 官方鸿蒙仓库](https://github.com/growingio/growingio-sdk-harmonyos)、[官方集成说明](https://growingio.github.io/growingio-sdk-docs/docs/framework/harmonyos/Introduce)、[无埋点配置](https://growingio.github.io/growingio-sdk-docs/docs/framework/harmonyos/Autotrack)、[数据采集 API](https://growingio.github.io/growingio-sdk-docs/docs/framework/harmonyos/api)。实施时以确认版本实际接口和平台条件为准。
 
-本版状态：本轮需求及方案文档已整理并获用户确认，仅本地提交；代码执行须提交后另行确认。SDK、通用工具和四项 GIO 点位未开发，分享本期实施仍待确认。原后台三项已完成的历史开发结论保持，不能与新增 GIO 合并声明为全部完成。
+本版状态：上版已提交5102793；本轮v1.1修订已确认，仅本地提交、不推送，安装和sync仍需提交后另行确认。SDK、通用工具及四项点位未开发；分享本期必做，既有判定已确认，原生接线与验证仍未实施。原后台三项已完成的历史开发结论保持，不能与新增 GIO 合并声明为全部完成。
+
+2026-10-29安装策略确认（SAN-DEC-053）：采用OHPM中心仓，第一次sync核对实际解析版本后再固定依赖和锁文件，第二次sync确认一致；不预设2.9.0。本轮仅改文档，未执行安装／sync，未提交，代码／依赖实施仍需单独确认。
