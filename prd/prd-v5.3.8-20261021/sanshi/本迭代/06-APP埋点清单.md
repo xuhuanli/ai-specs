@@ -1,10 +1,14 @@
 # V5.3.8 sanshi APP 随访埋点清单
 
-v1.3，2026-10-27，北京时间；关联产品需求v1.14的SAN-REQ-004、005、008。原业务目标于10月22日确认；后台API已于本次提供，按[GitLab #666](https://git.igancao.com/root/work-log/-/issues/666)整理。接口文档与旧业务口径存在差异，分享转后台、消息中心与系统推送统一归属Push已获确认；字段统计口径也已确认按后台文档，消息枚举已收口为Push，工具阶段已确认提交8090805d7，三项原生点位及咨询新增链路已提交366a91b51、未推送；真实设备／后台未验，AI独立页来源已按SAN-Q-020关闭决定归开方页；AI来源补充已提交8f06831ff、未推送，剩余真实验证在测试阶段执行。
+v2.0，2026-10-29，北京时间；关联产品需求v1.15的SAN-REQ-004、005、008、009。本清单分别维护自有后台GAPI与GrowingIO（GIO）两个通道：后台三项已开发，原交付及未验证范围保持；新增GIO原表四项、15项事件属性，尚未接入SDK或点位。分享保留在GIO清单，本期是否实施及实际调起判定待SAN-Q-025。
 
-完整解读、11类事件分工、差异与计划见[后台协议对照与确认](10-随访埋点后台协议对照与确认.md)，原文摘录见[来源资料](../sources/后台随访埋点-issue666-20261027.md)。[原Excel清单](06-APP埋点清单.xlsx)保留10月22日四项业务／15项参数的历史基线，本轮未改Excel，不作为新接口直接上传字段表；避免把旧业务名自动当成新API字段。
+第1至7节描述自有后台协议，第8节保留历史记录，第9至11节为本轮GIO清单与核对结论。此前“APP取消分享直报”“时间／状态由后台生成”“不传accountType”等决定只约束SET_FOLLOW_UP_TAG，不能据此删除GIO同名事件或属性。查看周期、成功节点及复制防重属于已确认的业务口径，按两个通道各自条件应用。
 
-## 1 原业务目标与后台分工对照
+后台完整解读与11类事件分工见[10号对照](10-随访埋点后台协议对照与确认.md)，GIO工程落点与数据缺口见[13号方案](13-鸿蒙GIO接入与随访埋点方案.md)。[本目录历史Excel](06-APP埋点清单.xlsx)保留10月22日整理基线，未修改；本轮重新核对的原始来源为[ai助手埋点上报清单.xlsx](/Users/hpt-sans/Desktop/ai助手埋点上报清单.xlsx)“2026.10-埋点”页。原表标题仍写V5.3.6，本次只引用其中随访要求，不改变本需求的V5.3.8归属。原15项用于GIO业务清单，不作为自有后台新接口的直接上传字段表。
+
+本版清单已获用户确认，按授权仅本地提交，文档提交不自动确认SAN-Q-021至026或授权代码修改；提交后须另行取得实施确认，见SAN-DEC-049及13号方案第8节。分享的业务范围确认与代码实施确认分别维护。
+
+## 1 自有后台：原业务目标与分工对照
 
 | 事件 | 原APP目标 | 后台当前说明 | 本轮状态 |
 | --- | --- | --- | --- |
@@ -15,7 +19,7 @@ v1.3，2026-10-27，北京时间；关联产品需求v1.14的SAN-REQ-004、005�
 
 后台所谓“四个前端事件”包含患者端followup_form_open。按后台文档分工，医生APP直报三项；APP分享直报已由用户确认取消。患者端不纳入本人的鸿蒙任务。
 
-## 2 接口及实际请求字段
+## 2 自有后台：接口及实际请求字段
 
 包名`igc_crm.recipel.client`，接口`SET_FOLLOW_UP_TAG`。已沿用鸿蒙GAPI网络封装，不使用旧AI诊疗的SET_AI_SUMMNARY_TAG，不自行增加REST地址。
 
@@ -29,9 +33,9 @@ orderid使用药方支付单号，对应旧recipel_pay_orderid，不使用随访
 
 无出参；00000为成功，10001为event非法，10002为药方不存在或插入失败。判断业务状态码，不要求data非空，不只看HTTP状态；10002的两种原因不混为一谈。
 
-## 3 原15项参数逐项处理
+## 3 原15项GIO属性与自有后台字段的对照
 
-此表保留原业务参数语义；“后台处理”不等于已验证后台实现。用户已确认时间和状态由后台处理，反馈查看不再上传关注状态快照，SAN-Q-019已关闭。
+此表说明原15项在自有后台通道如何处理，不取代第9节GIO上传要求。“后台处理”不等于已验证后台实现；SAN-Q-019关闭的是后台派生字段口径，GIO仍需自己的发生时间、状态文案及关注状态。
 
 | 原事件 | 原参数 | 原含义 | 新接口处理／差异 |
 | --- | --- | --- | --- |
@@ -89,7 +93,7 @@ orderid使用药方支付单号，对应旧recipel_pay_orderid，不使用随访
 2. SAN-Q-018已关闭：消息中心和系统推送同归属Push，event_tag均传Push；旧独立来源决定已替代。
 3. SAN-Q-019已关闭：接受后台时间／状态／复制标识，不再上传反馈查看关注状态快照。
 
-三项用户决定及协议待补内容见10号对照文档；消息中心上传值已确认，来源枚举没有待补项。工具及三项上报开发完成；AI独立入口新增来源已补齐，本轮尚未提交。真机与后台写库由测试阶段核验，不新增测试归档。
+三项用户决定及后台协议待补内容见10号对照文档；后台消息来源已确认，工具及三项上报已完成，AI独立入口来源补充已提交8f06831ff、未推送。真机与后台写库仍由测试阶段核验。新增GIO依赖单列于第11节，不重开原后台任务；本轮没有新增测试执行归档。
 
 ## 8 历史确认记录
 
@@ -106,3 +110,75 @@ orderid使用药方支付单号，对应旧recipel_pay_orderid，不使用随访
 2026-10-27实施核对完成：三项事件、规定字段、来源映射及成功触发均与当前代码一致。120进入详情并成功展示完整反馈，与271／273及顶部提示同传咨询 IM 卡片；未成功展示不发查看。咨询修正已提交42c9e530b，文档独立本地提交，不推送。
 
 2026-10-27当前决定：AI独立读文识图入口也记录反馈查看，来源为开方页，SAN-Q-020关闭；这覆盖历史记录中该入口待确认的阶段描述。开发完成，剩余真实环境验证转测试阶段，本轮补充未提交。
+
+## 9 鸿蒙GIO四项事件与十五项属性
+
+本节为2026-10-29用户确认的GIO业务清单。原始Excel中M列标记GIO的医生端条目为计划4项、分享3项、反馈5项、复制3项，共4事件／15属性；不包含did。表内“属性数”按各事件分别计，不是15个互不重复的字段名。
+
+### 9.1 事件及触发边界
+
+| 事件标识 | 鸿蒙接入位置与触发条件 | 频次及本期状态 |
+| --- | --- | --- |
+| followup_plan_view | [计划展示节点](/Users/hpt-sans/Desktop/allplatform/hos_doctor/yzs_order/src/main/ets/pages/FollowUpPlanDialog.ets:227)，内容加载成功、实际展示且页面可见；仅看到或点击入口不计 | 同一打开周期一次，刷新／重建不重发，关闭后重开成功可再计；待实施 |
+| followup_wechat_share_initiate | [微信分享入口](/Users/hpt-sans/Desktop/allplatform/hos_doctor/yzs_order/src/main/ets/pages/FollowUpPlanDialog.ets:676)，实际调起分享流程的可确认节点；单纯点击或版本同步成功不足以触发 | 四项清单中保留；本期是否实施及具体判定待SAN-Q-025，未确认前不开发或写已取消 |
+| followup_feedback_view | [完整反馈展示节点](/Users/hpt-sans/Desktop/allplatform/hos_doctor/yzs_order/src/main/ets/complete_feedback/CompleteFeedbackDialog.ets:205)，任意入口最终正文／小结成功展示且页面可见；中间页不代替最终展示 | 同一打开周期一次，重开重计；沿用第4节七入口／六上传来源；待实施 |
+| followup_summary_copy | [剪贴板成功节点](/Users/hpt-sans/Desktop/allplatform/hos_doctor/yzs_order/src/main/ets/complete_feedback/CompleteFeedbackDialog.ets:594)，小结、舌象结论、问卷答案三个区域共用事件 | 每次主动写入成功记一次；同操作重复回调不多计，失败不报，不增加区域属性；待实施 |
+
+查看周期与复制防重沿用原用户确认，不声称原Excel单独规定了频次。GIO不根据入口点击替代实际展示，也不将后台返回成功作为发出GIO的前提。分享统计发起，不证明患者发送或收到。
+
+### 9.2 原表属性及鸿蒙业务语义
+
+下表固定事件、属性名及已确认业务含义；全表网络类型、必填性和缺失处理仍待SAN-Q-022核对GIO元数据，不把示例自动变为默认值。
+
+| 事件 | 属性 | 含义与已确认取值 |
+| --- | --- | --- |
+| followup_plan_view | timeSpan | 计划查看发生时刻；格式、时区与精度待SAN-Q-024，不是时长 |
+| followup_plan_view | event_tag | 进入来源：开方记录／开方详情 |
+| followup_plan_view | count_type | 当前诊后状态文案；完整枚举及数据来源待SAN-Q-023，不直接传reply_status数字 |
+| followup_plan_view | recipel_pay_orderid | 本次随访所属药方支付订单号 |
+| followup_wechat_share_initiate | event_tag | 实际分享的表单版本：默认版／简易版／详细版；不使用已失效的选择或写死默认版 |
+| followup_wechat_share_initiate | timeSpan | 实际分享发起时刻，不能取单纯点击或版本同步时刻 |
+| followup_wechat_share_initiate | recipel_pay_orderid | 本次分享关联的药方支付订单号 |
+| followup_feedback_view | event_tag | 待办／咨询 IM 卡片／Push／开方页／开方记录列表页／开方详情；消息中心和系统推送同传Push |
+| followup_feedback_view | count_type | 当前诊后状态文案，完整枚举及来源待SAN-Q-023 |
+| followup_feedback_view | timeSpan | 完整反馈查看发生时刻，网络格式待SAN-Q-024 |
+| followup_feedback_view | accountType | 反馈关注状态；完整枚举及未知值处理待SAN-Q-023，不与复制标识混用 |
+| followup_feedback_view | recipel_pay_orderid | 当前实际展示反馈所属药方支付订单号 |
+| followup_summary_copy | count_type | 当前诊后状态文案，取本次成功复制行为关联上下文 |
+| followup_summary_copy | accountType | 复制成功标识，语义值为1；字符串或数字由SAN-Q-022确认，失败不发事件 |
+| followup_summary_copy | recipel_pay_orderid | 当前复制内容所属药方支付订单号 |
+
+`recipel_pay_orderid`与后台`orderid`当前是同一支付单业务标识的不同上传键名，不是两类订单。不能用invest_serial、患者ID、AI任务ID、当前新处方号或origin_orderid替代；路由与本次加载响应不一致时不得拼出混合订单事件。当前最终页模型只保留部分字段，状态／关注等数据补齐方案见13号文档，不假定全入口已经具备GIO属性。
+
+本轮不新增复制内容非空门槛，不照搬iOS空内容过滤，也不改变此前已确认的空内容UI行为。以实际剪贴板写入成功判定，提示文案本身不能证明写入或上报成功。若后续要求改变空内容计数，须另行确认业务规则。
+
+## 10 指定iOS提交的静态对照
+
+核对对象为本地保存的`origin/feature/kqc-随访埋点-Q41`，精确提交`6be8af95806635add150b9543c8a9c692dfd4fc8`，作者与提交时间均为2026-10-29 10:10:18北京时间。只读使用该Git对象，未切分支或拉取；不是此前本地develop的实现结论，不证明已合入发布版本或后台已收到。
+
+| GIO事件 | 指定提交事实 | 与鸿蒙要求的关系 |
+| --- | --- | --- |
+| followup_plan_view | [计划代码1015行](https://git.igancao.com/root/gancao-ios4doctor/-/blob/6be8af95806635add150b9543c8a9c692dfd4fc8/LiqForDoctors/Classes/FollowUpManager/View/AutoFollowup/GCAutoFollowupPlanView.swift#L1015)：成功加载、展示完成且可见后同次一次，两种来源已接入 | 触发方向一致，不能据此确定全部属性类型 |
+| followup_wechat_share_initiate | [分享流程895行](https://git.igancao.com/root/gancao-ios4doctor/-/blob/6be8af95806635add150b9543c8a9c692dfd4fc8/LiqForDoctors/Classes/FollowUpManager/View/AutoFollowup/GCAutoFollowupPlanView.swift#L895)：有版本同步及微信调用，但指定提交LiqForDoctors源码（排除UniMPSDK）未命中该事件标识 | 与原表清单有差异；不据此从鸿蒙清单删除，实施范围仍待SAN-Q-025 |
+| followup_feedback_view | [反馈代码752行](https://git.igancao.com/root/gancao-ios4doctor/-/blob/6be8af95806635add150b9543c8a9c692dfd4fc8/LiqForDoctors/Classes/FollowUpManager/View/AutoFollowup/GCAutoFollowupPlanFeedbackView.swift#L752)：成功展示且存在有效反馈内容，同次一次，六来源接入 | 展示条件方向一致，具体额外内容判断只作实现对照 |
+| followup_summary_copy | [复制代码788行](https://git.igancao.com/root/gancao-ios4doctor/-/blob/6be8af95806635add150b9543c8a9c692dfd4fc8/LiqForDoctors/Classes/FollowUpManager/View/AutoFollowup/GCAutoFollowupPlanFeedbackView.swift#L788)：三处非空内容写入后共用事件，accountType传字符串1 | 三处共用方向一致；字符串类型与空内容过滤不自动成为鸿蒙规则 |
+
+三项iOS事件都额外传`did`，取UserInfoModel.id（NSString），没有SDK登录身份使用的D前缀。它不在原表15项内，鸿蒙是否增加、是否设置公共属性及其类型由SAN-Q-021确认；不能直接将D+doctorId当作该属性值。
+
+两项查看的`timeSpan`由DateFormatter按`yyyy/MM/dd HH:mm:ss`生成，显式设置locale及Gregorian calendar，未显式指定时区。原表K12／K21／K44则为Excel数值日期，显示格式`yyyy/m/d h:mm:ss`，示例2026-10-12 10:12:12；两者均不单独规定鸿蒙线上序列化格式。
+
+iOS反馈`accountType`按reply_type映射2→整体好转、3→需关注、4→客服回访中、5→客服回访完结，其他值包括6为空。鸿蒙已确认reply_type=6的UI标签“无明显变化”，但其GIO关注状态值未定，不自行套用iOS空串或把UI文案直接当已确认枚举。
+
+## 11 双通道边界与实施依赖
+
+| 项目 | GIO（SAN-REQ-009） | 自有后台（SAN-REQ-004） |
+| --- | --- | --- |
+| 字段模型 | 本文第9节原表4项／15属性；did额外待确认 | 保持orderid／event，两类查看额外event_tag |
+| 分享 | 清单保留，本期范围与节点待SAN-Q-025 | 仍由版本同步后台记录，APP不调用GAPI重复直报 |
+| 时间、状态、关注及复制标识 | 客户端按确认清单获取发生时快照并独立组装 | 沿用后台派生口径，不增加旧属性 |
+| 执行与结果 | 通用GioTracker交给SDK；调用完成不等于平台入库 | 仍按GAPI业务码判断，00000成功不要求data非空 |
+| 失败与防重 | 自己的字段资格及本次行为状态；缺属性、未启动或异常不影响后台 | 原校验、结果及不主动重试规则保持，不因GIO失败而重发 |
+
+SAN-Q-021至024分别确认did、十五项元数据、完整状态／关注枚举及数据源、timeSpan格式时区。SAN-Q-025确认分享实施范围及可观察节点。SAN-Q-026补齐SDK产品线、鸿蒙测试／正式数据源、Scheme、采集地址及授权／身份／环境／自动采集方案。模块架构已确认，其余工程推荐配置不得写成已确认目标或已实施结果。
+
+本轮仅完成原表与指定iOS提交静态核对及文档更新。GIO SDK接入、四项点位、设备运行及两个平台收数均未执行；后台三项既有完成记录和未验证边界保持。对应任务见03，计划用例见AI第24节及人工第11节。
