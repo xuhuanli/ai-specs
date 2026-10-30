@@ -1,12 +1,12 @@
 # V5.3.8 sanshi APP 随访埋点清单
 
-v2.1，2026-10-29，北京时间；关联产品需求v1.16的SAN-REQ-004、005、008、009。本清单分别维护自有后台GAPI与GrowingIO（GIO）两个通道：后台三项已开发，原交付及未验证范围保持；新增GIO原表四项、15项事件属性，尚未接入SDK或点位。分享GIO已确认本期必须实施，实际调起已确认沿用既有成功唤起规则。
+v2.2，2026-10-30，北京时间；关联产品需求v1.17的SAN-REQ-004、005、008、009。本清单分别维护自有后台GAPI与GrowingIO（GIO）两个通道：后台三项已开发，原交付及未验证范围保持；新增GIO原表四项、15项事件属性，SDK及四项点位接线已开发，尚未完成运行和平台收数验收。分享GIO已确认本期必须实施，实际调起已确认沿用既有成功唤起规则。
 
 第1至7节描述自有后台协议，第8节保留历史记录，第9至11节为本轮GIO清单与核对结论。此前“APP取消分享直报”“时间／状态由后台生成”“不传accountType”等决定只约束SET_FOLLOW_UP_TAG，不能据此删除GIO同名事件或属性。查看周期、成功节点及复制防重属于已确认的业务口径，按两个通道各自条件应用。
 
 后台完整解读与11类事件分工见[10号对照](10-随访埋点后台协议对照与确认.md)，GIO工程落点与数据缺口见[13号方案](13-鸿蒙GIO接入与随访埋点方案.md)。[本目录历史Excel](06-APP埋点清单.xlsx)保留10月22日整理基线，未修改；本轮重新核对的原始来源为[ai助手埋点上报清单.xlsx](/Users/hpt-sans/Desktop/ai助手埋点上报清单.xlsx)“2026.10-埋点”页。原表标题仍写V5.3.6，本次只引用其中随访要求，不改变本需求的V5.3.8归属。原15项用于GIO业务清单，不作为自有后台新接口的直接上传字段表。
 
-上一版清单随5102793本地提交；本轮v2.1修订已获确认，仅本地提交、不推送。Q021已关闭，其他Q按已确认部分更新；分享本期必做不等于代码授权，仍按SAN-DEC-049和051先确认文档提交、再单独确认代码实施。
+2026-10-30当前交付：鸿蒙GIO完整接线已本地提交`67d5cb5d5`（feat: 完成鸿蒙GIO随访埋点接入），包含应用编排、四项业务事件、原生分享回调、集中事件枚举、最新关注分类规则及注释／冗余调用整理；未推送。文档在根仓库独立记录；只做逻辑与静态审查，不编译、不运行测试，设备及平台收数由用户后续验证。
 
 ## 1 自有后台：原业务目标与分工对照
 
@@ -134,7 +134,7 @@ orderid使用药方支付单号，对应旧recipel_pay_orderid，不使用随访
 | --- | --- | --- |
 | followup_plan_view | timeSpan | 计划查看发生时刻，字符串yyyy/MM/dd HH:mm:ss、精度到秒；统一Asia/Shanghai北京时间，Q024关闭，不是时长 |
 | followup_plan_view | event_tag | 进入来源：开方记录／开方详情 |
-| followup_plan_view | count_type | 当前诊后状态文案，按9.3节的reply_status 1至6映射，不传数字；未知／缺失及数据源仍待补 |
+| followup_plan_view | count_type | 当前诊后状态文案，按9.3节的reply_status 1至6映射，不传数字；同单补查后仍缺失或未知则跳过该条GIO |
 | followup_plan_view | recipel_pay_orderid | 本次随访所属药方支付订单号 |
 | followup_wechat_share_initiate | event_tag | 实际分享的表单版本：默认版／简易版／详细版；不使用已失效的选择或写死默认版 |
 | followup_wechat_share_initiate | timeSpan | 实际分享发起时刻，字符串yyyy/MM/dd HH:mm:ss；不取单纯点击／版本同步时刻，统一Asia/Shanghai北京时间 |
@@ -142,7 +142,7 @@ orderid使用药方支付单号，对应旧recipel_pay_orderid，不使用随访
 | followup_feedback_view | event_tag | 待办／咨询 IM 卡片／Push／开方页／开方记录列表页／开方详情；消息中心和系统推送同传Push |
 | followup_feedback_view | count_type | 当前诊后状态文案，按9.3节1至6映射；不将关注分类当诊后阶段 |
 | followup_feedback_view | timeSpan | 完整反馈查看发生时刻，字符串yyyy/MM/dd HH:mm:ss；统一Asia/Shanghai北京时间，Q024关闭 |
-| followup_feedback_view | accountType | 反馈关注状态；完整枚举及未知值处理待SAN-Q-023，不与复制标识混用 |
+| followup_feedback_view | accountType | 反馈关注状态：reply_type的1正常／2整体好转／3需关注／4客服回访中／5客服回访完结／6无明显变化；未映射的已提供reply_type直接上传原数值字符串；仅缺失且同单补查后仍缺失才跳过反馈查看GIO，不与复制标识混用 |
 | followup_feedback_view | recipel_pay_orderid | 当前实际展示反馈所属药方支付订单号 |
 | followup_summary_copy | count_type | 当前诊后状态文案，按9.3节1至6映射，取本次成功复制关联上下文 |
 | followup_summary_copy | accountType | 复制成功标识，固定字符串"1"，不是数字1；失败不发事件 |
@@ -163,11 +163,22 @@ orderid使用药方支付单号，对应旧recipel_pay_orderid，不使用随访
 | 5 | 已反馈 |
 | 6 | 已完结 |
 
-此表只确定GIO诊后阶段文案，不修改App既有UI及后台状态处理；0、空、未知值及最终页字段来源仍待Q023。反馈查看accountType表示reply_type对应的关注分类，与本表不同，正常／无明显变化／未知等取值尚未由本次消息给出。
+此表只确定GIO诊后阶段文案，不修改App既有UI及后台状态处理。反馈查看accountType是另一组用户已确认的关注分类：
+
+| reply_type | GIO反馈查看accountType |
+| --- | --- |
+| 1 | 正常 |
+| 2 | 整体好转 |
+| 3 | 需关注 |
+| 4 | 客服回访中 |
+| 5 | 客服回访完结 |
+| 6 | 无明显变化 |
+
+最终模型保留可选状态字段，不足时静默查询同一支付单的现有订单详情字段，详见13号方案。2026-10-30用户补充：未映射reply_type直接转原数值字符串，0也上传"0"；仅reply_type缺失才同单补查，仍缺失则跳过反馈查看。reply_status的0／空／未知仍按同单补查后无效则跳过处理，不虚填正常状态。计划查看和复制只要求诊后状态；反馈查看同时要求诊后状态及关注分类；分享不增加状态／关注门槛，后台GAPI独立处理。
 
 复制accountType固定字符串"1"；timeSpan使用字符串yyyy/MM/dd HH:mm:ss，示例2026/10/12 10:12:12，仅用于原表含该属性的计划／分享／反馈事件，复制不额外增加timeSpan。统一按Asia/Shanghai北京时间生成，Q024关闭；不把示例日期作为固定数据。不增加事件属性did，也不通过公共或动态业务属性间接添加；SDK登录身份另归Q026。
 
-微信分享GIO已确认本期必须做，并按用户要求沿用现有BridgeWechatShareTracker成功唤起判定：图片准备结束、真正dispatch后，同次SDK成功与应用退后台共同成立才计一次。两信号顺序不限，不等待回前台；单独sendReq、仅退后台、版本同步或void方法结束不作为计数证据。原生直达小程序目前未接这套成功回调，需在代码授权后补接线，不重写成功规则。
+微信分享GIO已确认本期必须做，并按用户要求沿用现有BridgeWechatShareTracker成功唤起判定：图片准备结束、真正dispatch后，同次SDK成功与应用退后台共同成立才计一次。两信号顺序不限，不等待回前台；单独sendReq、仅退后台、版本同步或void方法结束不作为计数证据。原生直达小程序已补接这套可选成功回调，不重写成功规则；真实唤起和平台收数仍待用户运行验证。
 
 ## 10 指定iOS提交的静态对照
 
@@ -176,7 +187,7 @@ orderid使用药方支付单号，对应旧recipel_pay_orderid，不使用随访
 | GIO事件 | 指定提交事实 | 与鸿蒙要求的关系 |
 | --- | --- | --- |
 | followup_plan_view | [计划代码1015行](https://git.igancao.com/root/gancao-ios4doctor/-/blob/6be8af95806635add150b9543c8a9c692dfd4fc8/LiqForDoctors/Classes/FollowUpManager/View/AutoFollowup/GCAutoFollowupPlanView.swift#L1015)：成功加载、展示完成且可见后同次一次，两种来源已接入 | 触发方向一致，不能据此确定全部属性类型 |
-| followup_wechat_share_initiate | [分享流程895行](https://git.igancao.com/root/gancao-ios4doctor/-/blob/6be8af95806635add150b9543c8a9c692dfd4fc8/LiqForDoctors/Classes/FollowUpManager/View/AutoFollowup/GCAutoFollowupPlanView.swift#L895)：有版本同步及微信调用，但指定提交LiqForDoctors源码（排除UniMPSDK）未命中该事件标识 | 与原表清单有差异；不据此从鸿蒙清单删除，本期已确认必须实施；调起已确认沿用既有规则，原生接线待实施 |
+| followup_wechat_share_initiate | [分享流程895行](https://git.igancao.com/root/gancao-ios4doctor/-/blob/6be8af95806635add150b9543c8a9c692dfd4fc8/LiqForDoctors/Classes/FollowUpManager/View/AutoFollowup/GCAutoFollowupPlanView.swift#L895)：有版本同步及微信调用，但指定提交LiqForDoctors源码（排除UniMPSDK）未命中该事件标识 | 与原表清单有差异；不据此从鸿蒙清单删除，本期已确认必须实施；调起已确认沿用既有规则，原生接线已本地提交67d5cb5d5，真实唤起仍待验证 |
 | followup_feedback_view | [反馈代码752行](https://git.igancao.com/root/gancao-ios4doctor/-/blob/6be8af95806635add150b9543c8a9c692dfd4fc8/LiqForDoctors/Classes/FollowUpManager/View/AutoFollowup/GCAutoFollowupPlanFeedbackView.swift#L752)：成功展示且存在有效反馈内容，同次一次，六来源接入 | 展示条件方向一致，具体额外内容判断只作实现对照 |
 | followup_summary_copy | [复制代码788行](https://git.igancao.com/root/gancao-ios4doctor/-/blob/6be8af95806635add150b9543c8a9c692dfd4fc8/LiqForDoctors/Classes/FollowUpManager/View/AutoFollowup/GCAutoFollowupPlanFeedbackView.swift#L788)：三处非空内容写入后共用事件，accountType传字符串1 | 三处共用方向一致；字符串"1"现已由用户另行确认；空内容过滤仍不自动成为鸿蒙规则 |
 
@@ -184,7 +195,7 @@ orderid使用药方支付单号，对应旧recipel_pay_orderid，不使用随访
 
 两项查看的`timeSpan`由DateFormatter按`yyyy/MM/dd HH:mm:ss`生成，显式设置locale及Gregorian calendar，未显式指定时区。原表K12／K21／K44则为Excel数值日期，显示格式`yyyy/m/d h:mm:ss`，示例2026-10-12 10:12:12；两者本身不单独规定目标；本轮用户已另行确认鸿蒙格式为yyyy/MM/dd HH:mm:ss，时区已由用户进一步确认为Asia/Shanghai北京时间。
 
-iOS反馈`accountType`按reply_type映射2→整体好转、3→需关注、4→客服回访中、5→客服回访完结，其他值包括6为空。鸿蒙已确认reply_type=6的UI标签“无明显变化”，但其GIO关注状态值未定，不自行套用iOS空串或把UI文案直接当已确认枚举。
+iOS反馈`accountType`按reply_type映射2→整体好转、3→需关注、4→客服回访中、5→客服回访完结，其他值包括6为空。鸿蒙后续已由用户明确确认1至6的GIO关注状态文案，见9.3节，其中6上传“无明显变化”，不采用该iOS版本对6上传空串的实现。
 
 ## 11 双通道边界与实施依赖
 
@@ -196,10 +207,16 @@ iOS反馈`accountType`按reply_type映射2→整体好转、3→需关注、4→
 | 执行与结果 | 通用GioTracker交给SDK；调用完成不等于平台入库 | 仍按GAPI业务码判断，00000成功不要求data非空 |
 | 失败与防重 | 自己的字段资格及本次行为状态；缺属性、未启动或异常不影响后台 | 原校验、结果及不主动重试规则保持，不因GIO失败而重发 |
 
-SAN-Q-021已关闭、不增加did；Q022复制字符串"1"已定，其余元数据待补；Q023诊后1至6文案已定，未知状态／关注分类及字段来源待补；Q024格式与Asia/Shanghai时区已确认关闭；Q025本期分享及沿用既有成功规则已确认关闭。SAN-Q-026补齐SDK产品线、鸿蒙测试／正式数据源、Scheme、采集地址及授权／身份／环境／自动采集方案。模块架构以及OHPM首次sync后锁真实精确版本的策略已确认；实际版本尚未解析，其他工程推荐配置不得写成已确认或已实施结果。
+SAN-Q-021不加did、Q024北京时间和Q025沿用既有成功唤起规则已关闭。Q026的SDK2.9.0、旧版SaaS、鸿蒙Scheme、三项自动采集、测试包同应用、entry立即启动及登录后身份同步已收口；平台登记按Q022核对，两组1至6文案已定，异常字段策略已按DEC059确认跳过整条GIO，Q023关闭。
 
-本轮仅完成原表与指定iOS提交静态核对及文档更新。GIO SDK接入、四项点位、设备运行及两个平台收数均未执行；后台三项既有完成记录和未验证边界保持。对应任务见03，计划用例见AI第24节及人工第11节。
+SDK、公共工具及四项接线已开发；公共工具已提交65ac59804，其余尚未提交。当前仅完成允许的逻辑及静态检查，未到代码编译、未运行测试或设备、未验证GIO／后台收数。任务与后续人工核对计划仍见03、04、05，历史通过结果不复用为本轮通过。
 
 2026-10-29清单v2.1：同步SAN-DEC-051，不增加did，固定复制字符串"1"、六种诊后文案和斜杠时间格式，分享GIO纳入本期；保留时区、关注分类、实际调起判定及其他元数据待定。仅文档修订，未提交、未改代码。
 
 本轮后续补充：用户已确认北京时间，并要求分享复用既有成功唤起状态机，否决单独sendReq候选。Q024／025关闭；原生结果接线、SDK及GIO数据尚未实施或验证。
+
+2026-10-29清单v2.2：同步本轮确认的关注分类、配置和真实开发进度；异常字段策略已按DEC059收口，平台登记及实际运行继续验证，用户自行运行。未提交本次修订。
+
+2026-10-30关注分类补充（SAN-DEC-060）：reply_type的1至6沿用既有文案；其他已提供数值直接转为字符串（如0→"0"、7→"7"），不因未映射而跳过或额外补查。仅关注类型缺失时补查同一订单，补查后仍缺失则跳过反馈查看GIO；reply_status未知仍按原补查／跳过规则处理。本次同步代码、注释及文档，仅静态检查，未编译、未运行测试、未提交。
+
+2026-10-30整体review与本地归档（SAN-DEC-061）：复核未发现需修复的明确逻辑遗漏或新增冗余；完整接线已提交67d5cb5d5，文档在根仓库独立记录，均不推送。本轮仅静态及逻辑审查，未编译、未运行测试，平台登记和实际收数仍待验证。此前各阶段“未提交”等记录保留当时事实，当前交付以本记录及文档首部为准。
