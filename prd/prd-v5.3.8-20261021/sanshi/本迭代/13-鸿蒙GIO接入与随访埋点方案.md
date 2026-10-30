@@ -22,7 +22,7 @@ v1.2，2026-10-30，北京时间；关联产品需求 v1.17 的 SAN-REQ-009、SA
 
 ## 2 代码基线与交付状态
 
-仓库为`hos_doctor`，分支`feature/sanshi/order-0518-Q42`；当前代码提交为`67d5cb5d5`，未拉取或推送远端。
+仓库为`hos_doctor`，分支`feature/sanshi/order-0518-Q42`；当前代码提交为`2dbd63e5d`，未拉取或推送远端。
 
 | 阶段 | 实际记录 |
 | --- | --- |
@@ -30,6 +30,7 @@ v1.2，2026-10-30，北京时间；关联产品需求 v1.17 的 SAN-REQ-009、SA
 | 依赖锁定 | `d67128177`固定`@growingio/analytics`为2.9.0；锁文件按原.gitignore本地保留，不改变仓库锁文件策略 |
 | 公共工具 | `65ac59804`，`feat: 封装GrowingIO公共配置与统计工具`；本轮按授权先本地提交，未推送 |
 | 完整接线 | `67d5cb5d5`，`feat: 完成鸿蒙GIO随访埋点接入`；entry、四项业务事件、分享回调、事件枚举、最新关注分类规则及注释整理均已本地提交，未推送 |
+| 后续修正 | `2dbd63e5d`：调试日志复用项目环境枚举，分享链接追加source=1；均已本地提交，未推送 |
 | 本轮验证 | 只做静态与逻辑检查；此前主包编译尝试在既有凭据检查阶段停止，0个任务，未到代码编译；用户随后明确取消编译，由其自行运行 |
 
 原八项需求及后台上报的历史测试结论继续保留，但不升级为本轮GIO或当前提交源码的通过证据。
@@ -50,7 +51,7 @@ entry和yzs_order新增对hpt_analytics的直接依赖声明，符合项目分�
 
 GioWiring在EntryAbility.onCreate、偏好上下文建立后配置并启动SDK；窗口在既有loadContent成功回调绑定，以WindowStage对象防重复。onCreate与onNewWant只将匹配本应用Scheme的URI交给SDK，原微信和Push入口保留。
 
-使用旧版SaaS配置，对应SDK的SaaS工厂方法；不切到NewSaaS或CDP，不凭空要求额外dataSourceId。收集地址采用所锁SDK的SaaS默认地址，不新增业务接口地址。debug仅在非Agc产品开启；各产品使用本次同一应用配置，不随DevKit业务域名切换重启SDK。
+使用旧版SaaS配置，对应SDK的SaaS工厂方法；不切到NewSaaS或CDP，不凭空要求额外dataSourceId。收集地址采用所锁SDK的SaaS默认地址，不新增业务接口地址。SDK调试日志使用项目统一环境判断Constant.env === AppEnv.debug，与现有友盟日志口径一致：仅测试环境开启，生产及预发关闭；不按产品名字面量比较，也不影响自动采集和业务事件。各产品使用本次同一应用配置，不随DevKit业务域名切换重启SDK。
 
 窗口监听、autotrackEnabled及autotrackAllPages分别显式开启，hybridAutotrackEnabled为false。基础配置和厂商对象创建分离，SDK仅在显式调用时接触Context；进程内启动尝试防重，不对可能已部分完成的SDK初始化自动重试。
 
@@ -76,6 +77,8 @@ timeSpan用行为发生时刻加北京时间偏移并读取UTC年月日时分秒
 | followup_wechat_share_initiate | 计划页同步版本成功后发起原生小程序分享，回调成功唤起才交GIO；三属性，event_tag为本次同步的默认版／简易版／详细版 |
 
 同一次逻辑打开成功查看只计一次，刷新、重绘、遮挡返回不补发，关闭后重开可计。每次主动复制成功可计，同一token只消费一次；复制失败不报，保留原有空内容UI口径，不照搬iOS非空过滤。加载失败、只有入口点击或HTTP成功不作为查看依据。
+
+分享小程序路径为`/pages/feedback/status/index?orderid=${orderId}&investSerial=${serial}&source=1`，固定追加source=1，原orderid／investSerial继续使用本次快照。source属于小程序查询参数，不进入GIO属性字典；不更改分享事件、属性数或成功唤起判定。
 
 分享在版本同步前快照订单、流水和实际选择，异步返回校验仍为原打开周期。页面正常关闭不取消随后真实分享的结果通知；回调不依赖已关闭的查看Session。失败、单信号或重复结果不能新增GIO事件。
 
@@ -118,3 +121,7 @@ Service在同一真实行为成立后分别交GIO适配和原GAPI，GIO不等待
 2026-10-30整体review与本地归档（SAN-DEC-061）：复核未发现需修复的明确逻辑遗漏或新增冗余；完整接线已提交67d5cb5d5，文档在根仓库独立记录，均不推送。本轮仅静态及逻辑审查，未编译、未运行测试，平台登记和实际收数仍待验证。此前各阶段“未提交”等记录保留当时事实，当前交付以本记录及文档首部为准。
 
 最终静态审查覆盖SDK配置及身份、四事件／十五属性、DEC060关注类型回退、同单及账号隔离、查看／复制防重、微信双信号和原后台白名单；20份纯逻辑ETS语法解析无诊断，3份ArkUI页面新增差异人工审阅，3份JSON5配置解析及相对导入检查通过，源码均未超过800行。公共模块不含随访业务，业务事件集中定义，未新增GAPI分享直报、自动重试或离线补报队列。检查不含编译、测试、设备或平台收数。
+
+2026-10-30编译反馈修正：用户提供ArkTS 10505001，生成的PRODUCT_NAME为单个产品字面量类型，直接比较另一产品名会被判定无交集。GioWiring改用现有Constant.env／AppEnv.debug判断SDK调试日志，移除未再使用的ProjectConfig导入；测试环境开启，生产及预发关闭。该修正已纳入2dbd63e5d，未重新编译、未运行测试。
+
+2026-10-30环境判断与分享路径调整（SAN-DEC-062）：GioWiring移除产品名字面量比较及无用导入，调试日志沿用Constant.env === AppEnv.debug，仅测试环境开启；不改变采集开关。分享随访小程序路径在原orderid／investSerial后追加source=1，不增加GIO属性。两项修正代码已本地提交`2dbd63e5d`（fix: 修正GIO环境判断并补充随访分享参数），文档在根仓库独立记录；本轮未编译、未运行测试、未推送。
