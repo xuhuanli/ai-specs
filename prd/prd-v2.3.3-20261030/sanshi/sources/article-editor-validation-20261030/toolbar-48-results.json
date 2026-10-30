@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-30",
+  "change": "toolbar and buttons 40 to 48vp; divider overlay avoids shrinking content",
+  "module_build_successful": true,
+  "source": "yzs_article/src/main/ets/pages/ArticleEdit.ets",
+  "source_sha256": "8e17fca0cfe9cbc933694e5da13cae91c3e1c0ab56ea145cc7e7bf0102ba7cf3",
+  "geometry": [
+    {
+      "row_px": 155,
+      "button_px": 155,
+      "icon_px": 78,
+      "density": 3.25,
+      "row_vp": 47.69230769230769,
+      "button_vp": 47.69230769230769,
+      "icon_vp": 24.0,
+      "top_inset_vp": 12.0,
+      "bottom_inset_vp": 11.692307692307692,
+      "rounding_tolerance_px": 1
+    },
+    {
+      "row_px": 155,
+      "button_px": 155,
+      "icon_px": 78,
+      "density": 3.25,
+      "row_vp": 47.69230769230769,
+      "button_vp": 47.69230769230769,
+      "icon_vp": 24.0,
+      "top_inset_vp": 12.0,
+      "bottom_inset_vp": 11.692307692307692,
+      "rounding_tolerance_px": 1
+    }
+  ],
+  "geometry_note": "参考换算比例取24vp图标的整数边界78px，非系统密度的精确测量；允许1px边界取整误差。",
+  "other_spacing_design_verified": false,
+  "note": "首次交付25项业务回归和全量构建保留基线；此次仅局部尺寸，验证受影响HSP编译及设备布局。"
+}
