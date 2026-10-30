@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-30",
+  "baseCommit": "4024f97969ef895e54c34b9276fdeaf3c4217e88",
+  "codeCommitted": true,
+  "pushed": false,
+  "source": "yzs_article/src/main/ets/components/ArticleEditorWeb.ets",
+  "sha256": "93aa25dc1daaad5a890af31be3b93492bd5e18175939ac0501f3509fc8d86d24",
+  "build": {
+    "product": "AgcDebug_Test",
+    "target": "yzs_article@default assembleHsp",
+    "result": "BUILD SUCCESSFUL",
+    "fullAppRepeated": false
+  },
+  "device": {
+    "installation": "signed HSP installed with -r",
+    "beforeFix": "Repeated body taps caused OnBlur, HideTextInputForce, then OnFocus",
+    "afterFix": {
+      "bodyTaps": 4,
+      "OnBlur": 0,
+      "HideTextInputForce": 0,
+      "OnFocus": 4,
+      "keyboardVisibleInScreenshots": true
+    },
+    "otherChecks": [
+      "title/body switching",
+      "body text input",
+      "long-press text selection menu",
+      "gallery 0/9 and cancel",
+      "camera open and cancel",
+      "test text preserved after media cancellation",
+      "unsaved confirmation and discard to article list"
+    ],
+    "serverWrites": false
+  },
+  "userVersionFilePreserved": true,
+  "fixCommit": "ed83bbcf6ece48e346d13946ec02548e6fd9fba6"
+}
