@@ -4,12 +4,14 @@ v1.2，2026-10-30，北京时间；关联产品需求 v1.17 的 SAN-REQ-009、SA
 
 用户已先后确认依赖安装、版本固定、公共工具开发及剩余接线开发。本轮先提交公共工具，再完成 entry、随访及原生分享接线；完整接线已本地提交67d5cb5d5，未推送。最新限制为只检查逻辑和静态问题，用户自行运行；不继续编译，不运行测试、不安装或操作设备，不以历史结果证明本轮通过。
 
+2026-11-04接入依据更正：以用户提供的[SaaS产品线鸿蒙官方文档](https://help-center.growingio.com/@saas/developer-manual/sdkintegrated/other-sdk/harmonyosnext-sdk.html)为准，使用SaaS(AccountId, UrlScheme)，不要求DataSourceId；此前引用的SDK V4／NewSaaS示例不再作为本应用接入依据。保留当前诊断日志，按SaaS文档补齐扫码圈选Host。本轮代码已本地提交658a11896，文档在根仓库独立记录，未推送；未编译、未运行测试。
+
 ## 1 已确认的实现边界
 
 | 事项 | 确认结果 |
 | --- | --- |
 | SDK安装 | OHPM中心仓首次解析后核对并锁定精确版本；实际结果为2.9.0，声明、生成锁文件和实际包已核对一致 |
-| 应用配置 | 复用现有医生端旧版SaaS项目；鸿蒙Scheme为`growing.c4a41276e046a6ae`，测试／开发包允许向同一应用上报 |
+| 应用配置 | 使用现有医生端SaaS产品线项目；鸿蒙Scheme为`growing.c4a41276e046a6ae`，测试／开发包允许向同一应用上报 |
 | 初始化 | 按用户要求对齐iOS，在entry进入应用后启动，不等待登录，不新增GIO专属授权弹窗或设置开关 |
 | 用户身份 | 登录成功或有效会话恢复后，按现有App的`D+当前user.id`绑定SDK身份；退出清除，切账号同步新身份；不读取可能滞后的doctor详情 |
 | 自动采集 | 窗口监听、点击／输入变化采集、页面浏览自动采集全部开启；本期不扩展Web Hybrid接入 |
@@ -22,7 +24,7 @@ v1.2，2026-10-30，北京时间；关联产品需求 v1.17 的 SAN-REQ-009、SA
 
 ## 2 代码基线与交付状态
 
-仓库为`hos_doctor`，分支`feature/sanshi/order-0518-Q42`；当前代码提交为`2dbd63e5d`，未拉取或推送远端。
+GIO历史交付提交为`2dbd63e5d`，原分支为`feature/sanshi/order-0518-Q42`。本轮官方文档更正及诊断改动位于迁移后的hos_doctor、分支`feature/sanshi/all-article-Q44`，当前代码提交为`658a11896`；未拉取或推送远端。
 
 | 阶段 | 实际记录 |
 | --- | --- |
@@ -31,6 +33,7 @@ v1.2，2026-10-30，北京时间；关联产品需求 v1.17 的 SAN-REQ-009、SA
 | 公共工具 | `65ac59804`，`feat: 封装GrowingIO公共配置与统计工具`；本轮按授权先本地提交，未推送 |
 | 完整接线 | `67d5cb5d5`，`feat: 完成鸿蒙GIO随访埋点接入`；entry、四项业务事件、分享回调、事件枚举、最新关注分类规则及注释整理均已本地提交，未推送 |
 | 后续修正 | `2dbd63e5d`：调试日志复用项目环境枚举，分享链接追加source=1；均已本地提交，未推送 |
+| SaaS接入与诊断修正 | `658a11896`，`fix: 对齐GIO SaaS扫码配置并补充诊断日志`；三份代码已本地提交，未推送 |
 | 本轮验证 | 只做静态与逻辑检查；此前主包编译尝试在既有凭据检查阶段停止，0个任务，未到代码编译；用户随后明确取消编译，由其自行运行 |
 
 原八项需求及后台上报的历史测试结论继续保留，但不升级为本轮GIO或当前提交源码的通过证据。
@@ -49,9 +52,9 @@ entry和yzs_order新增对hpt_analytics的直接依赖声明，符合项目分�
 
 ## 4 生命周期与SDK配置
 
-GioWiring在EntryAbility.onCreate、偏好上下文建立后配置并启动SDK；窗口在既有loadContent成功回调绑定，以WindowStage对象防重复。onCreate与onNewWant只将匹配本应用Scheme的URI交给SDK，原微信和Push入口保留。
+GioWiring在EntryAbility.onCreate、偏好上下文建立后配置并启动SDK；窗口在既有loadContent成功回调绑定，以WindowStage对象防重复。onCreate与onNewWant只将匹配本应用Scheme的URI交给SDK，原微信和Push入口保留。 entry/module.json5的扫码技能按SaaS官方示例配置scheme=growing.c4a41276e046a6ae、host=growing/oauth2/token。SDK接管结果与WebSocket实际连接结果分别判断，不将App被唤起视为平台已连接。
 
-使用旧版SaaS配置，对应SDK的SaaS工厂方法；不切到NewSaaS或CDP，不凭空要求额外dataSourceId。收集地址采用所锁SDK的SaaS默认地址，不新增业务接口地址。SDK调试日志使用项目统一环境判断Constant.env === AppEnv.debug，与现有友盟日志口径一致：仅测试环境开启，生产及预发关闭；不按产品名字面量比较，也不影响自动采集和业务事件。各产品使用本次同一应用配置，不随DevKit业务域名切换重启SDK。
+使用SaaS产品线配置，对应SDK的SaaS工厂方法；AccountId和UrlScheme为必填，DataSourceId不参与本应用初始化，不切到NewSaaS或CDP。收集地址采用所锁SDK的SaaS默认地址，不新增业务接口地址。SDK调试日志使用项目统一环境判断Constant.env === AppEnv.debug，与现有友盟日志口径一致：仅测试环境开启，生产及预发关闭；不按产品名字面量比较，也不影响自动采集和业务事件。各产品使用本次同一应用配置，不随DevKit业务域名切换重启SDK。
 
 窗口监听、autotrackEnabled及autotrackAllPages分别显式开启，hybridAutotrackEnabled为false。基础配置和厂商对象创建分离，SDK仅在显式调用时接触Context；进程内启动尝试防重，不对可能已部分完成的SDK初始化自动重试。
 
@@ -98,6 +101,8 @@ Service在同一真实行为成立后分别交GIO适配和原GAPI，GIO不等待
 
 本轮git diff --check通过；3份变更JSON5配置可解析，新增相对导入未发现缺失，SDK声明和实际包均为2.9.0。最终20份变更纯逻辑ETS文件仅做语法解析，未发现语法诊断；3份ArkUI页面因独立解析器不能完整处理DSL，按新增差异人工检查。另核对导入与分层、属性和来源、同单上下文、异步账号检查及分享回调防重。上述不含类型编译、测试执行或设备／收数结论。
 
+用户已确认当前平台不支持鸿蒙GrowingIO Mobile Debugger；本期以同一鸿蒙应用下的四项业务事件、页面浏览／元素点击等基础无埋点实际数据及SDK日志验证，不将Mobile Debugger连接作为通过条件。SDK默认15秒为客户端发送周期，不代表平台分析页保证在15秒内可见；当前项目的平台处理时效仍未确认。
+
 用户后续运行时重点核对：冷启动／登录／退出／换账号身份；两个计划入口和全部反馈入口的同单属性；一次打开不重计及重开再计；三处复制；三种表单版本真实唤起微信及失败不报。分别查看GIO平台收到的数据和原后台结果，调用已交SDK不等于平台已入库。
 
 | 待办 | 当前边界 |
@@ -125,3 +130,9 @@ Service在同一真实行为成立后分别交GIO适配和原GAPI，GIO不等待
 2026-10-30编译反馈修正：用户提供ArkTS 10505001，生成的PRODUCT_NAME为单个产品字面量类型，直接比较另一产品名会被判定无交集。GioWiring改用现有Constant.env／AppEnv.debug判断SDK调试日志，移除未再使用的ProjectConfig导入；测试环境开启，生产及预发关闭。该修正已纳入2dbd63e5d，未重新编译、未运行测试。
 
 2026-10-30环境判断与分享路径调整（SAN-DEC-062）：GioWiring移除产品名字面量比较及无用导入，调试日志沿用Constant.env === AppEnv.debug，仅测试环境开启；不改变采集开关。分享随访小程序路径在原orderid／investSerial后追加source=1，不增加GIO属性。两项修正代码已本地提交`2dbd63e5d`（fix: 修正GIO环境判断并补充随访分享参数），文档在根仓库独立记录；本轮未编译、未运行测试、未推送。
+
+2026-11-04扫码诊断补充：按用户确认，仅增加应用侧初始化、窗口绑定及扫码接管日志，初始化按本次更正后的SaaS产品线文档处理，不新增DataSourceId配置或更改通用参数校验。测试环境按[GioDiagnostic]前缀输出配置字段是否具备、配置／启动结果、SDK就绪与采集状态、扫码URI的Scheme／Host以及SDK接管布尔值；不输出完整URI、路径、查询参数、用户ID或项目／数据源ID的实际值。SDK调用异常仅记录固定原因。sdkAccepted只说明SDK接受URI，不代表平台已连接；SDK2.9.0公开接口未提供WebSocket连接错误回调，连接错误仍需结合厂商调试日志核对，不修改厂商SDK或注入私有回调。本轮仅静态检查，未编译、未运行测试、未提交。
+
+2026-11-04按SaaS文档修正：应用保持SaaS模式，移除应用诊断中不适用的dataSourceIdPresent字段，补齐官方扫码圈选Host。SDK2.9.0、采集开关、用户身份、四项业务事件及source=1分享链接保持。与文档一致的网络权限、标准化OHMUrl、deferStart调用及loadContent成功后的窗口观察已静态核对；当前混淆关闭。本轮不提交，由用户运行检查诊断及实际连接。
+
+2026-11-04提交归档（SAN-DEC-064）：SaaS官方文档对齐、扫码Host及诊断日志代码已在feature/sanshi/all-article-Q44本地提交658a11896；对应需求／方案在根文档仓库独立记录，不推送。仅完成静态语法、JSON5及差异检查，未编译、未运行测试；用户当前反馈平台尚未看到数据，实际发送和收数仍需继续核对，不记为验收通过。此前“未提交”等阶段记录保留当时事实，以本次归档状态为准。
