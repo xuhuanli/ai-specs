@@ -120,7 +120,7 @@ CRM
 
 医生列表既按责任范围划分，也有状态、职称、地区、科室、标签等筛选。iOS 当前列表还明确区分待激活、已激活、已流失、未注册等分类；Android 请求中也传递生命周期、活跃类别、回流标签等条件。**注册／审核、活跃／流失、客户归属属于不同维度**，不能画成一条简单的医生状态线。[依据：S03]
 
-医生详情是认识项目最重要的入口之一。本人医生的相关视图包含拜访记录、收入统计、行为统计、账户信息，顶部还有客户资料、标签／标记、潜力及归属相关操作；其他范围医生的可见内容受条件限制。查看客户现状、了解历史跟进、查看交易表现和处理账户事项，都可能从这里展开。[依据：S09]
+医生详情是认识项目最重要的入口之一。本人医生的相关视图包含拜访记录、收入统计、行为统计、账户信息，顶部还有客户资料、标签／标记、潜力及归属相关操作；详情完整可见性由后台 `can_show` 控制，不能仅凭“本人／经理”身份推定；无完整权限时，公有池可见拜访记录和行为跟踪，其他池仅拜访记录。查看客户现状、了解历史跟进、查看交易表现和处理账户事项，都可能从这里展开。[依据：S09]
 
 私有池、公有池、死海反映另一组客户资源管理场景。两端页面都有“首单超时、久未开单、审核超时”等释因，并有保护、领取相关处理。可据此理解为客户资源的维护和再分配，但各池的正式定义、流转时机、保护时长、领取额度及限制，以服务端和业务确认规则为准。[依据：S10]
 
@@ -156,7 +156,7 @@ CRM
 
 协同工单是跨人处理事项的载体。两端都有“我发起的、待我处理、全部”分类，以及回复、退回、转派、完成和处理记录等能力。需要同时理解工单当前状态及人员关系，不能只看登录岗位决定谁能处理。[依据：S17]
 
-Android 从工单列表进入的详情有“处理记录／工单明细”两个页签：发起人回复的调用在“处理记录”页，不能因为“工单明细”页隐藏回复按钮而判断发起人无法回复。iOS 在工单详情组织处理操作。两端在具体状态下的入口可用性仍需业务验证，此处不提出代码调整。[依据：S17]
+Android 从工单列表进入的详情有“处理记录／工单明细”两个页签：发起人回复的调用在“处理记录”页，不能因为“工单明细”页隐藏回复按钮而判断发起人无法回复。iOS 当前列表进入聊天式详情，顶部也有“处理记录／工单明细”页签；部分通知／工作台保留其他详情入口。两端在具体状态下的入口可用性仍需业务验证，此处不提出代码调整。[依据：S17]
 
 ### 3.7 数据、预警与激励
 
@@ -330,7 +330,7 @@ iOS `origin/cili_Q4_10`（`bf7e69a6`）相对 `develop` 还有咨询订单相关
 | S14 | 患者感谢管理 | iOS [ThankLetterVC.m](repos/ios4crm/GCCRM/ViewController/Mine/ThankLetterVC.m)、`Mine/ThankLetterDetailVC.m`、`Mine/ThankLetterEditVC.m`；Android [MineFragment.kt](repos/android4crm/app/src/main/java/com/igancao/crm/ui/mine/MineFragment.kt) 对 `thansdoc/`、`docthanksinfo/` 等页面的入口 |
 | S15 | 订单范围和查询 | iOS [OrderVC.m](repos/ios4crm/GCCRM/ViewController/Apply/OrderInquire/OrderVC.m)、[ApplyNewVC.m](repos/ios4crm/GCCRM/ViewController/Apply/ApplyNewVC.m) 的订单菜单；Android [OrderFragment.kt](repos/android4crm/app/src/main/java/com/igancao/crm/ui/application/order/OrderFragment.kt)、[OrderRepository.kt](repos/android4crm/app/src/main/java/com/igancao/crm/ui/application/order/OrderRepository.kt)、[ApplicationFragment.kt](repos/android4crm/app/src/main/java/com/igancao/crm/ui/application/ApplicationFragment.kt) |
 | S16 | 问诊／咨询入口与接口区别 | iOS [ApplyNewVC.m](repos/ios4crm/GCCRM/ViewController/Apply/ApplyNewVC.m)、[CRMAskOrderListController.swift](repos/ios4crm/GCCRM/ViewController/Apply/AskOrder/CRMAskOrderListController.swift)；Android [ConsultRepository.kt](repos/android4crm/app/src/main/java/com/igancao/crm/ui/application/consult/ConsultRepository.kt)、[ApiService.kt](repos/android4crm/app/src/main/java/com/igancao/crm/api/ApiService.kt) 的 `getConsultList` |
-| S17 | 工单分类、角色与回复入口 | iOS [CRMSynergyTabVC.m](repos/ios4crm/GCCRM/ViewController/Synergy/CRMSynergyTabVC.m)、[CRMSynergyDetailVC.m](repos/ios4crm/GCCRM/ViewController/Synergy/CRMSynergyDetailVC.m)；Android [MyWorkOrderFragment.kt](repos/android4crm/app/src/main/java/com/igancao/crm/ui/mine/workorder/MyWorkOrderFragment.kt)、[WorkOrderDetailsActivity.kt](repos/android4crm/app/src/main/java/com/igancao/crm/ui/mine/workorder/workinfo/WorkOrderDetailsActivity.kt)、[WorkInfoFragment.kt](repos/android4crm/app/src/main/java/com/igancao/crm/ui/mine/workorder/workinfo/WorkInfoFragment.kt)、[ProcessingRecordFragment.kt](repos/android4crm/app/src/main/java/com/igancao/crm/ui/mine/workorder/workinfo/ProcessingRecordFragment.kt) 的 `doSend` |
+| S17 | 工单分类、角色与回复入口 | iOS [CRMSynergyTabVC.m](repos/ios4crm/GCCRM/ViewController/Synergy/CRMSynergyTabVC.m)、[CRMSynergyChatDetailVC.m](repos/ios4crm/GCCRM/ViewController/Synergy/CRMSynergyChatDetailVC.m)、[CRMSynergyDetailVC.m](repos/ios4crm/GCCRM/ViewController/Synergy/CRMSynergyDetailVC.m)；Android [MyWorkOrderFragment.kt](repos/android4crm/app/src/main/java/com/igancao/crm/ui/mine/workorder/MyWorkOrderFragment.kt)、[WorkOrderDetailsActivity.kt](repos/android4crm/app/src/main/java/com/igancao/crm/ui/mine/workorder/workinfo/WorkOrderDetailsActivity.kt)、[WorkInfoFragment.kt](repos/android4crm/app/src/main/java/com/igancao/crm/ui/mine/workorder/workinfo/WorkInfoFragment.kt)、[ProcessingRecordFragment.kt](repos/android4crm/app/src/main/java/com/igancao/crm/ui/mine/workorder/workinfo/ProcessingRecordFragment.kt) 的 `doSend` |
 | S18 | 经营指标及下钻 | iOS [ApplyNewVC.m](repos/ios4crm/GCCRM/ViewController/Apply/ApplyNewVC.m) 的 `didSeleteBlcok:`；Android [ApplicationFragment.kt](repos/android4crm/app/src/main/java/com/igancao/crm/ui/application/ApplicationFragment.kt) 的统计赋值、范围筛选及明细跳转 |
 | S19 | 奖励池及 PK | iOS [CRMRewardListVC.swift](repos/ios4crm/GCCRM/ViewController/Apply/Reward/CRMRewardListVC.swift)、[HuashanVC.m](repos/ios4crm/GCCRM/ViewController/Huashan/HuashanVC.m)、[PKCenterVC.m](repos/ios4crm/GCCRM/ViewController/Apply/PK/PKCenterVC.m)；Android [AwardPoolFragment.kt](repos/android4crm/app/src/main/java/com/igancao/crm/ui/application/award/AwardPoolFragment.kt)、[ApiService.kt](repos/android4crm/app/src/main/java/com/igancao/crm/api/ApiService.kt) 的 `reward_pool/` 接口及 `ui/application/sword/`、`emperor/` |
 | S20 | 小程序、业务资料及菜单覆盖 | iOS [UniappManager.m](repos/ios4crm/GCCRM/ViewController/Apply/Uniapp/UniappManager.m)、[CRMMaterialListVC.swift](repos/ios4crm/GCCRM/ViewController/Apply/Material/CRMMaterialListVC.swift)、[ApplyNewVC.m](repos/ios4crm/GCCRM/ViewController/Apply/ApplyNewVC.m) 的 `getData`；Android [ApplicationFragment.kt](repos/android4crm/app/src/main/java/com/igancao/crm/ui/application/ApplicationFragment.kt) 的 UniApp 调用及当前应用菜单 |

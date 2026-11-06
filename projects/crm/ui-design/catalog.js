@@ -1,4 +1,4 @@
-window.CRM_META={"date": "2026-11-06", "ios": "develop / 221c9898", "android": "develop / b98e308", "figmaAccess": "连接器不可读；经用户已打开 Chrome 查看画布，仅对实际查看模块标注。", "pages": 153, "modules": ["认证", "首页通知", "医生客户", "账户优惠券", "客户准入", "日程拜访", "客户资源", "运营激励", "个人管理", "订单服务", "问诊咨询", "协同工单", "经营数据", "业务资料"], "criticalNotes": ["当前CRMSynergyListVC.m:84–91实际push CRMSynergyChatDetailVC；旧CRMSynergyDetailVC push已注释，但其他通知/工作台仍引用旧详情。", "CRMAskOrderListController.swift:didSelectRow只取消选中，无独立详情；头像才跳医生。新版咨询订单不能假造独立详情，也不能与ChatListVC旧问诊混同。", "CRMSynergyCreateVC从GET_WOBC_TEMPLATE动态构造额外字段；原生源码无法给出全部工单类型字段，只可呈现通用字段和明确标注的示例模板。", "订单详情价格可展开：实付含医药费/药价/服务费/协定方差价/诊金/运费/制作费/包材费/活动优惠/用户券/医生券；总优惠另含减免制作费/辅料费等。", "源码提供主蓝#3B99FC、页面底#F4F4F4，多为白底导航/灰底分组列表。", "QRCodeVC仅展示接口返回二维码并关闭返回；未发现保存/分享按钮，本清单已收紧到实际行为。"]};
+window.CRM_META={"date": "2026-11-06", "ios": "develop / 221c9898", "android": "develop / b98e308", "figmaAccess": "连接器不可读；经用户已打开 Chrome 查看画布，仅对实际查看模块标注。", "pages": 153, "modules": ["认证", "首页通知", "医生客户", "账户优惠券", "客户准入", "日程拜访", "客户资源", "运营激励", "个人管理", "订单服务", "问诊咨询", "协同工单", "经营数据", "业务资料"], "criticalNotes": ["当前CRMSynergyListVC.m:84–91实际push CRMSynergyChatDetailVC；旧CRMSynergyDetailVC push已注释，但其他通知/工作台仍引用旧详情。", "CRMAskOrderListController.swift:didSelectRow只取消选中，无独立详情；头像才跳医生。新版咨询订单不能假造独立详情，也不能与ChatListVC旧问诊混同。", "CRMSynergyCreateVC从GET_WOBC_TEMPLATE动态构造额外字段；原生源码无法给出全部工单类型字段，只可呈现通用字段和明确标注的示例模板。", "订单详情价格可展开：实付含医药费/药价/服务费/协定方差价/诊金/运费/制作费/包材费/活动优惠/用户券/医生券；总优惠另含减免制作费/辅料费等。", "源码提供主蓝#3B99FC、页面底#F4F4F4，多为白底导航/灰底分组列表。", "QRCodeVC仅展示接口返回二维码并关闭返回；未发现保存/分享按钮，本清单已收紧到实际行为。"], "revision": "V2 对照修订", "baselineCommit": "1021a01", "conditionRules": 137, "conditionVariants": 373};
 window.CRM_PAGES=[
   {
     "id": "login",
@@ -17,8 +17,11 @@ window.CRM_PAGES=[
     ],
     "entry": "启动或未登录访问",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "home",
@@ -46,8 +49,11 @@ window.CRM_PAGES=[
     ],
     "entry": "首页-首页",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "实机结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "已观察对应实机页面（非全部状态）",
+    "conditionCount": 3,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "notification",
@@ -66,8 +72,11 @@ window.CRM_PAGES=[
     ],
     "entry": "首页-通知",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 2,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "notification-helper",
@@ -85,8 +94,11 @@ window.CRM_PAGES=[
     ],
     "entry": "通知页",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "notification-list",
@@ -107,8 +119,11 @@ window.CRM_PAGES=[
     ],
     "entry": "通知小助手分类",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "notification-search",
@@ -125,8 +140,11 @@ window.CRM_PAGES=[
     ],
     "entry": "通知小助手搜索",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "doctor-messages",
@@ -147,8 +165,11 @@ window.CRM_PAGES=[
     ],
     "entry": "医生通知列表或搜索结果",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 1,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "doctors",
@@ -185,8 +206,11 @@ window.CRM_PAGES=[
     ],
     "entry": "医生Tab",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "实机结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "已观察对应实机页面（非全部状态）",
+    "conditionCount": 11,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "doctor-search",
@@ -206,8 +230,11 @@ window.CRM_PAGES=[
     ],
     "entry": "医生列表或选择医生",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "doctor-search-results",
@@ -227,8 +254,11 @@ window.CRM_PAGES=[
     ],
     "entry": "搜索医生",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "doctor-home",
@@ -258,8 +288,11 @@ window.CRM_PAGES=[
     ],
     "entry": "医生列表或业务关联",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 12,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "other-doctor-home",
@@ -279,8 +312,11 @@ window.CRM_PAGES=[
     ],
     "entry": "其他范围医生",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "doctor-info",
@@ -306,8 +342,11 @@ window.CRM_PAGES=[
     ],
     "entry": "医生主页资料",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 7,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "doctor-add",
@@ -334,8 +373,11 @@ window.CRM_PAGES=[
     ],
     "entry": "工作台新增医生或医生资料编辑",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "doctor-tags",
@@ -356,8 +398,11 @@ window.CRM_PAGES=[
     ],
     "entry": "医生主页标签",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "doctor-tags-edit",
@@ -377,8 +422,11 @@ window.CRM_PAGES=[
     ],
     "entry": "标记信息编辑",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "tag-manager",
@@ -397,8 +445,11 @@ window.CRM_PAGES=[
     ],
     "entry": "医生标签编辑",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "doctor-potential",
@@ -416,8 +467,11 @@ window.CRM_PAGES=[
     ],
     "entry": "医生主页潜力",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "change-manager",
@@ -438,8 +492,11 @@ window.CRM_PAGES=[
     ],
     "entry": "医生资料",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "select-manager",
@@ -457,8 +514,11 @@ window.CRM_PAGES=[
     ],
     "entry": "变更医助",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "audit-record-detail",
@@ -486,8 +546,11 @@ window.CRM_PAGES=[
     ],
     "entry": "医生审核消息",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "doctor-behavior",
@@ -514,8 +577,11 @@ window.CRM_PAGES=[
     ],
     "entry": "医生主页-行为统计",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "scan-patients",
@@ -533,8 +599,11 @@ window.CRM_PAGES=[
     ],
     "entry": "行为统计",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "invited-records",
@@ -553,8 +622,11 @@ window.CRM_PAGES=[
     ],
     "entry": "行为统计",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "doctor-income",
@@ -578,8 +650,11 @@ window.CRM_PAGES=[
     ],
     "entry": "医生主页-收入统计",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "doctor-income-orders",
@@ -597,8 +672,11 @@ window.CRM_PAGES=[
     ],
     "entry": "收入统计金额下钻",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "实机结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "已观察对应实机页面（非全部状态）",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "doctor-income-flow",
@@ -617,8 +695,11 @@ window.CRM_PAGES=[
     ],
     "entry": "医生收入看板/数据",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "doctor-account",
@@ -657,8 +738,11 @@ window.CRM_PAGES=[
     ],
     "entry": "医生主页-账户信息",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 7,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "coupon-list",
@@ -677,10 +761,13 @@ window.CRM_PAGES=[
     ],
     "entry": "账户信息三个状态入口",
     "basis": "iOS 源码 + Figma 可见画布",
-    "fidelity": "结构重建",
+    "fidelity": "源码结构修订",
     "figma": "https://www.figma.com/design/p9Hr9qCb4DbbKgFqgjZrPO/?node-id=1625-1353",
     "figmaNote": "待使用、已使用、已过期券卡片",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 3,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "coupon-gift",
@@ -702,8 +789,11 @@ window.CRM_PAGES=[
     ],
     "entry": "账户信息优惠券行",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 1,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "month-bills",
@@ -720,8 +810,11 @@ window.CRM_PAGES=[
     ],
     "entry": "账户余额行",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "month-bill-detail",
@@ -738,8 +831,11 @@ window.CRM_PAGES=[
     ],
     "entry": "月对账月份",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "doctor-attention",
@@ -758,8 +854,11 @@ window.CRM_PAGES=[
     ],
     "entry": "账户信息医生关注",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "doctor-materials",
@@ -780,8 +879,11 @@ window.CRM_PAGES=[
     ],
     "entry": "账户信息生成台签物料",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "tax-history",
@@ -800,8 +902,11 @@ window.CRM_PAGES=[
     ],
     "entry": "账户纳税方式历史",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "doctor-service-fee",
@@ -822,8 +927,11 @@ window.CRM_PAGES=[
     ],
     "entry": "账户信息服务费",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "service-level-history",
@@ -840,8 +948,11 @@ window.CRM_PAGES=[
     ],
     "entry": "账户信息服务费等级",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "doctor-invite",
@@ -860,8 +971,11 @@ window.CRM_PAGES=[
     ],
     "entry": "工作台邀请医生、我的二维码",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "doctor-register-code",
@@ -879,8 +993,11 @@ window.CRM_PAGES=[
     ],
     "entry": "工作台注册验证",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "doctor-audit",
@@ -901,8 +1018,11 @@ window.CRM_PAGES=[
     ],
     "entry": "工作台医生审核",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 1,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "select-unverified",
@@ -919,8 +1039,11 @@ window.CRM_PAGES=[
     ],
     "entry": "录入审核信息",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "hospital-search",
@@ -940,8 +1063,11 @@ window.CRM_PAGES=[
     ],
     "entry": "医生/拜访/日程/识别选医院",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "hospital-add",
@@ -961,8 +1087,11 @@ window.CRM_PAGES=[
     ],
     "entry": "医院搜索",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "department-select",
@@ -979,8 +1108,11 @@ window.CRM_PAGES=[
     ],
     "entry": "新增/编辑医生",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "doctor-check",
@@ -1000,8 +1132,11 @@ window.CRM_PAGES=[
     ],
     "entry": "工作台查验医生",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "check-hospital",
@@ -1018,8 +1153,11 @@ window.CRM_PAGES=[
     ],
     "entry": "查验医生其他方式",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "check-results",
@@ -1036,8 +1174,11 @@ window.CRM_PAGES=[
     ],
     "entry": "查验医生/医院搜索",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "check-detail",
@@ -1055,8 +1196,11 @@ window.CRM_PAGES=[
     ],
     "entry": "查验结果",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "ocr-upload",
@@ -1075,8 +1219,11 @@ window.CRM_PAGES=[
     ],
     "entry": "查验医生",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "ocr-results",
@@ -1094,8 +1241,11 @@ window.CRM_PAGES=[
     ],
     "entry": "专家墙识别完成",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "图片识别使用演示结果；识别、匹配和领取限制不调用真实接口。"
+    "fidelity": "源码结构修订",
+    "note": "图片识别使用演示结果；识别、匹配和领取限制不调用真实接口。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "workbench",
@@ -1121,8 +1271,11 @@ window.CRM_PAGES=[
     ],
     "entry": "工作台Tab",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "实机结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "已观察对应实机页面（非全部状态）",
+    "conditionCount": 3,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "todo",
@@ -1141,8 +1294,11 @@ window.CRM_PAGES=[
     ],
     "entry": "工作台我的待办",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "calendar",
@@ -1162,8 +1318,11 @@ window.CRM_PAGES=[
     ],
     "entry": "我的-甘草日历或工作台日期",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "schedule-edit",
@@ -1188,8 +1347,11 @@ window.CRM_PAGES=[
     ],
     "entry": "工作台创建日程/医生主页",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 5,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "schedule-detail",
@@ -1209,8 +1371,11 @@ window.CRM_PAGES=[
     ],
     "entry": "工作台日程/日历",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 1,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "birthday",
@@ -1230,8 +1395,11 @@ window.CRM_PAGES=[
     ],
     "entry": "工作台生日/日历",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "visit-edit",
@@ -1259,8 +1427,11 @@ window.CRM_PAGES=[
     ],
     "entry": "工作台/医生主页/日程详情",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 3,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "doctor-visits",
@@ -1279,8 +1450,11 @@ window.CRM_PAGES=[
     ],
     "entry": "医生主页-拜访记录",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 2,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "visit-actions",
@@ -1297,8 +1471,11 @@ window.CRM_PAGES=[
     ],
     "entry": "医生主页添加操作",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "visit-all",
@@ -1319,8 +1496,11 @@ window.CRM_PAGES=[
     ],
     "entry": "应用-拜访记录",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "visit-search",
@@ -1337,8 +1517,11 @@ window.CRM_PAGES=[
     ],
     "entry": "拜访记录搜索",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "visit-search-results",
@@ -1356,8 +1539,11 @@ window.CRM_PAGES=[
     ],
     "entry": "拜访搜索",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "nearby-map",
@@ -1379,8 +1565,11 @@ window.CRM_PAGES=[
     ],
     "entry": "工作台",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "nearby-search",
@@ -1398,8 +1587,11 @@ window.CRM_PAGES=[
     ],
     "entry": "雾影寻踪",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "nearby-list",
@@ -1415,8 +1607,11 @@ window.CRM_PAGES=[
     ],
     "entry": "雾影寻踪列表",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "visit-address",
@@ -1435,8 +1630,11 @@ window.CRM_PAGES=[
     ],
     "entry": "医生资料地址",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "doctor-pools",
@@ -1466,8 +1664,11 @@ window.CRM_PAGES=[
     ],
     "entry": "应用公私池",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 16,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "pool-search",
@@ -1483,8 +1684,11 @@ window.CRM_PAGES=[
     ],
     "entry": "客户池",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "pool-results",
@@ -1500,8 +1704,11 @@ window.CRM_PAGES=[
     ],
     "entry": "客户池搜索",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "protected-doctors",
@@ -1518,8 +1725,11 @@ window.CRM_PAGES=[
     ],
     "entry": "客户池相关入口/通知",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "potential-doctors",
@@ -1545,8 +1755,11 @@ window.CRM_PAGES=[
     ],
     "entry": "应用/潜力推荐查看更多",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 4,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "activities",
@@ -1566,8 +1779,11 @@ window.CRM_PAGES=[
     ],
     "entry": "工作台",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "展示月度基金/预算概览、提报记录及规则，没有新增未经确认的预算申报提交流程。"
+    "fidelity": "源码结构修订",
+    "note": "展示月度基金/预算概览、提报记录及规则，没有新增未经确认的预算申报提交流程。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 2,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "activity-funds",
@@ -1587,8 +1803,11 @@ window.CRM_PAGES=[
     ],
     "entry": "运营活动记录",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "reward-pool",
@@ -1611,8 +1830,11 @@ window.CRM_PAGES=[
     ],
     "entry": "应用",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 3,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "reward-records",
@@ -1632,8 +1854,11 @@ window.CRM_PAGES=[
     ],
     "entry": "奖励池",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "reward-cards",
@@ -1650,8 +1875,11 @@ window.CRM_PAGES=[
     ],
     "entry": "奖励池",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 2,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "reward-team",
@@ -1671,8 +1899,11 @@ window.CRM_PAGES=[
     ],
     "entry": "兑换卡详情",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 1,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "reward-points",
@@ -1691,8 +1922,11 @@ window.CRM_PAGES=[
     ],
     "entry": "兑换卡详情",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "reward-rules",
@@ -1711,8 +1945,11 @@ window.CRM_PAGES=[
     ],
     "entry": "奖励池规则（权限相关）",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "iOS 代码要求审核、首单、次单三项权重合计100%；新人扶持比例另计。按 iOS 还原；Android 校验不同，不据此改动两端业务。"
+    "fidelity": "源码结构修订",
+    "note": "iOS 代码要求审核、首单、次单三项权重合计100%；新人扶持比例另计。按 iOS 还原；Android 校验不同，不据此改动两端业务。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 3,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "mine",
@@ -1736,8 +1973,11 @@ window.CRM_PAGES=[
     ],
     "entry": "我的Tab",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "实机结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "已观察对应实机页面（非全部状态）",
+    "conditionCount": 2,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "doctor-activity",
@@ -1758,8 +1998,11 @@ window.CRM_PAGES=[
     ],
     "entry": "我的",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "doctor-activity-search",
@@ -1775,8 +2018,11 @@ window.CRM_PAGES=[
     ],
     "entry": "医生活动情况",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "doctor-activity-detail",
@@ -1793,8 +2039,11 @@ window.CRM_PAGES=[
     ],
     "entry": "活动医生列表",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "special-approvals",
@@ -1811,8 +2060,11 @@ window.CRM_PAGES=[
     ],
     "entry": "我的（大区经理标识）",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "special-approval-detail",
@@ -1833,8 +2085,11 @@ window.CRM_PAGES=[
     ],
     "entry": "特殊医生审批列表",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 1,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "special-qualifications",
@@ -1861,8 +2116,11 @@ window.CRM_PAGES=[
     ],
     "entry": "医生资料/通知",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 3,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "thanks",
@@ -1882,8 +2140,11 @@ window.CRM_PAGES=[
     ],
     "entry": "我的/医生行为",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 1,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "thanks-detail",
@@ -1908,8 +2169,11 @@ window.CRM_PAGES=[
     ],
     "entry": "患者感谢",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 3,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "thanks-production",
@@ -1932,8 +2196,11 @@ window.CRM_PAGES=[
     ],
     "entry": "患者感谢待制作",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 1,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "notification-settings",
@@ -1951,8 +2218,11 @@ window.CRM_PAGES=[
     ],
     "entry": "我的-消息设置",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "application",
@@ -1988,10 +2258,13 @@ window.CRM_PAGES=[
     ],
     "entry": "应用Tab",
     "basis": "iOS 源码 + Figma 可见画布",
-    "fidelity": "结构重建",
+    "fidelity": "实机结构修订",
     "figma": "https://www.figma.com/design/p9Hr9qCb4DbbKgFqgjZrPO/?node-id=2009-228",
     "figmaNote": "应用分组与咨询订单",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "已观察对应实机页面（非全部状态）",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "orders",
@@ -2020,8 +2293,11 @@ window.CRM_PAGES=[
     ],
     "entry": "应用或经营指标",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 6,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "order-search",
@@ -2044,8 +2320,11 @@ window.CRM_PAGES=[
     ],
     "entry": "订单查询/关注订单",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "order-search-results",
@@ -2061,8 +2340,11 @@ window.CRM_PAGES=[
     ],
     "entry": "订单搜索",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "order-detail",
@@ -2103,8 +2385,11 @@ window.CRM_PAGES=[
     ],
     "entry": "订单列表/搜索/通知",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 6,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "order-logistics",
@@ -2123,8 +2408,11 @@ window.CRM_PAGES=[
     ],
     "entry": "订单或商城订单详情",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "order-prescription-trace",
@@ -2145,8 +2433,11 @@ window.CRM_PAGES=[
     ],
     "entry": "订单详情",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "order-image",
@@ -2165,8 +2456,11 @@ window.CRM_PAGES=[
     ],
     "entry": "订单详情/物流",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "order-address",
@@ -2187,8 +2481,11 @@ window.CRM_PAGES=[
     ],
     "entry": "订单详情操作",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "order-invoice",
@@ -2209,8 +2506,11 @@ window.CRM_PAGES=[
     ],
     "entry": "订单详情操作",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "order-refund",
@@ -2228,8 +2528,11 @@ window.CRM_PAGES=[
     ],
     "entry": "订单详情操作",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "order-complaint",
@@ -2250,8 +2553,11 @@ window.CRM_PAGES=[
     ],
     "entry": "订单详情投诉",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "urgent-orders",
@@ -2269,8 +2575,11 @@ window.CRM_PAGES=[
     ],
     "entry": "应用",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "focused-orders",
@@ -2288,8 +2597,11 @@ window.CRM_PAGES=[
     ],
     "entry": "应用",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 1,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "photo-orders",
@@ -2312,8 +2624,11 @@ window.CRM_PAGES=[
     ],
     "entry": "订单范围切换",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "photo-order-detail",
@@ -2339,8 +2654,11 @@ window.CRM_PAGES=[
     ],
     "entry": "照片方列表",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "photo-search-results",
@@ -2356,8 +2674,11 @@ window.CRM_PAGES=[
     ],
     "entry": "照片方搜索",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "mall-orders",
@@ -2376,8 +2697,11 @@ window.CRM_PAGES=[
     ],
     "entry": "订单范围商城或经营商城指标",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "mall-search",
@@ -2393,8 +2717,11 @@ window.CRM_PAGES=[
     ],
     "entry": "商城订单",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "mall-search-results",
@@ -2410,8 +2737,11 @@ window.CRM_PAGES=[
     ],
     "entry": "商城搜索",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "mall-detail",
@@ -2440,8 +2770,11 @@ window.CRM_PAGES=[
     ],
     "entry": "商城列表",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 1,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "after-sales",
@@ -2462,8 +2795,11 @@ window.CRM_PAGES=[
     ],
     "entry": "应用",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "after-sale-detail",
@@ -2491,8 +2827,11 @@ window.CRM_PAGES=[
     ],
     "entry": "售后列表",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 2,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "after-sale-search",
@@ -2512,8 +2851,11 @@ window.CRM_PAGES=[
     ],
     "entry": "订单搜索售后模式",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "drug-storage",
@@ -2533,8 +2875,11 @@ window.CRM_PAGES=[
     ],
     "entry": "应用",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "查询药库与供应状态，未凭空增加药库详情或库存修改操作。"
+    "fidelity": "源码结构修订",
+    "note": "查询药库与供应状态，未凭空增加药库详情或库存修改操作。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "inquiry-orders",
@@ -2555,8 +2900,11 @@ window.CRM_PAGES=[
     ],
     "entry": "应用-问诊订单",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 2,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "inquiry-search",
@@ -2576,8 +2924,11 @@ window.CRM_PAGES=[
     ],
     "entry": "问诊订单搜索",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "inquiry-search-results",
@@ -2593,8 +2944,11 @@ window.CRM_PAGES=[
     ],
     "entry": "问诊搜索",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "inquiry-detail",
@@ -2618,8 +2972,11 @@ window.CRM_PAGES=[
     ],
     "entry": "问诊订单/通知",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "inquiry-chat",
@@ -2636,8 +2993,11 @@ window.CRM_PAGES=[
     ],
     "entry": "问诊订单详情",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "consultations",
@@ -2661,10 +3021,13 @@ window.CRM_PAGES=[
     ],
     "entry": "应用-咨询订单",
     "basis": "iOS 源码 + Figma 可见画布",
-    "fidelity": "结构重建",
+    "fidelity": "源码结构修订",
     "figma": "https://www.figma.com/design/p9Hr9qCb4DbbKgFqgjZrPO/?node-id=2009-228",
     "figmaNote": "咨询订单列表与空状态",
-    "note": "新版咨询列表整行没有订单详情跳转，仅头像进入医生主页。时间及搜索可操作。"
+    "note": "新版咨询列表整行没有订单详情跳转，仅头像进入医生主页。时间及搜索可操作。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 1,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "consultation-search",
@@ -2681,10 +3044,13 @@ window.CRM_PAGES=[
     ],
     "entry": "新版咨询订单",
     "basis": "iOS 源码 + Figma 可见画布",
-    "fidelity": "结构重建",
+    "fidelity": "源码结构修订",
     "figma": "https://www.figma.com/design/p9Hr9qCb4DbbKgFqgjZrPO/?node-id=2009-228",
     "figmaNote": "咨询搜索相关样式",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "consultation-results",
@@ -2701,10 +3067,13 @@ window.CRM_PAGES=[
     ],
     "entry": "新版咨询搜索",
     "basis": "iOS 源码 + Figma 可见画布",
-    "fidelity": "结构重建",
+    "fidelity": "源码结构修订",
     "figma": "https://www.figma.com/design/p9Hr9qCb4DbbKgFqgjZrPO/?node-id=2009-228",
     "figmaNote": "咨询订单列表",
-    "note": "保留新版咨询列表的交互边界，不套用旧问诊详情。"
+    "note": "保留新版咨询列表的交互边界，不套用旧问诊详情。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "workorders",
@@ -2724,8 +3093,11 @@ window.CRM_PAGES=[
     ],
     "entry": "首页工单/应用/我的",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "实机结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "已观察列表及分组选择工单弹层",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "workorder-list",
@@ -2743,8 +3115,11 @@ window.CRM_PAGES=[
     ],
     "entry": "协同页签或订单关联工单",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "workorder-chat",
@@ -2775,16 +3150,19 @@ window.CRM_PAGES=[
     ],
     "entry": "CRMSynergyListVC当前生效push",
     "basis": "iOS 源码 + Figma 可见画布",
-    "fidelity": "结构重建",
+    "fidelity": "实机结构修订",
     "figma": "https://www.figma.com/design/p9Hr9qCb4DbbKgFqgjZrPO/?node-id=648-18",
     "figmaNote": "处理记录、输入、图片及附件",
-    "note": "当前 iOS 工单列表默认进入聊天式详情。原型支持消息、附件及角色相关操作演示，权限以真实服务端为准。"
+    "note": "当前 iOS 工单列表默认进入聊天式详情。原型支持消息、附件及角色相关操作演示，权限以真实服务端为准。",
+    "deviceReview": "已观察对应实机页面（非全部状态）",
+    "conditionCount": 3,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "workorder-info",
-    "name": "工单资料详情（保留入口）",
+    "name": "工单明细（聊天详情内）",
     "module": "协同工单",
-    "source": "repos/ios4crm/GCCRM/ViewController/Synergy/CRMSynergyDetailVC.m",
+    "source": "repos/ios4crm/GCCRM/ViewController/Synergy/CRMSynergyChatDetailVC.m",
     "kind": "detail",
     "fields": [
       "工单信息",
@@ -2801,10 +3179,13 @@ window.CRM_PAGES=[
     ],
     "entry": "通知/工作台仍存在该详情跳转",
     "basis": "iOS 源码 + Figma 可见画布",
-    "fidelity": "结构重建",
+    "fidelity": "实机结构修订",
     "figma": "https://www.figma.com/design/p9Hr9qCb4DbbKgFqgjZrPO/?node-id=648-18",
     "figmaNote": "工单详情的处理记录关系",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "note": "当前聊天式工单详情内的工单明细页签；旧通知详情控制器仍单独存在，未据此将它们视为同一入口。",
+    "deviceReview": "已观察对应实机页面（非全部状态）",
+    "conditionCount": 2,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "workorder-create",
@@ -2828,8 +3209,11 @@ window.CRM_PAGES=[
     ],
     "entry": "创建工单或订单关联发起",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "固定表单来自 iOS；额外的协同字段由服务端模板下发。原型只演示示例字段组合，未覆盖所有工单模板。"
+    "fidelity": "实机基础模板修订",
+    "note": "问题分类和工单名称来自模板且不可编辑；本轮已看到的模板无额外字段。其他模板按源码字段类型演示，不代表已核实全部服务端配置。",
+    "deviceReview": "已观察基础模板；额外动态项为源码示例",
+    "conditionCount": 1,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "workorder-reply",
@@ -2848,8 +3232,11 @@ window.CRM_PAGES=[
     ],
     "entry": "工单详情",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 1,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "workorder-return",
@@ -2866,8 +3253,11 @@ window.CRM_PAGES=[
     ],
     "entry": "工单详情",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "workorder-transfer",
@@ -2888,8 +3278,11 @@ window.CRM_PAGES=[
     ],
     "entry": "工单详情",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 1,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "workorder-select-person",
@@ -2905,8 +3298,11 @@ window.CRM_PAGES=[
     ],
     "entry": "工单转派",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "workorder-finish",
@@ -2924,8 +3320,11 @@ window.CRM_PAGES=[
     ],
     "entry": "工单详情",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "attachment-preview",
@@ -2942,8 +3341,11 @@ window.CRM_PAGES=[
     ],
     "entry": "工单附件或业务资料",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "资料预览使用本地演示文档；不复制内部业务文件内容。"
+    "fidelity": "源码结构修订",
+    "note": "资料预览使用本地演示文档；不复制内部业务文件内容。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "doctor-board",
@@ -2965,8 +3367,11 @@ window.CRM_PAGES=[
     ],
     "entry": "应用",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 2,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "doctor-income-board",
@@ -2987,8 +3392,11 @@ window.CRM_PAGES=[
     ],
     "entry": "医生数据",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "doctor-metric-list",
@@ -3011,8 +3419,11 @@ window.CRM_PAGES=[
     ],
     "entry": "应用指标下钻",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "doctor-metric-search",
@@ -3028,8 +3439,11 @@ window.CRM_PAGES=[
     ],
     "entry": "指标医生列表",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "team-data",
@@ -3055,8 +3469,11 @@ window.CRM_PAGES=[
     ],
     "entry": "应用",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "member-data",
@@ -3080,8 +3497,11 @@ window.CRM_PAGES=[
     ],
     "entry": "团队成员",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "mall-data",
@@ -3101,8 +3521,11 @@ window.CRM_PAGES=[
     ],
     "entry": "应用商城指标",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "runoff-warning",
@@ -3124,8 +3547,11 @@ window.CRM_PAGES=[
     ],
     "entry": "应用",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 1,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "runoff-warning-detail",
@@ -3142,8 +3568,11 @@ window.CRM_PAGES=[
     ],
     "entry": "流失预警列表",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 1,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "huashan",
@@ -3163,8 +3592,11 @@ window.CRM_PAGES=[
     ],
     "entry": "应用",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "pk-center",
@@ -3183,8 +3615,11 @@ window.CRM_PAGES=[
     ],
     "entry": "应用",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "pk-detail",
@@ -3204,8 +3639,11 @@ window.CRM_PAGES=[
     ],
     "entry": "PK列表",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 2,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "pk-create",
@@ -3232,8 +3670,11 @@ window.CRM_PAGES=[
     ],
     "entry": "PK发起对战",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "队伍、指标和权限选项以原生结构组织。原型演示队员选择与顺序调整，真实规则待接口核对。"
+    "fidelity": "源码结构修订",
+    "note": "队伍、指标和权限选项以原生结构组织。原型演示队员选择与顺序调整，真实规则待接口核对。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "pk-team-select",
@@ -3250,8 +3691,11 @@ window.CRM_PAGES=[
     ],
     "entry": "发起对战队员",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "pk-ranking",
@@ -3267,8 +3711,11 @@ window.CRM_PAGES=[
     ],
     "entry": "对战详情",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "pk-team-detail",
@@ -3285,8 +3732,11 @@ window.CRM_PAGES=[
     ],
     "entry": "对战详情",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "fidelity": "源码结构修订",
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "materials",
@@ -3305,10 +3755,13 @@ window.CRM_PAGES=[
     ],
     "entry": "应用",
     "basis": "iOS 源码 + Figma 可见画布",
-    "fidelity": "结构重建",
+    "fidelity": "源码结构修订",
     "figma": "https://www.figma.com/design/p9Hr9qCb4DbbKgFqgjZrPO/?node-id=2010-417",
     "figmaNote": "业务资料列表、分类及空状态",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "material-search",
@@ -3325,10 +3778,13 @@ window.CRM_PAGES=[
     ],
     "entry": "业务资料",
     "basis": "iOS 源码 + Figma 可见画布",
-    "fidelity": "结构重建",
+    "fidelity": "源码结构修订",
     "figma": "https://www.figma.com/design/p9Hr9qCb4DbbKgFqgjZrPO/?node-id=2010-417",
     "figmaNote": "搜索初始、有内容与无内容",
-    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。"
+    "note": "按 iOS 页面入口、字段和控件关系重建；当前样例数据不代表业务规则。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   },
   {
     "id": "operation-miniapp",
@@ -3344,7 +3800,10 @@ window.CRM_PAGES=[
     ],
     "entry": "应用",
     "basis": "iOS 源码",
-    "fidelity": "结构重建",
-    "note": "原生端仅能确认小程序入口、加载和返回关系；小程序内部页面不在现有原生源码中，不虚构完整小程序。"
+    "fidelity": "源码结构修订",
+    "note": "原生端仅能确认小程序入口、加载和返回关系；小程序内部页面不在现有原生源码中，不虚构完整小程序。",
+    "deviceReview": "尚未逐页实机核验",
+    "conditionCount": 0,
+    "reviewPriority": "实际展示 > Figma同页最后一版 > 当前iOS代码条件"
   }
 ];

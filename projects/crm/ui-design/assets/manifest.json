@@ -158,5 +158,61 @@
   "avatar": {
     "file": "assets/avatar.png",
     "source": "repos/ios4crm/GCCRM/Image/Assets.xcassets/Mine/avatar.imageset/Frame1@3x.png"
+  },
+  "me_gongdan": {
+    "file": "assets/me_gongdan.png",
+    "source": "repos/ios4crm/GCCRM/Image/Assets.xcassets/Mine/me/me_gongdan.imageset/gongdan@3x.png"
+  },
+  "me_activity": {
+    "file": "assets/me_activity.png",
+    "source": "repos/ios4crm/GCCRM/Image/Assets.xcassets/Mine/me/me_activity.imageset/activity@3x.png"
+  },
+  "me_thanks": {
+    "file": "assets/me_thanks.png",
+    "source": "repos/ios4crm/GCCRM/Image/Assets.xcassets/Mine/me/me_thanks.imageset/thanks_letter@3x.png"
+  },
+  "me_cert": {
+    "file": "assets/me_cert.png",
+    "source": "repos/ios4crm/GCCRM/Image/Assets.xcassets/Mine/me/me_cert.imageset/Vector@3x.png"
+  },
+  "me_calendar": {
+    "file": "assets/me_calendar.png",
+    "source": "repos/ios4crm/GCCRM/Image/Assets.xcassets/Mine/me/me_calendar.imageset/calendar@3x 1.png"
+  },
+  "me_set": {
+    "file": "assets/me_set.png",
+    "source": "repos/ios4crm/GCCRM/Image/Assets.xcassets/Mine/me/me_set.imageset/set@3x.png"
+  },
+  "apply_invoice": {
+    "file": "assets/apply_invoice.png",
+    "source": "repos/ios4crm/GCCRM/Image/Assets.xcassets/Apply/apply_invoice.imageset/票据 1@3x.png"
+  },
+  "blue_phone": {
+    "file": "assets/blue_phone.png",
+    "source": "repos/ios4crm/GCCRM/Image/Assets.xcassets/Apply/OrderInquire/blue_phone.imageset/Group 1000006653@3x.png"
+  },
+  "camera": {
+    "file": "assets/camera.png",
+    "source": "repos/ios4crm/GCCRM/Image/Assets.xcassets/Apply/OrderInquire/camera.imageset/Vector@3x.png"
+  },
+  "wechat_green": {
+    "file": "assets/wechat_green.png",
+    "source": "repos/ios4crm/GCCRM/Image/Assets.xcassets/Apply/OrderInquire/wechat_green.imageset/Combined Shape@3x.png"
+  },
+  "doc_A_bg": {
+    "file": "assets/doc_A_bg.png",
+    "source": "repos/ios4crm/GCCRM/Image/Assets.xcassets/Doctor/doc_A_bg.imageset/doc_A_bg@3x.png"
+  },
+  "doc_B_bg": {
+    "file": "assets/doc_B_bg.png",
+    "source": "repos/ios4crm/GCCRM/Image/Assets.xcassets/Doctor/doc_B_bg.imageset/doc_B_bg@3x.png"
+  },
+  "doc_C_bg": {
+    "file": "assets/doc_C_bg.png",
+    "source": "repos/ios4crm/GCCRM/Image/Assets.xcassets/Doctor/doc_C_bg.imageset/doc_C_bg@3x.png"
+  },
+  "doc_D_bg": {
+    "file": "assets/doc_D_bg.png",
+    "source": "repos/ios4crm/GCCRM/Image/Assets.xcassets/Doctor/doc_D_bg.imageset/doc_D_bg@3x.png"
   }
 }
