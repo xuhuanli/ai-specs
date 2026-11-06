@@ -1,0 +1,122 @@
+[
+  {
+    "name": "ordinary_library_search_sort",
+    "status": "passed",
+    "seconds": 17.87,
+    "error": ""
+  },
+  {
+    "name": "gaofang_button_search_and_management",
+    "status": "passed",
+    "seconds": 20.81,
+    "error": ""
+  },
+  {
+    "name": "save_without_manager_to_list",
+    "status": "passed",
+    "seconds": 11.45,
+    "error": ""
+  },
+  {
+    "name": "save_without_manager_to_search",
+    "status": "passed",
+    "seconds": 18.81,
+    "error": ""
+  },
+  {
+    "name": "save_with_manager_returns_manager",
+    "status": "passed",
+    "seconds": 14.22,
+    "error": ""
+  },
+  {
+    "name": "save_failure_keeps_detail",
+    "status": "passed",
+    "seconds": 13.0,
+    "error": ""
+  },
+  {
+    "name": "numeric_draft_edit_fill_and_send_hidden",
+    "status": "passed",
+    "seconds": 13.58,
+    "error": ""
+  },
+  {
+    "name": "numeric_source_and_pc_edit",
+    "status": "passed",
+    "seconds": 5.03,
+    "error": ""
+  },
+  {
+    "name": "standard_id_fallback_and_content",
+    "status": "passed",
+    "seconds": 7.02,
+    "error": ""
+  },
+  {
+    "name": "source3_original_url",
+    "status": "passed",
+    "seconds": 5.2,
+    "error": ""
+  },
+  {
+    "name": "readonly_explicit_url",
+    "status": "passed",
+    "seconds": 5.0,
+    "error": ""
+  },
+  {
+    "name": "legacy_url",
+    "status": "passed",
+    "seconds": 5.3,
+    "error": ""
+  },
+  {
+    "name": "legacy_id",
+    "status": "passed",
+    "seconds": 4.66,
+    "error": ""
+  },
+  {
+    "name": "message_flag_management",
+    "status": "passed",
+    "seconds": 3.05,
+    "error": ""
+  },
+  {
+    "name": "todo_protocol_adapter",
+    "status": "passed",
+    "seconds": 5.13,
+    "error": ""
+  },
+  {
+    "name": "advertisement_protocol_adapter",
+    "status": "passed",
+    "seconds": 3.16,
+    "error": ""
+  },
+  {
+    "name": "invalid_protocol_stays",
+    "status": "passed",
+    "seconds": 5.97,
+    "error": ""
+  },
+  {
+    "name": "published_share_panel",
+    "status": "passed",
+    "seconds": 10.13,
+    "error": ""
+  },
+  {
+    "name": "warm_os_push_payload",
+    "status": "passed",
+    "seconds": 4.99,
+    "error": ""
+  },
+  {
+    "name": "cold_os_push_payload",
+    "status": "passed",
+    "seconds": 3.92,
+    "error": ""
+  }
+]
