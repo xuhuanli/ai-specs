@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>甘草医生 CRM · 全应用交互设计</title>
+<meta name="description" content="CRM iOS 优先的本地交互原型，按业务模块浏览页面、表单和状态。">
+<link rel="icon" href="assets/apply_file.png">
+<link rel="stylesheet" href="styles.css">
+<script defer src="assets/icons.js"></script><script defer src="catalog.js"></script><script defer src="app.js"></script>
+</head>
+<body>
+<div class="studio">
+  <aside class="sidebar">
+    <a class="brand" href="#home"><span class="brand-mark">甘</span><span>甘草医生 CRM<small>应用交互设计 · iOS 优先</small></span></a>
+    <div class="library-search"><span>⌕</span><input id="page-search" placeholder="搜索页面、模块或操作" aria-label="搜索设计页面"><kbd>⌘ K</kbd></div>
+    <div class="catalog-summary" id="catalog-summary"></div>
+    <nav id="catalog" aria-label="按业务模块浏览页面"></nav>
+    <div class="sidebar-footer"><i></i>本地交互原型<span>2026.11.06</span></div>
+  </aside>
+  <main class="main-studio">
+    <header class="studio-header"><div><span class="eyebrow" id="module-label">应用概览</span><h1 id="page-title">首页</h1></div><div class="header-actions"><button id="map-btn" class="desktop-btn">页面总览</button><button id="focus-btn" class="desktop-btn">专注预览</button><button id="reset-btn" class="desktop-btn" title="恢复所有演示数据">重置演示</button></div></header>
+    <div class="preview-controls"><div class="segmented" id="size-control"><button data-size="390" class="selected">iPhone · 390</button><button data-size="430">大屏 · 430</button></div><div class="preview-selects"><label>角色<select id="role-select"><option value="assistant">普通医助</option><option value="manager" selected>管理人员</option></select></label><label>页面状态<select id="state-select"><option value="normal">正常</option><option value="empty">空数据</option><option value="loading">加载中</option><option value="error">加载失败</option></select></label></div></div>
+    <div class="workarea"><section class="preview-stage" aria-label="手机应用预览"><div class="device" id="device"><div class="device-status"><strong>9:41</strong><span class="status-symbols">▮▮▮ <span>◕</span> ▰</span></div><div id="app" class="app"></div><div id="overlay-root"></div><div id="toast" class="toast" role="status"></div><div class="home-indicator"></div></div><div class="preview-caption"><span class="live-dot"></span>可交互 · 演示数据仅保存在当前浏览器</div></section>
+    <aside class="inspector"><div class="inspector-label">页面说明</div><h2 id="inspector-title"></h2><p id="inspector-desc"></p><div id="page-meta"></div><section><h3>可以试试</h3><div id="interaction-list"></div></section><section><h3>页面关系</h3><div id="related-pages"></div></section><section><h3>设计依据</h3><div id="source-info"></div></section><div class="scope-note">原型按当前代码重建设计，Figma 已查看的模块作为视觉参考。金额、人物和订单均为演示内容；接口动态字段、外部网页及设备能力的实际效果另行验证。</div></aside>
+    </div>
+  </main>
+</div>
+<div id="atlas" class="atlas" hidden></div>
+</body></html>
