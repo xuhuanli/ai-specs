@@ -1,0 +1,42 @@
+{
+  "method": "真实生产列表解析及AST提取的详情getter/组件配色方法在Node中执行；未渲染ArkUI",
+  "results": [
+    {
+      "name": "新增6：列表各诊后阶段与数字/字符串类型显示正确标签和secondary底色",
+      "status": "failed",
+      "error": "Expected values to be strictly equal:\n\n'' !== '无明显变化'\n"
+    },
+    {
+      "name": "新增6：详情不额外限制阶段或依赖列表描述",
+      "status": "failed",
+      "error": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n+   '',\n+   'app.color.drug_mark_color'\n-   '无明显变化',\n-   'app.color.secondary'\n  ]\n"
+    },
+    {
+      "name": "原有列表条件：阶段0/无效与空白描述仍隐藏整行",
+      "status": "passed"
+    },
+    {
+      "name": "原有超时规则：新标签不改变描述的待反馈超时标红",
+      "status": "passed"
+    },
+    {
+      "name": "原有1至5/空/未知值：列表全量状态、描述及超时组合与HEAD输出一致",
+      "status": "passed"
+    },
+    {
+      "name": "原有详情标签：1至5/空/未知值映射与HEAD输出一致",
+      "status": "passed"
+    },
+    {
+      "name": "数据复用：新旧标签切换、空值和整行隐藏后恢复均无旧标签残留",
+      "status": "failed",
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'app.color.drug_mark_color'\n- 'app.color.secondary'\n             ^\n"
+    },
+    {
+      "name": "secondary资源为#A56D5F且列表与详情仍使用现有白色字体",
+      "status": "passed"
+    }
+  ],
+  "passed": 5,
+  "failed": 3
+}

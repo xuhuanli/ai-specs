@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-26",
+  "requirement": "SAN-REQ-006",
+  "task": "SAN-DEV-HOS-014",
+  "platform": "HarmonyOS",
+  "codeCommit": "68ec8696af038455e0b5f0395004becfdf21e621",
+  "codeBranch": "feature/sanshi/order-0518-Q42",
+  "featureSourceFiles": 5,
+  "hostMockGroupsPassed": 8,
+  "deviceMockCasesPassed": 4,
+  "cleanBuildSucceeded": true,
+  "cleanPackageInstalled": true,
+  "temporaryMockRemoved": true,
+  "existingAppScopeChangeExcluded": true,
+  "iosAndAndroidModified": false,
+  "pushed": false,
+  "realBackendNewTypeIntegration": "not_executed"
+}

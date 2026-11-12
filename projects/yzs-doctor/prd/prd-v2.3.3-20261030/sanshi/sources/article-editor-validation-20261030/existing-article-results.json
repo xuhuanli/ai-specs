@@ -1,0 +1,99 @@
+{
+  "date": "2026-10-30",
+  "baseCommit": "26bffdf21b0832fa893c3beda4545639bd51f3e7",
+  "committed": true,
+  "pushed": false,
+  "requirements": [
+    "REQ-008",
+    "REQ-009"
+  ],
+  "acceptance": [
+    "AC-010",
+    "AC-011"
+  ],
+  "routeFields": [
+    "title",
+    "content",
+    "doctor_article_id",
+    "system_article_id"
+  ],
+  "temporaryEntry": {
+    "file": "yzs_article/src/main/ets/pages/MyArticles.ets",
+    "marker": "TODO(article-edit-test-entry)",
+    "removal": "已删除临时点击、TODO标记及openPhoneEditor的item参数／四字段拼装分支；MyArticles恢复当前HEAD，永久编辑能力与回归测试保留",
+    "removed": true
+  },
+  "regressions": {
+    "beforeImplementation": {
+      "pass": 27,
+      "fail": 8
+    },
+    "afterImplementation": {
+      "pass": 35,
+      "fail": 0
+    },
+    "nativePlatformApis": "fake"
+  },
+  "build": {
+    "product": "AgcDebug_Test",
+    "target": "yzs_article@default assembleHsp",
+    "result": "BUILD SUCCESSFUL",
+    "fullAppRepeated": false
+  },
+  "device": {
+    "listEntry": true,
+    "unchangedBackDirect": true,
+    "changedBackConfirm": true,
+    "continueEditing": true,
+    "discardToList": true,
+    "newAfterExistingBlankBackDirect": true,
+    "serverWrites": false
+  },
+  "visualInspection": {
+    "existingTitleAndBodyFilled": true,
+    "newPageBlank": true
+  },
+  "serverUpdateTested": false,
+  "userVersionFilePreserved": true,
+  "sha256": {
+    "yzs_article/src/main/ets/api/ArticleEditorApi.ets": "4076d338e099def6328a860b17b2dad94f14a8b389ddf72f2d24f3d8777be312",
+    "yzs_article/src/main/ets/manager/ArticleEditorSession.ets": "74070465b1f8fb4ffe0515c314aa993cdfd5f3cb5487d17ccc2400ee4b3bde32",
+    "yzs_article/src/main/ets/models/ArticleEditor.ets": "cf0ee5bfb6f0fd81e5cd4fb1138a132e213a1dda7cb621b5ee2672cd30e97cb9",
+    "yzs_article/src/main/ets/pages/ArticleEdit.ets": "1450bd6c8974e143ab7c793f1180a65778f42bdce934ce3b06fdf985b918de98",
+    "yzs_article/src/main/ets/pages/MyArticles.ets": "69c52250cac74e7c60c936ece35df868b5c2157c55d9135fba5fed8b0f854091",
+    "yzs_article/src/main/ets/view_models/ArticleEdit.ets": "278186e18866b90d9fa330d805d5249c92efc6d19c2b61153ce5d09c487e4c68",
+    "yzs_article/src/main/resources/rawfile/article_editor/editor.js": "cd63bcb4e1834e6b71dd99d1f61d9612f6e6933d0176c476fae61e9ec2e50b58",
+    "yzs_article/src/ohosTest/ets/test/ets/utils/ArticleEdit.host.test.cjs": "e6a57d6ce7866e951259e10910e4c7ca6f349a9397b676d056a0398e82b0574b",
+    "yzs_article/src/ohosTest/ets/test/ets/utils/ArticleEditor.dom.test.cjs": "efb9579fbc096333b44e2c8fdf45ee6a2b89a7e333f7fa1f7b72ff1dc83c3fa9"
+  },
+  "entryRemovalCheck": {
+    "date": "2026-10-30",
+    "MyArticlesMatchesHead": true,
+    "MyArticlesSha256": "90d603e4b55665e35f710d84a5930f84ea8ed5b7c6e487b5aed04e8c8a1768fa",
+    "build": "yzs_article@default assembleHsp AgcDebug_Test BUILD SUCCESSFUL",
+    "deviceReinstalled": false,
+    "userVersionFilePreserved": true
+  },
+  "codeCommit": "fe4ad0d5759a49b6562eacc1a81585b8087eaf41",
+  "precommitVerification": {
+    "regressionTests": 35,
+    "pass": 35,
+    "fail": 0,
+    "skipped": 0,
+    "diffCheck": true,
+    "finalCodeMatchesSuccessfulBuild": true,
+    "temporaryEntryRemoved": true,
+    "userVersionFileExcluded": true
+  },
+  "finalSourceSha256": {
+    "yzs_article/src/main/ets/api/ArticleEditorApi.ets": "4076d338e099def6328a860b17b2dad94f14a8b389ddf72f2d24f3d8777be312",
+    "yzs_article/src/main/ets/manager/ArticleEditorSession.ets": "74070465b1f8fb4ffe0515c314aa993cdfd5f3cb5487d17ccc2400ee4b3bde32",
+    "yzs_article/src/main/ets/models/ArticleEditor.ets": "cf0ee5bfb6f0fd81e5cd4fb1138a132e213a1dda7cb621b5ee2672cd30e97cb9",
+    "yzs_article/src/main/ets/pages/ArticleEdit.ets": "1450bd6c8974e143ab7c793f1180a65778f42bdce934ce3b06fdf985b918de98",
+    "yzs_article/src/main/ets/pages/MyArticles.ets": "90d603e4b55665e35f710d84a5930f84ea8ed5b7c6e487b5aed04e8c8a1768fa",
+    "yzs_article/src/main/ets/view_models/ArticleEdit.ets": "278186e18866b90d9fa330d805d5249c92efc6d19c2b61153ce5d09c487e4c68",
+    "yzs_article/src/main/resources/rawfile/article_editor/editor.js": "cd63bcb4e1834e6b71dd99d1f61d9612f6e6933d0176c476fae61e9ec2e50b58",
+    "yzs_article/src/ohosTest/ets/test/ets/utils/ArticleEdit.host.test.cjs": "e6a57d6ce7866e951259e10910e4c7ca6f349a9397b676d056a0398e82b0574b",
+    "yzs_article/src/ohosTest/ets/test/ets/utils/ArticleEditor.dom.test.cjs": "efb9579fbc096333b44e2c8fdf45ee6a2b89a7e333f7fa1f7b72ff1dc83c3fa9"
+  }
+}

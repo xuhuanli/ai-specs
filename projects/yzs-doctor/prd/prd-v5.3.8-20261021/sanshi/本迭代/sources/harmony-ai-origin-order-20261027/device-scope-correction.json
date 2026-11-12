@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-27",
+  "kind": "device_capture_attempt_and_scope_correction",
+  "appVersionName": "2.3.2.100",
+  "appVersionCode": 1000118,
+  "appUpdatedAt": "2026-10-27T11:25:18.954+08:00",
+  "observedEndpoint": "https://dev.igancao.com/appapi/index.php/ai_summary/complete_text_task",
+  "observedFlow": "AI写病历图文提交，用户后续说明不作为本次APP侧验收路径",
+  "httpStatus": 200,
+  "businessStatus": 1,
+  "taskIdReturned": true,
+  "originFieldPresent": false,
+  "verdict": "non_acceptance_sample_not_a_confirmed_defect",
+  "correction": "不能把此图文请求直接作为开方后台AI任务漏传origin_orderid的证据；APP侧不再安排测试，任务实际关联与图片处理交由测试查询后台确认。",
+  "ordinaryBackendTaskVerified": false,
+  "revisitBackendTaskVerified": false,
+  "draftRestoredBackendTaskVerified": false,
+  "rawCapture": "仅留本机/private/tmp/sanshi-ai-origin-device-20261027/，不归档患者信息、请求头或任务标识",
+  "captureStopped": true,
+  "sourceModifiedInThisCaptureTurn": false,
+  "committed": false,
+  "pushed": false
+}

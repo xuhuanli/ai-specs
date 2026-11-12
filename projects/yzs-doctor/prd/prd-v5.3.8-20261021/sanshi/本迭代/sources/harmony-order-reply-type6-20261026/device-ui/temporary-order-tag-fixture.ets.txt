@@ -1,0 +1,85 @@
+import { Want } from '@kit.AbilityKit'
+import BuildProfile from 'BuildProfile'
+import { dynamicPageRegistry, hptRouter } from 'hpt_scaffold'
+import { ModuleRouterName } from 'biz_middle_extension'
+import { HPTNetwork, NetworkInterceptor, Request, Response, HttpClient, HPTResponse } from 'hpt_network'
+
+/** 临时真机Mock，验证后整份移除。仅替换列表及详情收到的展示数据。 */
+class OrderTagFixtureInterceptor implements NetworkInterceptor {
+  private original: NetworkInterceptor
+  constructor(original: NetworkInterceptor) {
+    this.original = original
+  }
+  interceptForClient(client: HttpClient): HttpClient {
+    return this.original.interceptForClient(client)
+  }
+  interceptForRequest(request: Request): Request {
+    return this.original.interceptForRequest(request)
+  }
+  interceptForResponse<T>(origin: Response, response: HPTResponse<T>, disable: boolean): HPTResponse<T> | undefined {
+    const url = String(origin.request.url.url)
+    if (url.includes('acrecipel/getlist')) {
+      const fixture = JSON.parse(JSON.stringify(response)) as HPTResponse<Record<string, Object>[]>
+      if (Array.isArray(fixture.data) && fixture.data.length > 0) {
+        const item: Record<string, Object> = fixture.data[0]
+        this.patch(item)
+        fixture.data = [item]
+        console.info('[TAG6_FIXTURE] list status=' + OrderTagFixture.replyStatus.toString())
+        const replaced = JSON.parse(JSON.stringify(fixture)) as HPTResponse<T>
+        return this.original.interceptForResponse(origin, replaced, disable)
+      }
+    }
+    if (url.includes('acrecipel/getone')) {
+      const fixture = JSON.parse(JSON.stringify(response)) as HPTResponse<Record<string, Object>>
+      const recipel = fixture.data?.['recipel'] as Record<string, Object> | undefined
+      if (recipel !== undefined) {
+        this.patch(recipel)
+        recipel['follow_up_focus_summary'] = ''
+        recipel['followup_summary'] = 'V538标签6测试小结：患者按计划服药，暂无明显变化。'
+        recipel['receiver_name'] = 'V538标签6测试'
+        recipel['receiver_province_name'] = '测试省'
+        recipel['receiver_city_name'] = '测试市'
+        recipel['receiver_region_name'] = '测试区'
+        console.info('[TAG6_FIXTURE] detail status=' + OrderTagFixture.replyStatus.toString())
+        const replaced = JSON.parse(JSON.stringify(fixture)) as HPTResponse<T>
+        return this.original.interceptForResponse(origin, replaced, disable)
+      }
+    }
+    return this.original.interceptForResponse(origin, response, disable)
+  }
+  private patch(item: Record<string, Object>): void {
+    item['reply_type'] = 6
+    item['reply_status'] = OrderTagFixture.replyStatus
+    item['reply_status_text'] = OrderTagFixture.replyStatus === 5 ? '已反馈' : '已完结'
+    item['recipel_desc'] = 'V538标签6：患者按计划服药，暂无明显变化'
+    item['patient_name'] = 'V538标签6测试'
+    item['user_nickname'] = 'V538标签6测试'
+    item['remark_name'] = 'V538标签6测试'
+    item['patient_age'] = '28'
+    item['phone'] = '13800000000'
+    item['user_photo'] = ''
+    item['is_pre'] = 0
+  }
+}
+export class OrderTagFixture {
+  static replyStatus: number = 5
+  private static original?: NetworkInterceptor
+  static handleWant(want: Want): boolean {
+    if (!BuildProfile.DEVKIT_ENABLED) return false
+    const mode = String(want.parameters?.['v538TagCase'] ?? '')
+    if (mode !== '5' && mode !== '6' && mode !== 'off') return false
+    if (mode === 'off') {
+      if (OrderTagFixture.original) HPTNetwork.defaultRequestConfig.interceptor = OrderTagFixture.original
+      OrderTagFixture.original = undefined
+    } else {
+      OrderTagFixture.replyStatus = Number(mode)
+      if (!OrderTagFixture.original && HPTNetwork.defaultRequestConfig.interceptor) {
+        OrderTagFixture.original = HPTNetwork.defaultRequestConfig.interceptor
+        HPTNetwork.defaultRequestConfig.interceptor = new OrderTagFixtureInterceptor(OrderTagFixture.original)
+      }
+    }
+    hptRouter.navigation.clear(false)
+    dynamicPageRegistry.push(ModuleRouterName.doctorOrderList)
+    return true
+  }
+}

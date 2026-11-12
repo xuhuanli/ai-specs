@@ -1,0 +1,13 @@
+2026-10-26临时Mock测试包构建成功，随后覆盖安装当前真机。
+> hvigor Finished :entry:default@CollectDebugSymbol... after 1 ms
+> hvigor Finished :entry:assembleHap... after 1 ms
+================================================
+buildTime  :1026_161722
+productName:AgcDebug_Test
+bundleName :com.gancao.hm.doctor
+versionCode:1000118
+versionName:2.3.2.100
+networkVersionCode:5.0.6
+> hvigor BUILD SUCCESSFUL in 14 s 153 ms
+
+578 tasks in total: 341 executed, 237 up-to-date

@@ -1,0 +1,84 @@
+{
+  "scope": "Production methods transpiled/extracted; HarmonyOS, network and class-transformer dependencies isolated. Not device or backend validation.",
+  "pass": 3,
+  "fail": 13,
+  "results": [
+    {
+      "name": "新患者模型不继承其他开方来源",
+      "status": "fail",
+      "error": "Expected values to be strictly equal:\n\nundefined !== ''\n"
+    },
+    {
+      "name": "自动和手动推荐传同一来源，原参数保持",
+      "status": "fail",
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- '900719925474099312345'\n"
+    },
+    {
+      "name": "无来源不发origin_orderid，不借用pay_orderid",
+      "status": "pass"
+    },
+    {
+      "name": "成功回填优先响应订单号，通知时已可读取来源",
+      "status": "fail",
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- 'ORDER-A'\n"
+    },
+    {
+      "name": "成功回填缺少响应订单号时使用本次查询号",
+      "status": "fail",
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- 'LOOKUP-ID'\n"
+    },
+    {
+      "name": "没有订单数据或不支持剂型不建立来源",
+      "status": "fail",
+      "error": "Expected values to be strictly equal:\n\nundefined !== ''\n"
+    },
+    {
+      "name": "失败查询保留仍在使用的既有数据和来源",
+      "status": "pass"
+    },
+    {
+      "name": "入口及复诊标记不限制来源登记",
+      "status": "fail",
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- 'ORDER-0'\n"
+    },
+    {
+      "name": "接受后续订单回填时来源随数据更新",
+      "status": "fail",
+      "error": "Expected values to be strictly equal:\n\n'A' !== 'B'\n"
+    },
+    {
+      "name": "草稿优先新字段、兼容旧字段、缺字段清空",
+      "status": "fail",
+      "error": "Expected values to be strictly equal:\n\n'STALE' !== 'NEW'\n"
+    },
+    {
+      "name": "草稿恢复通知前来源已就绪",
+      "status": "fail",
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- 'DRAFT'\n"
+    },
+    {
+      "name": "开方AI写病历图文路由透传同一来源",
+      "status": "fail",
+      "error": "Expected values to be strictly equal:\n\nundefined !== 'A'\n"
+    },
+    {
+      "name": "图文页从路由解析来源并带入实际请求参数",
+      "status": "fail",
+      "error": "Expected values to be strictly equal:\n\nundefined !== 'A'\n"
+    },
+    {
+      "name": "独立图文入口无来源时不误发订单号",
+      "status": "pass"
+    },
+    {
+      "name": "草稿保存来源不污染真实开方参数",
+      "status": "fail",
+      "error": "Expected values to be strictly equal:\n\nundefined !== 'A'\n"
+    },
+    {
+      "name": "初始快照包含同一来源字段",
+      "status": "fail",
+      "error": "Expected values to be strictly equal:\n\nundefined !== 'A'\n"
+    }
+  ]
+}

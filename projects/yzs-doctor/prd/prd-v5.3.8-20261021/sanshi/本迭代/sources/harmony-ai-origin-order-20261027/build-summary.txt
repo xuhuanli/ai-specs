@@ -1,0 +1,23 @@
+2026-10-27，鸿蒙AgcDebug_Test，本轮未安装设备。
+工作目录：/Users/hpt-sans/Desktop/allplatform/hos_doctor
+命令：DEVECO_SDK_HOME=/Applications/DevEco-Studio.app/Contents/sdk JAVA_HOME=/Applications/DevEco-Studio.app/Contents/jbr/Contents/Home /Applications/DevEco-Studio.app/Contents/tools/node/bin/node /Applications/DevEco-Studio.app/Contents/tools/hvigor/bin/hvigorw.js assembleHap --mode module -p module=entry@default -p product=AgcDebug_Test -p buildMode=debug --no-daemon --parallel --incremental
+退出码：0
+> hvigor Finished :entry:default@CompileArkTS... after 10 s 141 ms
+> hvigor Finished :entry:default@GeneratePkgModuleJson... after 2 ms
+> hvigor Finished :entry:default@ProcessCompiledResources... after 1 ms
+> hvigor Finished :entry:default@PackageHap... after 413 ms
+> hvigor Finished :entry:default@PackingCheck... after 3 ms
+> hvigor Finished :entry:default@SignHap... after 843 ms
+> hvigor Finished :entry:default@CollectDebugSymbol... after 1 ms
+> hvigor Finished :entry:assembleHap... after 1 ms
+================================================
+buildTime  :1027_111413
+productName:AgcDebug_Test
+bundleName :com.gancao.hm.doctor
+versionCode:1000118
+versionName:2.3.2.100
+networkVersionCode:5.0.6
+> hvigor BUILD SUCCESSFUL in 18 s 59 ms
+
+578 tasks in total: 303 executed, 275 up-to-date
+包含弃用、资源及依赖配置警告，完整日志仅留本机临时目录。

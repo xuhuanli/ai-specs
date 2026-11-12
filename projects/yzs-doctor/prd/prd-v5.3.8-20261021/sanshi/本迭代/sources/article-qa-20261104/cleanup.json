@@ -1,0 +1,25 @@
+{
+  "source_hashes_restored": true,
+  "files": [
+    "entry/src/main/ets/entryability/EntryAbility.ets",
+    "yzs_article/src/main/ets/view_models/ArticleDetail.ets",
+    "yzs_article/src/main/ets/api/ArticleApi.ets",
+    "AppScope/app.json5",
+    "local.properties"
+  ],
+  "code_worktree_clean": true,
+  "fixture_packages_removed": [
+    "/Users/hpt-sans/Desktop/allplatform/projects/yzs-doctor/repos/hos_doctor/_hap/1000118Harmony_AgcDebug_Test_default_1104_134804.hap",
+    "/Users/hpt-sans/Desktop/allplatform/projects/yzs-doctor/repos/hos_doctor/entry/build/AgcDebug_Test/outputs/default/1000118Harmony_AgcDebug_Test_default_1104_134804.hap",
+    "/Users/hpt-sans/Desktop/allplatform/projects/yzs-doctor/repos/hos_doctor/entry/build/AgcDebug_Test/outputs/default/1000118Harmony_AgcDebug_Test_default_1104_134804-unsigned.hap"
+  ],
+  "device_restored": true,
+  "head": "658a118965f002c83adf127405e044b3d62054ab",
+  "clean_package_marker_absent": true,
+  "temporary_fixtures_removed": [
+    "/Users/hpt-sans/Desktop/allplatform/projects/yzs-doctor/repos/hos_doctor/yzs_article/build/AgcDebug_Test/outputs/default/yzs_article-default-unsigned.hsp",
+    "/private/tmp/article-qa-20261104/fixture-entry.hap",
+    "/private/tmp/article-qa-20261104/fixture-article.hsp",
+    "/private/tmp/article-qa-20261104/inject.py"
+  ]
+}
