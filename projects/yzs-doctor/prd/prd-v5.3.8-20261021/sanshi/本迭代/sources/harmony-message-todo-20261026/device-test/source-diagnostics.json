@@ -1,9 +1,0 @@
-{
-  "feedbackSampleCount": 9,
-  "allFeedbackMissingOrder": true,
-  "oldListRoute": "igancao://prescribe/small_no_visit_list/",
-  "normalizedRoute": "igancao://prescribe/small_no_visit_list/",
-  "canonicalRoute": "igancao://prescribe/small_no_visit_list",
-  "canonicalMatched": false,
-  "limit": "生产源码方法隔离复核；实际UI和日志另有记录。"
-}

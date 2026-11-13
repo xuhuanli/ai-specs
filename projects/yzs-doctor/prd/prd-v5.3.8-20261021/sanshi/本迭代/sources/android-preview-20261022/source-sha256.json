@@ -1,8 +1,0 @@
-{
-  "app/src/main/java/com/igancao/doctor/ui/prescribe/PrescribePreviewFragment.kt": "a4bf4e7ecf3e95ae3099eddba28f63bf9c23eb3da942907daca9949deee37005",
-  "app/src/main/java/com/igancao/doctor/ui/prescribe/MedicineCtmAdapter.kt": "ad89caab804ae5c67285359e6240f794980baf03c50e4b21fa7fab4a30aec40d",
-  "app/src/main/res/layout/fragment_prescribe_preview.xml": "af3305492bc4e81d71ece8273cee1c92b19b1b41828f67b3c3309e0fd83511d6",
-  "app/src/main/res/layout/item_prescribe_preview_price_row.xml": "fa411f28ac7c4254b65e52804cc597a7e12130e8aca8fd88274e2fa03ddb597c",
-  "app/src/main/java/com/igancao/doctor/ui/prescribe/preview/PrescribePreviewUiMapper.kt": "07d1b53bce7a2e9f77a616a96ca214c949815bf11d63523db2a83b33e570f844",
-  "app/src/main/java/com/igancao/doctor/ui/prescribe/preview/PrescribePreviewUiModel.kt": "6c4f9748c181c42bffcbb744bb81d5396a55b9343a82fd930f135d343695fb61"
-}

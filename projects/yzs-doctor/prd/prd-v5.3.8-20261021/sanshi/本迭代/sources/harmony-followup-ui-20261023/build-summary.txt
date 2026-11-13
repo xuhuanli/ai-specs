@@ -1,6 +1,0 @@
-产品：AgcDebug_Test
-任务：assembleHsp --mode module -p module=yzs_order@default -p product=AgcDebug_Test -p buildMode=debug --no-daemon --incremental
-> hvigor Finished :yzs_order:default@CompileArkTS... after 3 s 843 ms
-> hvigor Finished :yzs_order:default@SignHsp... after 902 ms
-> hvigor BUILD SUCCESSFUL in 8 s 901 ms
-构建日志含弃用、HAR依赖等警告；完整原始日志仅留本机临时目录。

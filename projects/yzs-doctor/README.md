@@ -1,14 +1,14 @@
 # 云诊室医生端多端协作
 
-本项目组织云诊室医生端 iOS、Android、HarmonyOS 的需求对齐和同步开发。所属部门以用户确认的信息为准，不从仓库名称推定。工作区通用规则见[根 README](../../README.md)和[根 AGENTS.md](../../AGENTS.md)，本项目规则见 [AGENTS.md](AGENTS.md)。
+本项目组织云诊室医生端 iOS、Android、HarmonyOS 的需求对齐和开发，支持任何开发者独立完成本次适用端的需求整理、实现和验证。工作区流程见[根 README](../../README.md)和[根 AGENTS.md](../../AGENTS.md)，本项目规则见 [AGENTS.md](AGENTS.md)。
 
 ## 各端入口
 
 | 平台 | 代码仓库 | 规范入口 |
 | --- | --- | --- |
-| iOS | [repos/ios_doctor](repos/ios_doctor/) | [AGENTS.md](repos/ios_doctor/AGENTS.md)、[README.md](repos/ios_doctor/README.md)及按需引用的规范 |
-| Android | [repos/android_doctor](repos/android_doctor/) | [README.md](repos/android_doctor/README.md)、实际构建配置与目标模块规范；接入核对时未见 AGENTS.md |
-| HarmonyOS | [repos/hos_doctor](repos/hos_doctor/) | [AGENTS.md](repos/hos_doctor/AGENTS.md)、[README.md](repos/hos_doctor/README.md)及按需引用的规范 |
+| iOS | [repos/gancao-ios4doctor](repos/gancao-ios4doctor/) | [AGENTS.md](repos/gancao-ios4doctor/AGENTS.md)、[README.md](repos/gancao-ios4doctor/README.md)及按需引用的规范 |
+| Android | [repos/gancao-android-doctor-v2](repos/gancao-android-doctor-v2/) | [AGENTS.md](repos/gancao-android-doctor-v2/AGENTS.md)、[README.md](repos/gancao-android-doctor-v2/README.md)、实际构建配置与目标模块规范 |
+| HarmonyOS | [repos/gancao-harmonydoctor](repos/gancao-harmonydoctor/) | [AGENTS.md](repos/gancao-harmonydoctor/AGENTS.md)、[README.md](repos/gancao-harmonydoctor/README.md)及按需引用的规范 |
 
 各端独立管理 Git 历史、分支、远端和代码提交。修改前确认目标仓库、分支和未提交改动，遵循本端架构及工程规范。
 
@@ -28,17 +28,17 @@ yzs-doctor/
 │   ├── README.md
 │   └── prd-vxxx-YYYYMMDD/
 │       ├── README.md
-│       └── sanshi/                  仅本人负责的需求及配套文档
+│       └── <负责人>/                本次需求及配套文档
 └── repos/
     ├── README.md
-    ├── ios_doctor/                  独立 Git 仓库
-    ├── android_doctor/              独立 Git 仓库
-    └── hos_doctor/                  独立 Git 仓库
+    ├── gancao-ios4doctor/            独立 Git 仓库
+    ├── gancao-android-doctor-v2/      独立 Git 仓库
+    └── gancao-harmonydoctor/         独立 Git 仓库
 ```
 
-版本入口见 [prd/README.md](prd/README.md)。版本资料按 `prd/prd-vxxx-YYYYMMDD/<姓名>/` 组织，当前用户为 `sanshi`。同一版本复用首次创建日期，不因负责人或后续修改日期另建目录；不自动纳入整版全部需求或改写其他人的资料。
+版本入口见 [prd/README.md](prd/README.md)。版本资料按 `prd/prd-vxxx-YYYYMMDD/<负责人>/` 组织，负责人使用实际姓名或团队标识，不预设默认人员。同一版本复用首次创建日期；接手已有需求时沿用原文档位置并记录实际执行者，不因换人另建或迁移资料。只维护本次授权范围，不自动纳入整版全部需求或改写无关资料。
 
-同一需求多人维护不同文档时，用链接、已确认版本和 REQ、AC 编号关联，共用业务逻辑及验收口径保持一致。产品确认业务规则，开发分别维护各端技术方案与任务，测试维护 AI 用例与人工验收；按实际需求使用模板，不要求凑齐全部文档。
+同一需求的文档用链接、已确认版本和 REQ、AC 编号关联，共用业务逻辑及验收口径保持一致。产品确认业务规则，开发维护各端技术方案与任务，测试维护 AI 用例与人工验收；以上职责可由同一人承担，按实际需求使用模板，不要求凑齐全部文档。各端实现和验证结果分别记录，历史资料中的实际负责人和执行事实保留。
 
 共用模板及填写方法见[工作区模板说明](../../docs/requirements/README.md)。本项目长期跨端约定维护在本文件、项目 AGENTS 或专题文档；各端自身技术维护资料按各仓库规范处理。
 
@@ -62,6 +62,6 @@ yzs-doctor/
 
 ## Git 与目录迁移
 
-本项目协作文档由 `allplatform/` 根文档仓库统一记录本地历史，不另建 `.git`、不向远程上传，也不复制到三端代码仓库提交。三端代码仓库由根忽略规则排除，代码提交和推送按明确授权分别执行。
+本项目协作文档由 `ai-specs/` 根文档仓库统一记录本地历史，不另建 `.git`、不向远程上传，也不复制到三端代码仓库提交。三端代码仓库由根忽略规则排除，代码提交和推送按明确授权分别执行。
 
 2026-11-02，本项目资料从工作区根目录迁入此处，三个代码仓库移到 `repos/`，保留原仓库目录名和 Git 历史。当前文档链接和可复用验证脚本已调整；历史日志、JSON 证据和原始材料保留原执行路径及事实。后续在新位置打开工程，迁移本身不表示重新完成构建或业务验收。

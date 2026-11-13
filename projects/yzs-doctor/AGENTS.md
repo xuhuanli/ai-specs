@@ -1,18 +1,18 @@
 # 云诊室医生端跨端协作约定
 
-本文件适用于 `projects/yzs-doctor/`。通用流程、文档写作、需求范围与 Git 授权边界遵循[工作区约定](../../AGENTS.md)；本文件只补充云诊室项目规则。
+本文件适用于 `projects/yzs-doctor/`，任何开发者均可按本规范完成一人多端开发。工作流程、文档写作、需求范围与 Git 授权边界遵循[工作区约定](../../AGENTS.md)，本文件补充云诊室项目规则。
 
 ## 项目与代码入口
 
 - 项目说明见 [README.md](README.md)，各端目录、规范和历史差异见[三端开发说明](三端开发说明.md)。
-- 三个独立代码仓库为 `repos/ios_doctor/`、`repos/android_doctor/`、`repos/hos_doctor/`；代码修改前读取目标仓库及目标目录的现行规范。Android 未提供 AGENTS.md 时按其 README 和实际配置核对，不套用其他端规则。
+- 三个独立代码仓库为 `repos/gancao-ios4doctor/`、`repos/gancao-android-doctor-v2/`、`repos/gancao-harmonydoctor/`；代码修改前读取目标仓库及目标目录的现行规范。Android 的规范入口为 [AGENTS.md](repos/gancao-android-doctor-v2/AGENTS.md)与 [README.md](repos/gancao-android-doctor-v2/README.md)，结合实际配置核对，不套用其他端规则。
 - 需求确认统一本次适用端的业务逻辑、交互和业务验收口径。已确认的平台差异继续保留；各端工程实现、分支、提交和验证分别遵循本端约定。
-- 不将 CRM 或其他业务项目的版本、接口、业务决定与本项目混用。
 
 ## 项目文档
 
-- 本项目版本资料放在 `prd/prd-vxxx-YYYYMMDD/<姓名>/`，当前用户默认 `sanshi/`；相对于工作区的完整路径为 `projects/yzs-doctor/prd/prd-vxxx-YYYYMMDD/sanshi/`。
-- 继续复用现有版本目录及首次创建日期；版本入口见 [prd/README.md](prd/README.md)。各负责人只维护本人负责范围，同一需求共用已确认业务规则与验收口径。
+- 本项目版本资料放在 `prd/prd-vxxx-YYYYMMDD/<负责人>/`；相对于工作区的完整路径为 `projects/yzs-doctor/prd/prd-vxxx-YYYYMMDD/<负责人>/`。负责人使用实际姓名或团队标识，不预设默认人员。
+- 继续复用现有版本目录及首次创建日期；版本入口见 [prd/README.md](prd/README.md)。目录只表示归档位置，接手者可在本次授权范围内维护原需求资料并记录实际执行者；同一需求共用已确认业务规则与验收口径。
+- 同一人可负责多个端，产品、开发、测试职责可兼任；各端实现、进度与验证结果分别记录，不以一端完成推定其他端完成。
 - 跨端长期约定在本项目 README 或专题文档维护；公共模板引用[工作区模板](../../docs/requirements/README.md)。各端自身技术文档仍按各仓库规则维护。
 - 三端开发说明中的分支、提交、工程配置和规范差异为注明日期的核对快照，执行任务时重新核对，不视为当前分支或生产状态。
 
