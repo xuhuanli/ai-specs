@@ -58,6 +58,6 @@ ai-specs/
 
 ## 文档与代码如何管理
 
-共用方法和模板放在根目录，业务规则、跨端决定、版本资料和发布记录放在对应项目内。版本资料按 `projects/<项目标识>/prd/prd-vxxx-YYYYMMDD/<负责人>/` 组织，具体归档与使用方法见[模板说明](docs/requirements/README.md)和项目文档。
+模板选择与填写方法见[模板说明](docs/requirements/README.md)，具体项目资料从[项目索引](projects/README.md)进入。
 
-根 Git 仓库管理共用资料和项目协作文档，各端代码仓库保留独立的 Git 历史，由根忽略规则排除。文档与代码的提交、推送分别按用户已给出的授权执行，具体边界见 [AGENTS.md](AGENTS.md)。
+归档、协作、验证和 Git 操作统一遵循 [AGENTS.md](AGENTS.md)。
