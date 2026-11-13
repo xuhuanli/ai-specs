@@ -5,6 +5,8 @@
 ## 项目与代码入口
 
 - 项目说明见 [README.md](README.md)，各端目录、规范和历史差异见[三端开发说明](三端开发说明.md)。
+- 需求任务通过 [prd/README.md](prd/README.md)定位实际版本，再按版本 README 和需求文档索引读取本次资料；发布任务读取本文件的发布约定和指定端发布记录。
+- 各端仓库入口见 [repos/README.md](repos/README.md)。按本次适用端进入对应仓库，读取本端 AGENTS、README 及目标目录规范，不因项目支持三个端就预读全部代码仓库。
 - 三个独立代码仓库为 `repos/gancao-ios4doctor/`、`repos/gancao-android-doctor-v2/`、`repos/gancao-harmonydoctor/`；代码修改前读取目标仓库及目标目录的现行规范。Android 的规范入口为 [AGENTS.md](repos/gancao-android-doctor-v2/AGENTS.md)与 [README.md](repos/gancao-android-doctor-v2/README.md)，结合实际配置核对，不套用其他端规则。
 - 需求确认统一本次适用端的业务逻辑、交互和业务验收口径。已确认的平台差异继续保留；各端工程实现、分支、提交和验证分别遵循本端约定。
 
