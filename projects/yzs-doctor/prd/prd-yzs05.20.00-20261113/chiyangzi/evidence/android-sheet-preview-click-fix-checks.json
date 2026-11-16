@@ -1,0 +1,181 @@
+{
+  "recordedAt": "2026-11-14T20:05:22.874860+08:00",
+  "baseCommit": "8436d102ebc48fbe45463af5f244b82cf423cfab",
+  "scope": "Remove item ripple, remove debounce from selection toggles, increase confirm bottom margin to 16dp",
+  "build": {
+    "command": "./gradlew :app:assembleDebug --offline --console=plain",
+    "result": "BUILD SUCCESSFUL",
+    "duration": "1m 59s",
+    "log": "/private/tmp/ai-specs-android-preview-click-fix-build.log"
+  },
+  "installation": {
+    "result": "success",
+    "device": "2509FPN0BC",
+    "androidApi": 36,
+    "package": "com.igancao.doctor",
+    "apkSha256": "d6d7ef979ba8df3f84b1406e49eba3e965dcabdc977ff0a3f139467091f17aa8"
+  },
+  "sourceSha256": {
+    "app/src/main/java/com/igancao/doctor/ui/record/recorddetail/CloudCaseImportPreviewSheet.kt": "83960953d99988b706d99014077d87cfe39d050442c09c9fc281483bc5c74db8",
+    "app/src/main/res/drawable/bg_cloud_case_preview_visit.xml": "53b9286c09e2ff6282c6807ec893fb88da5752524260c4b89d8d00ea07df8c69",
+    "app/src/main/res/layout/sheet_cloud_case_import_preview.xml": "ddd664cfa6eee1ba3a47c4f8be2cf5a2232944a220e9dfc7431dde839f1502ec"
+  },
+  "runtime": {
+    "executor": "Codex via adb on physical device",
+    "rapidToggleChecks": [
+      {
+        "control": "visit_current",
+        "field": "selectedCount",
+        "observedValues": [
+          0,
+          1
+        ],
+        "intervalMs": 133,
+        "result": "passed"
+      },
+      {
+        "control": "visit_previous",
+        "field": "selectedCount",
+        "observedValues": [
+          2,
+          1
+        ],
+        "intervalMs": 134,
+        "result": "passed"
+      },
+      {
+        "control": "btn_select_all",
+        "field": "selectedCount",
+        "observedValues": [
+          2,
+          0
+        ],
+        "intervalMs": 150,
+        "result": "passed"
+      },
+      {
+        "control": "iv_auto_sync",
+        "field": "autoSync",
+        "observedValues": [
+          false,
+          true
+        ],
+        "intervalMs": 143,
+        "result": "passed"
+      }
+    ],
+    "itemRipple": {
+      "result": "passed",
+      "method": "plain shape resource confirmed; AI compared unpressed and pressed screenshots during a stationary item press",
+      "unpressedScreenshot": "android-sheet-preview-click-fix-unpressed.png",
+      "pressedScreenshot": "android-sheet-preview-click-fix-pressed.png"
+    },
+    "confirmBottomGap": {
+      "pixels": 51,
+      "layoutDensity": 3.2,
+      "dp": 15.9375,
+      "expectedDp": 16,
+      "withinOnePixel": true,
+      "systemBottomInsetPixels": 48
+    },
+    "geometry": {
+      "presented": {
+        "recordedAt": 1794657809974,
+        "windowHeight": 2608,
+        "density": 3.2,
+        "sourceX": 64,
+        "sourceY": 222,
+        "sourceWidth": 1072,
+        "sourceHeight": 2329.8132,
+        "sourceScaleX": 0.8933333,
+        "sourceScaleY": 0.8933333,
+        "sourceRestored": false,
+        "selectedCount": 0,
+        "autoSync": true,
+        "sheetX": 0,
+        "sheetY": 261,
+        "sheetWidth": 1200,
+        "sheetHeight": 2347,
+        "sheetScaleX": 1,
+        "sheetScaleY": 1,
+        "confirmEnabled": false,
+        "confirmBottomGap": 51,
+        "footerBottomInset": 48
+      }
+    },
+    "closeRestoreGeometry": {
+      "presented": {
+        "recordedAt": 1794657814731,
+        "windowHeight": 2608,
+        "density": 3.2,
+        "sourceX": 64,
+        "sourceY": 222,
+        "sourceWidth": 1072,
+        "sourceHeight": 2329.8132,
+        "sourceScaleX": 0.8933333,
+        "sourceScaleY": 0.8933333,
+        "sourceRestored": false,
+        "selectedCount": 1,
+        "autoSync": true,
+        "sheetX": 0,
+        "sheetY": 261,
+        "sheetWidth": 1200,
+        "sheetHeight": 2347,
+        "sheetScaleX": 1,
+        "sheetScaleY": 1,
+        "confirmEnabled": true,
+        "confirmBottomGap": 51,
+        "footerBottomInset": 48
+      },
+      "dismissed": {
+        "recordedAt": 1794657817432,
+        "windowHeight": 2608,
+        "density": 3.2,
+        "sourceX": 0,
+        "sourceY": 0,
+        "sourceWidth": 1200,
+        "sourceHeight": 2608,
+        "sourceScaleX": 1,
+        "sourceScaleY": 1,
+        "sourceRestored": true,
+        "selectedCount": 1,
+        "autoSync": true
+      }
+    },
+    "finalPreviewGeometry": {
+      "presented": {
+        "recordedAt": 1794657819915,
+        "windowHeight": 2608,
+        "density": 3.2,
+        "sourceX": 64,
+        "sourceY": 222,
+        "sourceWidth": 1072,
+        "sourceHeight": 2329.8132,
+        "sourceScaleX": 0.8933333,
+        "sourceScaleY": 0.8933333,
+        "sourceRestored": false,
+        "selectedCount": 1,
+        "autoSync": true,
+        "sheetX": 0,
+        "sheetY": 261,
+        "sheetWidth": 1200,
+        "sheetHeight": 2347,
+        "sheetScaleX": 1,
+        "sheetScaleY": 1,
+        "confirmEnabled": true,
+        "confirmBottomGap": 51,
+        "footerBottomInset": 48
+      }
+    },
+    "finalScreenshot": "android-sheet-preview-click-fix.png",
+    "leftOpenForUser": true
+  },
+  "git": {
+    "committed": false,
+    "pushed": false
+  },
+  "notCovered": [
+    "Other Android devices and navigation modes",
+    "Complete synchronization business acceptance"
+  ]
+}

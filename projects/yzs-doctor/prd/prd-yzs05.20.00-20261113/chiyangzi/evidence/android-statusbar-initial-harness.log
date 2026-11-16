@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/private/tmp/ai_specs_android_statusbar_checks.py", line 57, in <module>
+    home_check('fixed-baseline')
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/ai_specs_android_statusbar_checks.py", line 31, in home_check
+    r=wait_text('开方记录');assert textnode(r,'诊室') is not None and textnode(r,'诊疗笔记') is None
+      ~~~~~~~~~^^^^^^^^^^^^
+  File "/private/tmp/ai_specs_android_statusbar_checks.py", line 18, in wait_text
+    raise AssertionError('Missing expected UI '+text)
+AssertionError: Missing expected UI 开方记录

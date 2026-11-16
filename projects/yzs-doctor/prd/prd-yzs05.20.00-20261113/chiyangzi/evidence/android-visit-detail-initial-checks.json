@@ -1,0 +1,83 @@
+[
+  {
+    "check": "Selected current visit opens with selection and the two design sections",
+    "result": "passed"
+  },
+  {
+    "check": "Opening and closing detail leaves selection unchanged",
+    "result": "passed"
+  },
+  {
+    "check": "Deselect in detail updates parent to zero and gray confirm",
+    "result": "passed"
+  },
+  {
+    "check": "Reopen brings deselected state; selecting restores parent count",
+    "result": "passed"
+  },
+  {
+    "check": "Second visit selection updates count; system Back closes only detail",
+    "result": "passed"
+  },
+  {
+    "check": "Reopen second selected visit and deselect updates only that visit",
+    "result": "passed"
+  },
+  {
+    "check": "Medicine copy read from OS clipboard matches exact name/grams/order/spaces and keeps duplicate medicines",
+    "result": "passed",
+    "clipboard": {
+      "source": "medicine",
+      "length": 67,
+      "sha256": "33baabb825242a0d8a7d930edcf7e932f9cedd06af7b87de8cf5a96c0b937b3b"
+    }
+  },
+  {
+    "check": "Prescription metadata can be scrolled into view without extra sections",
+    "result": "passed"
+  },
+  {
+    "check": "Closing outer sheet after nested details restores original page",
+    "result": "passed",
+    "geometry": {
+      "presented": {
+        "recordedAt": 1794662039172,
+        "windowHeight": 2608,
+        "density": 3.2,
+        "sourceX": 64,
+        "sourceY": 222,
+        "sourceWidth": 1072,
+        "sourceHeight": 2329.8132,
+        "sourceScaleX": 0.8933333,
+        "sourceScaleY": 0.8933333,
+        "sourceRestored": false,
+        "selectedCount": 1,
+        "autoSync": true,
+        "sheetX": 64,
+        "sheetY": 222,
+        "sheetWidth": 1200,
+        "sheetHeight": 2347,
+        "sheetScaleX": 0.8933333,
+        "sheetScaleY": 0.8933333,
+        "confirmEnabled": true,
+        "confirmBottomGap": 51,
+        "footerBottomInset": 48
+      },
+      "dismissed": {
+        "recordedAt": 1794662053316,
+        "windowHeight": 2608,
+        "density": 3.2,
+        "sourceX": 0,
+        "sourceY": 0,
+        "sourceWidth": 1200,
+        "sourceHeight": 2608,
+        "sourceScaleX": 1,
+        "sourceScaleY": 1,
+        "sourceRestored": true,
+        "selectedCount": 1,
+        "autoSync": true
+      }
+    },
+    "note": "Harness initially used nonexistent restored key; corrected to existing dismissed record and checked the same captured result."
+  }
+]

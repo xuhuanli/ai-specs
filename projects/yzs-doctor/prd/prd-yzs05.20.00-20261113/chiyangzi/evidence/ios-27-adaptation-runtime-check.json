@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-13",
+  "baseBranch": "origin/feature/kqc-27.1适配",
+  "baseCommit": "ddcc2f18a4e189c731f4a16aede21c5ae13d97b2",
+  "workingBranch": "feature/chiyz-cloud-records",
+  "requirementRestored": true,
+  "experimentalStartupChangesReverted": true,
+  "configuration": "Test",
+  "xcode": "27.2",
+  "device": "iPhone 14",
+  "deviceOS": "27.2",
+  "build": "succeeded",
+  "install": "succeeded",
+  "initialProcessRunning": true,
+  "sameProcessStillRunning": true,
+  "observationSeconds": 86.9,
+  "newCrashReports": [],
+  "remoteRefresh": "HTTP and SSH fetch failed; used existing remote-tracking snapshot",
+  "scope": "Startup process observation only; does not certify full business or face/payment flows"
+}

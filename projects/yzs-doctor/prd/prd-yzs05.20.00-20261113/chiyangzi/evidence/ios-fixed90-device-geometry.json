@@ -1,0 +1,20 @@
+{
+  "presentation": "fixed90Foreground",
+  "dismissed": {
+    "sourceFrame": "{{0, 0}, {390, 844}}",
+    "sourceTransform": "[1, 0, 0, 1, 0, 0]",
+    "recordedAt": 1794653547.225867,
+    "windowFrame": "{{0, 0}, {390, 844}}",
+    "sourceTransformRestored": true
+  },
+  "presented": {
+    "sheetFrame": "{{0, 84.333333333333314}, {390, 759.66666666666674}}",
+    "sheetHeightRatio": 0.9000789889415483,
+    "sourceTransformRestored": false,
+    "windowFrame": "{{0, 0}, {390, 844}}",
+    "sheetTransform": "[1, 0, 0, 1, 0, 0]",
+    "recordedAt": 1794653534.480136,
+    "sourceTransform": "[0.89743589743589747, 0, 0, 0.89743589743589747, 0, 29.117948717948707]",
+    "sourceFrame": "{{20, 72.399999999999977}, {350, 757.43589743589746}}"
+  }
+}

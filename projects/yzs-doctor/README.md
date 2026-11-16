@@ -22,7 +22,7 @@ yzs-doctor/
 ├── 发布记录HarmonyOS.md
 ├── prd/
 │   ├── README.md
-│   └── prd-vxxx-YYYYMMDD/
+│   └── prd-xxx-YYYYMMDD/
 │       ├── README.md
 │       └── <负责人>/                本次需求及配套文档
 └── repos/

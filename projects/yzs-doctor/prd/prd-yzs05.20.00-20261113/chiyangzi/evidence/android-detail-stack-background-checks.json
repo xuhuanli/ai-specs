@@ -1,0 +1,608 @@
+{
+  "oldDetailTop": {
+    "width": 1200,
+    "height": 310,
+    "backgroundRgb": [
+      0,
+      0,
+      0
+    ],
+    "whiteFraction": 0.1575,
+    "darkFraction": 0.7162,
+    "samplePixels": [
+      {
+        "x": 600,
+        "y": 230,
+        "rgb": [
+          222,
+          206,
+          193
+        ]
+      },
+      {
+        "x": 600,
+        "y": 240,
+        "rgb": [
+          222,
+          206,
+          193
+        ]
+      },
+      {
+        "x": 600,
+        "y": 250,
+        "rgb": [
+          223,
+          207,
+          196
+        ]
+      }
+    ]
+  },
+  "checks": [
+    {
+      "check": "Import starts as full-width fixed 90 percent sheet with original source stacked",
+      "result": "passed",
+      "geometry": {
+        "recordedAt": 1794795568753,
+        "windowHeight": 2608,
+        "density": 3.2,
+        "sourceX": 64,
+        "sourceY": 222,
+        "sourceWidth": 1072,
+        "sourceHeight": 2329.8132,
+        "sourceScaleX": 0.8933333,
+        "sourceScaleY": 0.8933333,
+        "sourceBackgroundColor": -1,
+        "decorBackgroundColor": -16777216,
+        "decorBackgroundRestored": false,
+        "sourceRestored": false,
+        "selectedCount": 1,
+        "matchingPatientCount": 3,
+        "visiblePatientCount": 1,
+        "patientsExpanded": false,
+        "patientConfirmed": true,
+        "newPatientSelected": true,
+        "selectedCandidateIndex": -1,
+        "autoSync": true,
+        "resultStyle": -1,
+        "messageStacked": false,
+        "sheetX": 0,
+        "sheetY": 261,
+        "sheetWidth": 1200,
+        "sheetHeight": 2347,
+        "sheetScaleX": 1,
+        "sheetScaleY": 1,
+        "sheetVisibleTop": 261,
+        "sheetVisibleBottom": 2608,
+        "confirmEnabled": true,
+        "confirmBottomGap": 51,
+        "footerBottomInset": 48,
+        "scrollY": 273,
+        "scrollHeight": 1414,
+        "patientHeaderY": 182,
+        "patientNoticeY": 361,
+        "footerY": 1954
+      }
+    },
+    {
+      "check": "detail-back exposes the import sheet above the full-size detail, with no clipping to its old top",
+      "result": "passed",
+      "geometry": {
+        "recordedAt": 1794795576755,
+        "windowHeight": 2608,
+        "density": 3.2,
+        "sourceX": 64,
+        "sourceY": 222,
+        "sourceWidth": 1072,
+        "sourceHeight": 2329.8132,
+        "sourceScaleX": 0.8933333,
+        "sourceScaleY": 0.8933333,
+        "sourceBackgroundColor": -1,
+        "decorBackgroundColor": -16777216,
+        "decorBackgroundRestored": false,
+        "sourceRestored": false,
+        "selectedCount": 1,
+        "matchingPatientCount": 3,
+        "visiblePatientCount": 1,
+        "patientsExpanded": false,
+        "patientConfirmed": true,
+        "newPatientSelected": true,
+        "selectedCandidateIndex": -1,
+        "autoSync": true,
+        "resultStyle": -1,
+        "messageStacked": false,
+        "sheetX": 64,
+        "sheetY": 222,
+        "sheetWidth": 1072,
+        "sheetHeight": 2096.6533,
+        "sheetScaleX": 0.8933333,
+        "sheetScaleY": 0.8933333,
+        "sheetVisibleTop": 222,
+        "sheetVisibleBottom": 2320,
+        "confirmEnabled": true,
+        "confirmBottomGap": 51,
+        "footerBottomInset": 48,
+        "scrollY": 0,
+        "scrollHeight": 1414,
+        "patientHeaderY": 182,
+        "patientNoticeY": 361,
+        "footerY": 1954
+      },
+      "topPixels": {
+        "width": 1200,
+        "height": 310,
+        "backgroundRgb": [
+          0,
+          0,
+          0
+        ],
+        "whiteFraction": 0.1575,
+        "darkFraction": 0.7154,
+        "samplePixels": [
+          {
+            "x": 600,
+            "y": 230,
+            "rgb": [
+              217,
+              227,
+              251
+            ]
+          },
+          {
+            "x": 600,
+            "y": 240,
+            "rgb": [
+              217,
+              227,
+              251
+            ]
+          },
+          {
+            "x": 600,
+            "y": 250,
+            "rgb": [
+              219,
+              229,
+              251
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "check": "Detail Back restores the import container, patient choice, scroll and fixed regions",
+      "result": "passed",
+      "geometry": {
+        "recordedAt": 1794795582253,
+        "windowHeight": 2608,
+        "density": 3.2,
+        "sourceX": 64,
+        "sourceY": 222,
+        "sourceWidth": 1072,
+        "sourceHeight": 2329.8132,
+        "sourceScaleX": 0.8933333,
+        "sourceScaleY": 0.8933333,
+        "sourceBackgroundColor": -1,
+        "decorBackgroundColor": -16777216,
+        "decorBackgroundRestored": false,
+        "sourceRestored": false,
+        "selectedCount": 1,
+        "matchingPatientCount": 3,
+        "visiblePatientCount": 1,
+        "patientsExpanded": false,
+        "patientConfirmed": true,
+        "newPatientSelected": true,
+        "selectedCandidateIndex": -1,
+        "autoSync": true,
+        "resultStyle": -1,
+        "messageStacked": false,
+        "sheetX": 0,
+        "sheetY": 261,
+        "sheetWidth": 1200,
+        "sheetHeight": 2347,
+        "sheetScaleX": 1,
+        "sheetScaleY": 1,
+        "sheetVisibleTop": 261,
+        "sheetVisibleBottom": 2608,
+        "confirmEnabled": true,
+        "confirmBottomGap": 51,
+        "footerBottomInset": 48,
+        "scrollY": 0,
+        "scrollHeight": 1414,
+        "patientHeaderY": 182,
+        "patientNoticeY": 361,
+        "footerY": 1954
+      }
+    },
+    {
+      "check": "detail-system-back exposes the import sheet above the full-size detail, with no clipping to its old top",
+      "result": "passed",
+      "geometry": {
+        "recordedAt": 1794795594130,
+        "windowHeight": 2608,
+        "density": 3.2,
+        "sourceX": 64,
+        "sourceY": 222,
+        "sourceWidth": 1072,
+        "sourceHeight": 2329.8132,
+        "sourceScaleX": 0.8933333,
+        "sourceScaleY": 0.8933333,
+        "sourceBackgroundColor": -1,
+        "decorBackgroundColor": -16777216,
+        "decorBackgroundRestored": false,
+        "sourceRestored": false,
+        "selectedCount": 1,
+        "matchingPatientCount": 3,
+        "visiblePatientCount": 1,
+        "patientsExpanded": false,
+        "patientConfirmed": true,
+        "newPatientSelected": true,
+        "selectedCandidateIndex": -1,
+        "autoSync": true,
+        "resultStyle": -1,
+        "messageStacked": false,
+        "sheetX": 64,
+        "sheetY": 222,
+        "sheetWidth": 1072,
+        "sheetHeight": 2096.6533,
+        "sheetScaleX": 0.8933333,
+        "sheetScaleY": 0.8933333,
+        "sheetVisibleTop": 222,
+        "sheetVisibleBottom": 2320,
+        "confirmEnabled": true,
+        "confirmBottomGap": 51,
+        "footerBottomInset": 48,
+        "scrollY": 273,
+        "scrollHeight": 1414,
+        "patientHeaderY": 182,
+        "patientNoticeY": 361,
+        "footerY": 1954
+      },
+      "topPixels": {
+        "width": 1200,
+        "height": 310,
+        "backgroundRgb": [
+          0,
+          0,
+          0
+        ],
+        "whiteFraction": 0.1575,
+        "darkFraction": 0.7154,
+        "samplePixels": [
+          {
+            "x": 600,
+            "y": 230,
+            "rgb": [
+              217,
+              227,
+              251
+            ]
+          },
+          {
+            "x": 600,
+            "y": 240,
+            "rgb": [
+              217,
+              227,
+              251
+            ]
+          },
+          {
+            "x": 600,
+            "y": 250,
+            "rgb": [
+              219,
+              229,
+              251
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "check": "Detail system-back restores the import container, patient choice, scroll and fixed regions",
+      "result": "passed",
+      "geometry": {
+        "recordedAt": 1794795599671,
+        "windowHeight": 2608,
+        "density": 3.2,
+        "sourceX": 64,
+        "sourceY": 222,
+        "sourceWidth": 1072,
+        "sourceHeight": 2329.8132,
+        "sourceScaleX": 0.8933333,
+        "sourceScaleY": 0.8933333,
+        "sourceBackgroundColor": -1,
+        "decorBackgroundColor": -16777216,
+        "decorBackgroundRestored": false,
+        "sourceRestored": false,
+        "selectedCount": 1,
+        "matchingPatientCount": 3,
+        "visiblePatientCount": 1,
+        "patientsExpanded": false,
+        "patientConfirmed": true,
+        "newPatientSelected": true,
+        "selectedCandidateIndex": -1,
+        "autoSync": true,
+        "resultStyle": -1,
+        "messageStacked": false,
+        "sheetX": 0,
+        "sheetY": 261,
+        "sheetWidth": 1200,
+        "sheetHeight": 2347,
+        "sheetScaleX": 1,
+        "sheetScaleY": 1,
+        "sheetVisibleTop": 261,
+        "sheetVisibleBottom": 2608,
+        "confirmEnabled": true,
+        "confirmBottomGap": 51,
+        "footerBottomInset": 48,
+        "scrollY": 273,
+        "scrollHeight": 1414,
+        "patientHeaderY": 182,
+        "patientNoticeY": 361,
+        "footerY": 1954
+      }
+    },
+    {
+      "check": "detail-swipe exposes the import sheet above the full-size detail, with no clipping to its old top",
+      "result": "passed",
+      "geometry": {
+        "recordedAt": 1794795607582,
+        "windowHeight": 2608,
+        "density": 3.2,
+        "sourceX": 64,
+        "sourceY": 222,
+        "sourceWidth": 1072,
+        "sourceHeight": 2329.8132,
+        "sourceScaleX": 0.8933333,
+        "sourceScaleY": 0.8933333,
+        "sourceBackgroundColor": -1,
+        "decorBackgroundColor": -16777216,
+        "decorBackgroundRestored": false,
+        "sourceRestored": false,
+        "selectedCount": 1,
+        "matchingPatientCount": 3,
+        "visiblePatientCount": 1,
+        "patientsExpanded": false,
+        "patientConfirmed": true,
+        "newPatientSelected": true,
+        "selectedCandidateIndex": -1,
+        "autoSync": true,
+        "resultStyle": -1,
+        "messageStacked": false,
+        "sheetX": 64,
+        "sheetY": 222,
+        "sheetWidth": 1072,
+        "sheetHeight": 2096.6533,
+        "sheetScaleX": 0.8933333,
+        "sheetScaleY": 0.8933333,
+        "sheetVisibleTop": 222,
+        "sheetVisibleBottom": 2320,
+        "confirmEnabled": true,
+        "confirmBottomGap": 51,
+        "footerBottomInset": 48,
+        "scrollY": 273,
+        "scrollHeight": 1414,
+        "patientHeaderY": 182,
+        "patientNoticeY": 361,
+        "footerY": 1954
+      },
+      "topPixels": {
+        "width": 1200,
+        "height": 310,
+        "backgroundRgb": [
+          0,
+          0,
+          0
+        ],
+        "whiteFraction": 0.1575,
+        "darkFraction": 0.7148,
+        "samplePixels": [
+          {
+            "x": 600,
+            "y": 230,
+            "rgb": [
+              217,
+              227,
+              251
+            ]
+          },
+          {
+            "x": 600,
+            "y": 240,
+            "rgb": [
+              217,
+              227,
+              251
+            ]
+          },
+          {
+            "x": 600,
+            "y": 250,
+            "rgb": [
+              219,
+              229,
+              251
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "check": "detail-drag-rebound exposes the import sheet above the full-size detail, with no clipping to its old top",
+      "result": "passed",
+      "geometry": {
+        "recordedAt": 1794795613875,
+        "windowHeight": 2608,
+        "density": 3.2,
+        "sourceX": 64,
+        "sourceY": 222,
+        "sourceWidth": 1072,
+        "sourceHeight": 2329.8132,
+        "sourceScaleX": 0.8933333,
+        "sourceScaleY": 0.8933333,
+        "sourceBackgroundColor": -1,
+        "decorBackgroundColor": -16777216,
+        "decorBackgroundRestored": false,
+        "sourceRestored": false,
+        "selectedCount": 1,
+        "matchingPatientCount": 3,
+        "visiblePatientCount": 1,
+        "patientsExpanded": false,
+        "patientConfirmed": true,
+        "newPatientSelected": true,
+        "selectedCandidateIndex": -1,
+        "autoSync": true,
+        "resultStyle": -1,
+        "messageStacked": false,
+        "sheetX": 64,
+        "sheetY": 222,
+        "sheetWidth": 1072,
+        "sheetHeight": 2096.6533,
+        "sheetScaleX": 0.8933333,
+        "sheetScaleY": 0.8933333,
+        "sheetVisibleTop": 222,
+        "sheetVisibleBottom": 2320,
+        "confirmEnabled": true,
+        "confirmBottomGap": 51,
+        "footerBottomInset": 48,
+        "scrollY": 273,
+        "scrollHeight": 1414,
+        "patientHeaderY": 182,
+        "patientNoticeY": 361,
+        "footerY": 1954
+      },
+      "topPixels": {
+        "width": 1200,
+        "height": 310,
+        "backgroundRgb": [
+          0,
+          0,
+          0
+        ],
+        "whiteFraction": 0.1575,
+        "darkFraction": 0.7148,
+        "samplePixels": [
+          {
+            "x": 600,
+            "y": 230,
+            "rgb": [
+              217,
+              227,
+              251
+            ]
+          },
+          {
+            "x": 600,
+            "y": 240,
+            "rgb": [
+              217,
+              227,
+              251
+            ]
+          },
+          {
+            "x": 600,
+            "y": 250,
+            "rgb": [
+              219,
+              229,
+              251
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "check": "Detail swipe restores the import container, patient choice, scroll and fixed regions",
+      "result": "passed",
+      "geometry": {
+        "recordedAt": 1794795620028,
+        "windowHeight": 2608,
+        "density": 3.2,
+        "sourceX": 64,
+        "sourceY": 222,
+        "sourceWidth": 1072,
+        "sourceHeight": 2329.8132,
+        "sourceScaleX": 0.8933333,
+        "sourceScaleY": 0.8933333,
+        "sourceBackgroundColor": -1,
+        "decorBackgroundColor": -16777216,
+        "decorBackgroundRestored": false,
+        "sourceRestored": false,
+        "selectedCount": 1,
+        "matchingPatientCount": 3,
+        "visiblePatientCount": 1,
+        "patientsExpanded": false,
+        "patientConfirmed": true,
+        "newPatientSelected": true,
+        "selectedCandidateIndex": -1,
+        "autoSync": true,
+        "resultStyle": -1,
+        "messageStacked": false,
+        "sheetX": 0,
+        "sheetY": 261,
+        "sheetWidth": 1200,
+        "sheetHeight": 2347,
+        "sheetScaleX": 1,
+        "sheetScaleY": 1,
+        "sheetVisibleTop": 261,
+        "sheetVisibleBottom": 2608,
+        "confirmEnabled": true,
+        "confirmBottomGap": 51,
+        "footerBottomInset": 48,
+        "scrollY": 273,
+        "scrollHeight": 1414,
+        "patientHeaderY": 182,
+        "patientNoticeY": 361,
+        "footerY": 1954
+      }
+    },
+    {
+      "check": "Detail selection still returns to import and updates selected visit count",
+      "result": "passed"
+    },
+    {
+      "check": "Import-to-result still reuses the sheet without an added stack",
+      "result": "passed"
+    },
+    {
+      "check": "Closing flow and returning to MyRoom restores white status bar and dark icons",
+      "result": "passed",
+      "statusBar": {
+        "width": 1200,
+        "height": 144,
+        "backgroundRgb": [
+          255,
+          255,
+          255
+        ],
+        "whiteFraction": 0.9587,
+        "darkFraction": 0.0229
+      }
+    }
+  ],
+  "execution": {
+    "executedAt": "2026-11-16T10:23:07.771097+08:00",
+    "executor": "AI via adb on physical Android device",
+    "branch": "feature/chiyz-cloud-records",
+    "baseCommit": "7a2177fb0764a1911a34a8279c3badc69362b697",
+    "workingChangesCommitted": false,
+    "deviceModel": "2509FPN0BC",
+    "api": 36,
+    "screenPx": [
+      1200,
+      2608
+    ],
+    "density": 3.2,
+    "buildCommand": "./gradlew :app:assembleDebug --offline --console=plain",
+    "initialBuild": "BUILD SUCCESSFUL in 3m 14s",
+    "finalBuild": "BUILD SUCCESSFUL in 1m 41s",
+    "installation": "adb install -r -t: Success; data preserved",
+    "apkSha256": "3150c18e060a338b2901a75104ef6693be32e2978a8a821738b8cd5dcf0265ff",
+    "scope": "Stack background, actual visible bounds, back/system back/swipe/rebound, selection return, result transition and home status restoration. No real cloud-case storage API called.",
+    "archivedImages": "Only upper 310 or 440 pixel strips and home status bar; no real patient detail fields or attachments archived."
+  }
+}

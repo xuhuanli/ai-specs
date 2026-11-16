@@ -1,0 +1,579 @@
+{
+  "executedAt": "2026-11-15T10:22:11.743725+08:00",
+  "executor": "AI using adb on a physical Android device",
+  "branch": "feature/chiyz-cloud-records",
+  "baseCommit": "7a2177fb0764a1911a34a8279c3badc69362b697",
+  "workingChangesCommitted": false,
+  "device": {
+    "model": "2509FPN0BC",
+    "api": 36,
+    "screenPx": [
+      1200,
+      2608
+    ],
+    "appDensity": 3.2
+  },
+  "build": {
+    "command": "./gradlew :app:assembleDebug --offline --console=plain",
+    "initial": "BUILD SUCCESSFUL in 3m 18s; installed for initial visual inspection",
+    "final": "BUILD SUCCESSFUL in 1m 18s; installed after making tag height exactly 20dp",
+    "apkSha256": "4b416c48e501873256ce9606d007bc227aa692421d2e3f0caf61d7d0fa2e1158",
+    "installation": "adb install -r -t: Success; app data preserved"
+  },
+  "scope": "Local candidate/list/result preview. Existing visit detail still reads fixed getOne order. No real cloud-case patient query, identity association, patient creation or storage submission API connected.",
+  "toastVisualVerification": {
+    "identity": "请核对患者身份",
+    "visit": "请选择诊次",
+    "evidence": [
+      "android-patient-identity-toast.png",
+      "android-patient-visit-toast.png"
+    ]
+  },
+  "assets": {
+    "headerAvatar": [
+      128,
+      128
+    ],
+    "warningIcon": [
+      51,
+      51
+    ],
+    "candidateImages": [
+      [
+        64,
+        64
+      ],
+      [
+        64,
+        64
+      ]
+    ],
+    "visitCountTag": [
+      206,
+      64
+    ],
+    "background": [
+      1200,
+      512
+    ],
+    "localAssets": [
+      {
+        "name": "cloud_case_avatar_female",
+        "file": "drawable_resource/src/main/res/drawable-xxhdpi/cloud_case_avatar_female.png",
+        "sizeBytes": 10017,
+        "intrinsicPx": [
+          120,
+          120
+        ]
+      },
+      {
+        "name": "cloud_case_selection_off",
+        "file": "drawable_resource/src/main/res/drawable-xxhdpi/cloud_case_selection_off.png",
+        "sizeBytes": 1254,
+        "intrinsicPx": [
+          60,
+          60
+        ]
+      },
+      {
+        "name": "cloud_case_selection_on",
+        "file": "drawable_resource/src/main/res/drawable-xxhdpi/cloud_case_selection_on.png",
+        "sizeBytes": 1386,
+        "intrinsicPx": [
+          60,
+          60
+        ]
+      },
+      {
+        "name": "cloud_case_section_mark",
+        "file": "drawable_resource/src/main/res/drawable-xxhdpi/cloud_case_section_mark.png",
+        "sizeBytes": 3243,
+        "intrinsicPx": [
+          48,
+          48
+        ]
+      },
+      {
+        "name": "cloud_case_import_background",
+        "file": "drawable_resource/src/main/res/drawable-xxhdpi/cloud_case_import_background.png",
+        "sizeBytes": 286496,
+        "intrinsicPx": [
+          1125,
+          480
+        ]
+      },
+      {
+        "name": "cloud_case_close",
+        "file": "drawable_resource/src/main/res/drawable-xxhdpi/cloud_case_close.png",
+        "sizeBytes": 570,
+        "intrinsicPx": [
+          60,
+          60
+        ]
+      },
+      {
+        "name": "ic_warning_orange",
+        "file": "drawable_resource/src/main/res/drawable/ic_warning_orange.xml",
+        "sizeBytes": 846,
+        "intrinsicDp": [
+          16,
+          16
+        ]
+      }
+    ]
+  },
+  "checks": [
+    {
+      "check": "Multiple matches default to first same-name same-gender patient, no identity selected, current visit and sync remain selected",
+      "result": "passed",
+      "geometry": {
+        "recordedAt": 1794709071872,
+        "windowHeight": 2608,
+        "density": 3.2,
+        "sourceX": 64,
+        "sourceY": 222,
+        "sourceWidth": 1072,
+        "sourceHeight": 2329.8132,
+        "sourceScaleX": 0.8933333,
+        "sourceScaleY": 0.8933333,
+        "sourceBackgroundColor": -1,
+        "decorBackgroundColor": -16777216,
+        "decorBackgroundRestored": false,
+        "sourceRestored": false,
+        "selectedCount": 1,
+        "matchingPatientCount": 3,
+        "visiblePatientCount": 1,
+        "patientsExpanded": false,
+        "patientConfirmed": false,
+        "newPatientSelected": false,
+        "selectedCandidateIndex": -1,
+        "autoSync": true,
+        "resultStyle": -1,
+        "messageStacked": false,
+        "sheetX": 0,
+        "sheetY": 261,
+        "sheetWidth": 1200,
+        "sheetHeight": 2347,
+        "sheetScaleX": 1,
+        "sheetScaleY": 1,
+        "confirmEnabled": true,
+        "confirmBottomGap": 51,
+        "footerBottomInset": 48,
+        "scrollY": 0,
+        "scrollHeight": 1414,
+        "patientHeaderY": 182,
+        "patientNoticeY": 361,
+        "footerY": 1954
+      }
+    },
+    {
+      "check": "Unconfirmed identity blocks result; identity toast screenshot captured",
+      "result": "passed"
+    },
+    {
+      "check": "Expand shows all three matching patients in source order, trims names, excludes other name and genders, without auto-selection",
+      "result": "passed",
+      "geometry": {
+        "recordedAt": 1794709077665,
+        "windowHeight": 2608,
+        "density": 3.2,
+        "sourceX": 64,
+        "sourceY": 222,
+        "sourceWidth": 1072,
+        "sourceHeight": 2329.8132,
+        "sourceScaleX": 0.8933333,
+        "sourceScaleY": 0.8933333,
+        "sourceBackgroundColor": -1,
+        "decorBackgroundColor": -16777216,
+        "decorBackgroundRestored": false,
+        "sourceRestored": false,
+        "selectedCount": 1,
+        "matchingPatientCount": 3,
+        "visiblePatientCount": 3,
+        "patientsExpanded": true,
+        "patientConfirmed": false,
+        "newPatientSelected": false,
+        "selectedCandidateIndex": -1,
+        "autoSync": true,
+        "resultStyle": -1,
+        "messageStacked": false,
+        "sheetX": 0,
+        "sheetY": 261,
+        "sheetWidth": 1200,
+        "sheetHeight": 2347,
+        "sheetScaleX": 1,
+        "sheetScaleY": 1,
+        "confirmEnabled": true,
+        "confirmBottomGap": 51,
+        "footerBottomInset": 48,
+        "scrollY": 0,
+        "scrollHeight": 1414,
+        "patientHeaderY": 182,
+        "patientNoticeY": 361,
+        "footerY": 1954
+      }
+    },
+    {
+      "check": "Only patient-merge and visit-list region scrolls; title, close, patient header, warning and footer stay fixed",
+      "result": "passed",
+      "fixedBounds": {
+        "tv_title": "[51,261][1046,440]",
+        "iv_close": "[1046,280][1187,421]",
+        "patient_header": "[64,443][1136,571]",
+        "patient_notice": "[38,622][1162,763]",
+        "footer": "[0,2215][1200,2608]",
+        "scroll_content": "[0,801][1200,2215]"
+      }
+    },
+    {
+      "check": "Choosing one existing patient selects it exclusively and enables yellow confirm",
+      "result": "passed",
+      "geometry": {
+        "recordedAt": 1794709094604,
+        "windowHeight": 2608,
+        "density": 3.2,
+        "sourceX": 64,
+        "sourceY": 222,
+        "sourceWidth": 1072,
+        "sourceHeight": 2329.8132,
+        "sourceScaleX": 0.8933333,
+        "sourceScaleY": 0.8933333,
+        "sourceBackgroundColor": -1,
+        "decorBackgroundColor": -16777216,
+        "decorBackgroundRestored": false,
+        "sourceRestored": false,
+        "selectedCount": 1,
+        "matchingPatientCount": 3,
+        "visiblePatientCount": 3,
+        "patientsExpanded": true,
+        "patientConfirmed": true,
+        "newPatientSelected": false,
+        "selectedCandidateIndex": 1,
+        "autoSync": true,
+        "resultStyle": -1,
+        "messageStacked": false,
+        "sheetX": 0,
+        "sheetY": 261,
+        "sheetWidth": 1200,
+        "sheetHeight": 2347,
+        "sheetScaleX": 1,
+        "sheetScaleY": 1,
+        "confirmEnabled": true,
+        "confirmBottomGap": 51,
+        "footerBottomInset": 48,
+        "scrollY": 0,
+        "scrollHeight": 1414,
+        "patientHeaderY": 182,
+        "patientNoticeY": 361,
+        "footerY": 1954
+      }
+    },
+    {
+      "check": "Collapse keeps selected non-first patient visible and preserves choice",
+      "result": "passed",
+      "geometry": {
+        "recordedAt": 1794709096919,
+        "windowHeight": 2608,
+        "density": 3.2,
+        "sourceX": 64,
+        "sourceY": 222,
+        "sourceWidth": 1072,
+        "sourceHeight": 2329.8132,
+        "sourceScaleX": 0.8933333,
+        "sourceScaleY": 0.8933333,
+        "sourceBackgroundColor": -1,
+        "decorBackgroundColor": -16777216,
+        "decorBackgroundRestored": false,
+        "sourceRestored": false,
+        "selectedCount": 1,
+        "matchingPatientCount": 3,
+        "visiblePatientCount": 1,
+        "patientsExpanded": false,
+        "patientConfirmed": true,
+        "newPatientSelected": false,
+        "selectedCandidateIndex": 1,
+        "autoSync": true,
+        "resultStyle": -1,
+        "messageStacked": false,
+        "sheetX": 0,
+        "sheetY": 261,
+        "sheetWidth": 1200,
+        "sheetHeight": 2347,
+        "sheetScaleX": 1,
+        "sheetScaleY": 1,
+        "confirmEnabled": true,
+        "confirmBottomGap": 51,
+        "footerBottomInset": 48,
+        "scrollY": 0,
+        "scrollHeight": 1414,
+        "patientHeaderY": 182,
+        "patientNoticeY": 361,
+        "footerY": 1954
+      }
+    },
+    {
+      "check": "Rapid expand and collapse both apply without debounce and preserve selection",
+      "result": "passed",
+      "intervalMs": 73
+    },
+    {
+      "check": "New-patient option is exclusive with existing candidate, warning stays visible",
+      "result": "passed",
+      "geometry": {
+        "recordedAt": 1794709106624,
+        "windowHeight": 2608,
+        "density": 3.2,
+        "sourceX": 64,
+        "sourceY": 222,
+        "sourceWidth": 1072,
+        "sourceHeight": 2329.8132,
+        "sourceScaleX": 0.8933333,
+        "sourceScaleY": 0.8933333,
+        "sourceBackgroundColor": -1,
+        "decorBackgroundColor": -16777216,
+        "decorBackgroundRestored": false,
+        "sourceRestored": false,
+        "selectedCount": 1,
+        "matchingPatientCount": 3,
+        "visiblePatientCount": 1,
+        "patientsExpanded": false,
+        "patientConfirmed": true,
+        "newPatientSelected": true,
+        "selectedCandidateIndex": -1,
+        "autoSync": true,
+        "resultStyle": -1,
+        "messageStacked": false,
+        "sheetX": 0,
+        "sheetY": 261,
+        "sheetWidth": 1200,
+        "sheetHeight": 2347,
+        "sheetScaleX": 1,
+        "sheetScaleY": 1,
+        "confirmEnabled": true,
+        "confirmBottomGap": 51,
+        "footerBottomInset": 48,
+        "scrollY": 0,
+        "scrollHeight": 1414,
+        "patientHeaderY": 182,
+        "patientNoticeY": 361,
+        "footerY": 1954
+      }
+    },
+    {
+      "check": "Rapid identity switches apply without debounce",
+      "result": "passed",
+      "intervalMs": 79
+    },
+    {
+      "check": "Visit-detail selection returns without losing patient choice or parent scroll position",
+      "result": "passed",
+      "geometry": {
+        "recordedAt": 1794709117336,
+        "windowHeight": 2608,
+        "density": 3.2,
+        "sourceX": 64,
+        "sourceY": 222,
+        "sourceWidth": 1072,
+        "sourceHeight": 2329.8132,
+        "sourceScaleX": 0.8933333,
+        "sourceScaleY": 0.8933333,
+        "sourceBackgroundColor": -1,
+        "decorBackgroundColor": -16777216,
+        "decorBackgroundRestored": false,
+        "sourceRestored": false,
+        "selectedCount": 0,
+        "matchingPatientCount": 3,
+        "visiblePatientCount": 1,
+        "patientsExpanded": false,
+        "patientConfirmed": true,
+        "newPatientSelected": false,
+        "selectedCandidateIndex": 0,
+        "autoSync": true,
+        "resultStyle": -1,
+        "messageStacked": false,
+        "sheetX": 64,
+        "sheetY": 222,
+        "sheetWidth": 1200,
+        "sheetHeight": 2347,
+        "sheetScaleX": 0.8933333,
+        "sheetScaleY": 0.8933333,
+        "confirmEnabled": true,
+        "confirmBottomGap": 51,
+        "footerBottomInset": 48,
+        "scrollY": 0,
+        "scrollHeight": 1414,
+        "patientHeaderY": 182,
+        "patientNoticeY": 361,
+        "footerY": 1954
+      }
+    },
+    {
+      "check": "Confirmed identity plus zero visits keeps gray clickable confirm and blocks result; visit toast screenshot captured",
+      "result": "passed"
+    },
+    {
+      "check": "Both confirmations enter loading inside same full-size sheet without an extra stack",
+      "result": "passed"
+    },
+    {
+      "check": "Existing-patient result uses selected candidate group",
+      "result": "passed"
+    },
+    {
+      "check": "Single match shows one unselected candidate and warning, with no expand entry",
+      "result": "passed",
+      "geometry": {
+        "recordedAt": 1794709139932,
+        "windowHeight": 2608,
+        "density": 3.2,
+        "sourceX": 64,
+        "sourceY": 222,
+        "sourceWidth": 1072,
+        "sourceHeight": 2329.8132,
+        "sourceScaleX": 0.8933333,
+        "sourceScaleY": 0.8933333,
+        "sourceBackgroundColor": -1,
+        "decorBackgroundColor": -16777216,
+        "decorBackgroundRestored": false,
+        "sourceRestored": false,
+        "selectedCount": 1,
+        "matchingPatientCount": 1,
+        "visiblePatientCount": 1,
+        "patientsExpanded": false,
+        "patientConfirmed": false,
+        "newPatientSelected": false,
+        "selectedCandidateIndex": -1,
+        "autoSync": true,
+        "resultStyle": -1,
+        "messageStacked": false,
+        "sheetX": 0,
+        "sheetY": 261,
+        "sheetWidth": 1200,
+        "sheetHeight": 2347,
+        "sheetScaleX": 1,
+        "sheetScaleY": 1,
+        "confirmEnabled": true,
+        "confirmBottomGap": 51,
+        "footerBottomInset": 48,
+        "scrollY": 0,
+        "scrollHeight": 1414,
+        "patientHeaderY": 182,
+        "patientNoticeY": 361,
+        "footerY": 1954
+      }
+    },
+    {
+      "check": "Explicit new-patient choice with current visit reaches new-patient result preview",
+      "result": "passed"
+    },
+    {
+      "check": "No matches retains original new-patient hint without merge or warning and requires no extra identity selection",
+      "result": "passed",
+      "geometry": {
+        "recordedAt": 1794709157732,
+        "windowHeight": 2608,
+        "density": 3.2,
+        "sourceX": 64,
+        "sourceY": 222,
+        "sourceWidth": 1072,
+        "sourceHeight": 2329.8132,
+        "sourceScaleX": 0.8933333,
+        "sourceScaleY": 0.8933333,
+        "sourceBackgroundColor": -1,
+        "decorBackgroundColor": -16777216,
+        "decorBackgroundRestored": false,
+        "sourceRestored": false,
+        "selectedCount": 1,
+        "matchingPatientCount": 0,
+        "visiblePatientCount": 0,
+        "patientsExpanded": false,
+        "patientConfirmed": true,
+        "newPatientSelected": false,
+        "selectedCandidateIndex": -1,
+        "autoSync": true,
+        "resultStyle": -1,
+        "messageStacked": false,
+        "sheetX": 0,
+        "sheetY": 261,
+        "sheetWidth": 1200,
+        "sheetHeight": 2347,
+        "sheetScaleX": 1,
+        "sheetScaleY": 1,
+        "confirmEnabled": true,
+        "confirmBottomGap": 51,
+        "footerBottomInset": 48,
+        "scrollY": 0,
+        "scrollHeight": 1414,
+        "patientHeaderY": 182,
+        "patientNoticeY": 361,
+        "footerY": 1954
+      }
+    },
+    {
+      "check": "No-match branch still validates empty visits without requiring identity confirmation",
+      "result": "passed"
+    },
+    {
+      "check": "No-match branch can confirm selected current visit and close result normally",
+      "result": "passed"
+    },
+    {
+      "check": "Reopening normal test entry resets identity and restores default multi-match scene",
+      "result": "passed",
+      "geometry": {
+        "recordedAt": 1794709175260,
+        "windowHeight": 2608,
+        "density": 3.2,
+        "sourceX": 64,
+        "sourceY": 222,
+        "sourceWidth": 1072,
+        "sourceHeight": 2329.8132,
+        "sourceScaleX": 0.8933333,
+        "sourceScaleY": 0.8933333,
+        "sourceBackgroundColor": -1,
+        "decorBackgroundColor": -16777216,
+        "decorBackgroundRestored": false,
+        "sourceRestored": false,
+        "selectedCount": 1,
+        "matchingPatientCount": 3,
+        "visiblePatientCount": 1,
+        "patientsExpanded": false,
+        "patientConfirmed": false,
+        "newPatientSelected": false,
+        "selectedCandidateIndex": -1,
+        "autoSync": true,
+        "resultStyle": -1,
+        "messageStacked": false,
+        "sheetX": 0,
+        "sheetY": 261,
+        "sheetWidth": 1200,
+        "sheetHeight": 2347,
+        "sheetScaleX": 1,
+        "sheetScaleY": 1,
+        "confirmEnabled": true,
+        "confirmBottomGap": 51,
+        "footerBottomInset": 48,
+        "scrollY": 0,
+        "scrollHeight": 1414,
+        "patientHeaderY": 182,
+        "patientNoticeY": 361,
+        "footerY": 1954
+      }
+    },
+    {
+      "check": "Returning all the way to MyRoom still restores white status background and dark icons",
+      "result": "passed",
+      "statusBar": {
+        "width": 1200,
+        "height": 144,
+        "backgroundRgb": [
+          255,
+          255,
+          255
+        ],
+        "whiteFraction": 0.9553,
+        "darkFraction": 0.0204
+      }
+    }
+  ]
+}

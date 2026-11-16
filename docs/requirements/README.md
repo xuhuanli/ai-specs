@@ -39,7 +39,7 @@
 ```text
 projects/<项目标识>/prd/
 ├── README.md                 版本目录索引
-└── prd-vxxx-YYYYMMDD/
+└── prd-xxx-YYYYMMDD/
     ├── README.md             各负责人目录索引
     └── <负责人>/            本次需求与文档
         ├── 00-文档索引.md

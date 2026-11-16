@@ -1,0 +1,492 @@
+{
+  "recordedAt": "2026-11-14T19:31:24.569497+08:00",
+  "branch": "feature/chiyz-cloud-records",
+  "baseCommit": "e9a88866e329a83eee29a1cf3d125430c9ff60bc",
+  "design": {
+    "fileKey": "aFKpQlzeW8NibL23OpY5lq",
+    "nodeId": "22850:46884"
+  },
+  "device": {
+    "model": "2509FPN0BC",
+    "androidApi": 36,
+    "physicalPixels": [
+      1200,
+      2608
+    ],
+    "layoutDensity": 3.2,
+    "connection": "USB"
+  },
+  "history": [
+    {
+      "phase": "initial build",
+      "result": "failed",
+      "reason": "BottomSheetBehavior generic type mismatch; corrected"
+    },
+    {
+      "phase": "first device preview",
+      "result": "foreground size and selection checks passed; visual corrections required",
+      "geometry": {
+        "presented": {
+          "recordedAt": 1794655209390,
+          "windowHeight": 2608,
+          "sourceX": 60,
+          "sourceY": 225,
+          "sourceWidth": 1080,
+          "sourceHeight": 2347.2,
+          "sourceScaleX": 0.9,
+          "sourceScaleY": 0.9,
+          "sourceRestored": false,
+          "selectedCount": 0,
+          "autoSync": false,
+          "sheetX": 0,
+          "sheetY": 261,
+          "sheetWidth": 1200,
+          "sheetHeight": 2347,
+          "sheetScaleX": 1,
+          "sheetScaleY": 1,
+          "confirmEnabled": false
+        },
+        "dismissed": {
+          "recordedAt": 1794655209963,
+          "windowHeight": 2608,
+          "sourceX": 0,
+          "sourceY": 0,
+          "sourceWidth": 1200,
+          "sourceHeight": 2608,
+          "sourceScaleX": 1,
+          "sourceScaleY": 1,
+          "sourceRestored": true,
+          "selectedCount": 0,
+          "autoSync": false
+        }
+      },
+      "corrections": [
+        "Use existing SourceHanTextView with 600-weight font rather than 700-weight bold font",
+        "Use separate top/horizontal/bottom card paddings to keep bottom at 12dp",
+        "Use current page density rather than system density for background card geometry"
+      ]
+    },
+    {
+      "phase": "final build",
+      "result": "BUILD SUCCESSFUL",
+      "duration": "2m 59s",
+      "command": "./gradlew :app:assembleDebug --offline --console=plain",
+      "log": "/private/tmp/ai-specs-android-cloud-preview-build-final.log"
+    }
+  ],
+  "installation": {
+    "result": "success",
+    "package": "com.igancao.doctor",
+    "variant": "debug",
+    "versionName": "5.3.9",
+    "apkSha256": "50a59a060c6d4f90aacf27340870fb69b9e9fbf4b736e9f271618f1682456b48"
+  },
+  "sourceSha256": {
+    "app/src/main/java/com/igancao/doctor/ui/record/recorddetail/CloudCaseImportPreviewSheet.kt": "0f59afffdc8dd799a142a98f19b8dc9b13c87379268f4f4ab8e1aa9a39cef5e9",
+    "app/src/main/java/com/igancao/doctor/ui/record/recorddetail/NormalDetailV2Fragment.kt": "6eacee6638f6f7de25d4eecad6b508b61ecf947d8465c940a45fa0be51550eee"
+  },
+  "assets": [
+    {
+      "path": "drawable_resource/src/main/res/drawable-xxhdpi/cloud_case_arrow.png",
+      "bytes": 353,
+      "sha256": "21f2ef0d5830a5c87b20d1c3ef6af11ca1b406980db55e2d298cec4eab6ad739"
+    },
+    {
+      "path": "drawable_resource/src/main/res/drawable-xxhdpi/cloud_case_avatar_female.png",
+      "bytes": 10017,
+      "sha256": "296aa174c68034fdb5d0c948b3552712b2a77020d458b839cdcc1ab40d591dfe"
+    },
+    {
+      "path": "drawable_resource/src/main/res/drawable-xxhdpi/cloud_case_close.png",
+      "bytes": 570,
+      "sha256": "b1a982efb699d2ada642b3d68123fe27a0b35d0f6e6ae858b4f86b9061dcb0ff"
+    },
+    {
+      "path": "drawable_resource/src/main/res/drawable-xxhdpi/cloud_case_help.png",
+      "bytes": 1173,
+      "sha256": "ad5759e30d733ab7c032c65c7f79a0ef9633c3f6d9d89b85772065fbf0c53b56"
+    },
+    {
+      "path": "drawable_resource/src/main/res/drawable-xxhdpi/cloud_case_import_background.png",
+      "bytes": 286496,
+      "sha256": "733ce0145d65a09ca50a8c3f18545f26e523e22c55cf535e7e412fb9084158a9"
+    },
+    {
+      "path": "drawable_resource/src/main/res/drawable-xxhdpi/cloud_case_section_mark.png",
+      "bytes": 3243,
+      "sha256": "e00a8d8d371198af650015dc00ed59fa857f72a30bf6ad7655e457414b9d7585"
+    },
+    {
+      "path": "drawable_resource/src/main/res/drawable-xxhdpi/cloud_case_selection_off.png",
+      "bytes": 1254,
+      "sha256": "f34ae5a7e01c1ed3add8ab5ca1e9e4db97f12696f172556de5b7ce984fcd5451"
+    },
+    {
+      "path": "drawable_resource/src/main/res/drawable-xxhdpi/cloud_case_selection_on.png",
+      "bytes": 1386,
+      "sha256": "9cc061194f626c8c7be6078ce0c8ce17bf5320f49612bd81f383e2f9f4d8c181"
+    },
+    {
+      "path": "drawable_resource/src/main/res/drawable-xxhdpi/cloud_case_selection_partial.png",
+      "bytes": 999,
+      "sha256": "312d7cb34e96dc24e82c251ad12e737809cdf6eb0355f6322f694df3795a29d4"
+    }
+  ],
+  "runtimeValidation": {
+    "executor": "Codex via adb on physical device",
+    "humanAcceptance": "not executed",
+    "geometryChecks": {
+      "foregroundFullWidth": true,
+      "foregroundNinetyPercentWithinOnePixel": true,
+      "foregroundNotScaled": true,
+      "foregroundBottomAligned": true,
+      "backgroundInsetTwentyDp": true,
+      "backgroundWidthMatchesInsets": true,
+      "backgroundPeekTwelveDp": true,
+      "sourceRestoredAfterCloseAndSwipeAndBack": true
+    },
+    "functionalChecks": [
+      {
+        "check": "Default current visit selected and count shown",
+        "result": "passed"
+      },
+      {
+        "check": "Second visit selection updates visible count to two",
+        "result": "passed"
+      },
+      {
+        "check": "Clear all shows zero and disables confirm",
+        "result": "passed"
+      },
+      {
+        "check": "Auto sync toggles off locally",
+        "result": "passed"
+      },
+      {
+        "check": "Select all from empty shows two",
+        "result": "passed"
+      },
+      {
+        "check": "Confirm only shows preview message",
+        "result": "passed"
+      },
+      {
+        "check": "Auto sync help opens and closes",
+        "result": "passed"
+      },
+      {
+        "check": "Visit detail only shows preview information",
+        "result": "passed"
+      },
+      {
+        "check": "Close button restores original detail page",
+        "result": "passed"
+      },
+      {
+        "check": "Reopening starts a new local preview",
+        "result": "passed"
+      },
+      {
+        "check": "Short downward drag returns to fixed expanded size",
+        "result": "passed"
+      },
+      {
+        "check": "Downward swipe closes and restores detail page",
+        "result": "passed"
+      },
+      {
+        "check": "System back closes and restores detail page",
+        "result": "passed"
+      },
+      {
+        "check": "Final preview left open for user",
+        "result": "passed"
+      }
+    ],
+    "geometrySnapshots": {
+      "final-open": {
+        "presented": {
+          "recordedAt": 1794655647506,
+          "windowHeight": 2608,
+          "density": 3.2,
+          "sourceX": 64,
+          "sourceY": 222,
+          "sourceWidth": 1072,
+          "sourceHeight": 2329.8132,
+          "sourceScaleX": 0.8933333,
+          "sourceScaleY": 0.8933333,
+          "sourceRestored": false,
+          "selectedCount": 1,
+          "autoSync": true,
+          "sheetX": 0,
+          "sheetY": 261,
+          "sheetWidth": 1200,
+          "sheetHeight": 2347,
+          "sheetScaleX": 1,
+          "sheetScaleY": 1,
+          "confirmEnabled": true
+        }
+      },
+      "final-two": {
+        "presented": {
+          "recordedAt": 1794655722466,
+          "windowHeight": 2608,
+          "density": 3.2,
+          "sourceX": 64,
+          "sourceY": 222,
+          "sourceWidth": 1072,
+          "sourceHeight": 2329.8132,
+          "sourceScaleX": 0.8933333,
+          "sourceScaleY": 0.8933333,
+          "sourceRestored": false,
+          "selectedCount": 2,
+          "autoSync": true,
+          "sheetX": 0,
+          "sheetY": 261,
+          "sheetWidth": 1200,
+          "sheetHeight": 2347,
+          "sheetScaleX": 1,
+          "sheetScaleY": 1,
+          "confirmEnabled": true
+        }
+      },
+      "final-empty": {
+        "presented": {
+          "recordedAt": 1794655724724,
+          "windowHeight": 2608,
+          "density": 3.2,
+          "sourceX": 64,
+          "sourceY": 222,
+          "sourceWidth": 1072,
+          "sourceHeight": 2329.8132,
+          "sourceScaleX": 0.8933333,
+          "sourceScaleY": 0.8933333,
+          "sourceRestored": false,
+          "selectedCount": 0,
+          "autoSync": true,
+          "sheetX": 0,
+          "sheetY": 261,
+          "sheetWidth": 1200,
+          "sheetHeight": 2347,
+          "sheetScaleX": 1,
+          "sheetScaleY": 1,
+          "confirmEnabled": false
+        }
+      },
+      "final-auto-off": {
+        "presented": {
+          "recordedAt": 1794655727028,
+          "windowHeight": 2608,
+          "density": 3.2,
+          "sourceX": 64,
+          "sourceY": 222,
+          "sourceWidth": 1072,
+          "sourceHeight": 2329.8132,
+          "sourceScaleX": 0.8933333,
+          "sourceScaleY": 0.8933333,
+          "sourceRestored": false,
+          "selectedCount": 0,
+          "autoSync": false,
+          "sheetX": 0,
+          "sheetY": 261,
+          "sheetWidth": 1200,
+          "sheetHeight": 2347,
+          "sheetScaleX": 1,
+          "sheetScaleY": 1,
+          "confirmEnabled": false
+        }
+      },
+      "final-close": {
+        "presented": {
+          "recordedAt": 1794655729350,
+          "windowHeight": 2608,
+          "density": 3.2,
+          "sourceX": 64,
+          "sourceY": 222,
+          "sourceWidth": 1072,
+          "sourceHeight": 2329.8132,
+          "sourceScaleX": 0.8933333,
+          "sourceScaleY": 0.8933333,
+          "sourceRestored": false,
+          "selectedCount": 2,
+          "autoSync": false,
+          "sheetX": 0,
+          "sheetY": 261,
+          "sheetWidth": 1200,
+          "sheetHeight": 2347,
+          "sheetScaleX": 1,
+          "sheetScaleY": 1,
+          "confirmEnabled": true
+        },
+        "dismissed": {
+          "recordedAt": 1794655745268,
+          "windowHeight": 2608,
+          "density": 3.2,
+          "sourceX": 0,
+          "sourceY": 0,
+          "sourceWidth": 1200,
+          "sourceHeight": 2608,
+          "sourceScaleX": 1,
+          "sourceScaleY": 1,
+          "sourceRestored": true,
+          "selectedCount": 2,
+          "autoSync": false
+        }
+      },
+      "final-reopen": {
+        "presented": {
+          "recordedAt": 1794655747802,
+          "windowHeight": 2608,
+          "density": 3.2,
+          "sourceX": 64,
+          "sourceY": 222,
+          "sourceWidth": 1072,
+          "sourceHeight": 2329.8132,
+          "sourceScaleX": 0.8933333,
+          "sourceScaleY": 0.8933333,
+          "sourceRestored": false,
+          "selectedCount": 1,
+          "autoSync": true,
+          "sheetX": 0,
+          "sheetY": 261,
+          "sheetWidth": 1200,
+          "sheetHeight": 2347,
+          "sheetScaleX": 1,
+          "sheetScaleY": 1,
+          "confirmEnabled": true
+        }
+      },
+      "final-drag-cancel": {
+        "presented": {
+          "recordedAt": 1794655750911,
+          "windowHeight": 2608,
+          "density": 3.2,
+          "sourceX": 64,
+          "sourceY": 222,
+          "sourceWidth": 1072,
+          "sourceHeight": 2329.8132,
+          "sourceScaleX": 0.8933333,
+          "sourceScaleY": 0.8933333,
+          "sourceRestored": false,
+          "selectedCount": 1,
+          "autoSync": true,
+          "sheetX": 0,
+          "sheetY": 261,
+          "sheetWidth": 1200,
+          "sheetHeight": 2347,
+          "sheetScaleX": 1,
+          "sheetScaleY": 1,
+          "confirmEnabled": true
+        }
+      },
+      "final-swipe-close": {
+        "presented": {
+          "recordedAt": 1794655750911,
+          "windowHeight": 2608,
+          "density": 3.2,
+          "sourceX": 64,
+          "sourceY": 222,
+          "sourceWidth": 1072,
+          "sourceHeight": 2329.8132,
+          "sourceScaleX": 0.8933333,
+          "sourceScaleY": 0.8933333,
+          "sourceRestored": false,
+          "selectedCount": 1,
+          "autoSync": true,
+          "sheetX": 0,
+          "sheetY": 261,
+          "sheetWidth": 1200,
+          "sheetHeight": 2347,
+          "sheetScaleX": 1,
+          "sheetScaleY": 1,
+          "confirmEnabled": true
+        },
+        "dismissed": {
+          "recordedAt": 1794655754218,
+          "windowHeight": 2608,
+          "density": 3.2,
+          "sourceX": 0,
+          "sourceY": 0,
+          "sourceWidth": 1200,
+          "sourceHeight": 2608,
+          "sourceScaleX": 1,
+          "sourceScaleY": 1,
+          "sourceRestored": true,
+          "selectedCount": 1,
+          "autoSync": true
+        }
+      },
+      "final-back-close": {
+        "presented": {
+          "recordedAt": 1794655756728,
+          "windowHeight": 2608,
+          "density": 3.2,
+          "sourceX": 64,
+          "sourceY": 222,
+          "sourceWidth": 1072,
+          "sourceHeight": 2329.8132,
+          "sourceScaleX": 0.8933333,
+          "sourceScaleY": 0.8933333,
+          "sourceRestored": false,
+          "selectedCount": 1,
+          "autoSync": true,
+          "sheetX": 0,
+          "sheetY": 261,
+          "sheetWidth": 1200,
+          "sheetHeight": 2347,
+          "sheetScaleX": 1,
+          "sheetScaleY": 1,
+          "confirmEnabled": true
+        },
+        "dismissed": {
+          "recordedAt": 1794655759179,
+          "windowHeight": 2608,
+          "density": 3.2,
+          "sourceX": 0,
+          "sourceY": 0,
+          "sourceWidth": 1200,
+          "sourceHeight": 2608,
+          "sourceScaleX": 1,
+          "sourceScaleY": 1,
+          "sourceRestored": true,
+          "selectedCount": 1,
+          "autoSync": true
+        }
+      },
+      "final-ready": {
+        "presented": {
+          "recordedAt": 1794655761662,
+          "windowHeight": 2608,
+          "density": 3.2,
+          "sourceX": 64,
+          "sourceY": 222,
+          "sourceWidth": 1072,
+          "sourceHeight": 2329.8132,
+          "sourceScaleX": 0.8933333,
+          "sourceScaleY": 0.8933333,
+          "sourceRestored": false,
+          "selectedCount": 1,
+          "autoSync": true,
+          "sheetX": 0,
+          "sheetY": 261,
+          "sheetWidth": 1200,
+          "sheetHeight": 2347,
+          "sheetScaleX": 1,
+          "sheetScaleY": 1,
+          "confirmEnabled": true
+        }
+      }
+    },
+    "screenshot": "android-sheet-preview.png",
+    "leftOpenForUser": true
+  },
+  "notCovered": [
+    "Complete cloud record synchronization business and backend integration",
+    "Other Android devices, Android versions and navigation modes",
+    "Human business acceptance"
+  ],
+  "git": {
+    "committed": false,
+    "pushed": false
+  }
+}

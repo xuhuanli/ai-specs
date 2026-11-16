@@ -1,0 +1,84 @@
+{
+  "scope": "Android fixed-order detail via existing acrecipel/getone; outer list remains a UI fixture",
+  "branch": "feature/chiyz-cloud-records",
+  "baseCommit": "7a2177fb0764a1911a34a8279c3badc69362b697",
+  "commitStatus": "uncommitted",
+  "device": "2509FPN0BC / Android API 36 / 1200x2608",
+  "build": "./gradlew :app:assembleDebug --offline --console=plain",
+  "buildResult": "BUILD SUCCESSFUL in 3m 28s",
+  "apkSha256": "8882a52fbca7c9900a8d3f7ba65d410aca09bd4b22d81c426fde26d0a3873ba4",
+  "checks": [
+    {
+      "check": "getOne returns the requested order with 4 attachments and 16 medicines",
+      "result": "passed",
+      "metadata": {
+        "orderMatchesRequested": true,
+        "patientFieldCount": 7,
+        "medicineCount": 16,
+        "attachmentCount": 4,
+        "originalPhotoCount": 0,
+        "granuleToggleVisible": false
+      }
+    },
+    {
+      "check": "Live detail remains full width and 90 percent screen height",
+      "result": "passed",
+      "bounds": "[0,261][1200,2608]"
+    },
+    {
+      "check": "All 7 patient fields match NormalDetailV2Fragment, including its empty-field display and order time",
+      "result": "passed"
+    },
+    {
+      "check": "Patient clipboard matches label-space-value lines and excludes attachment data",
+      "result": "passed",
+      "clipboard": {
+        "source": "patient",
+        "length": 95,
+        "sha256": "9df5928bef3534c5d9e68dfedfa26014dd5ae61c4dc0f8ce524b43c1202cac81"
+      }
+    },
+    {
+      "check": "Existing noneditable four-column photo component displays all four images, with no granule toggle",
+      "result": "passed"
+    },
+    {
+      "check": "Fourth attachment opens the existing photo preview at 4/4",
+      "result": "passed"
+    },
+    {
+      "check": "Returning from photo preview preserves detail and its selection",
+      "result": "passed"
+    },
+    {
+      "check": "All 16 medicine cells match the original detail; clipboard matches displayed names, quantities, units and order",
+      "result": "passed",
+      "clipboard": {
+        "source": "medicine",
+        "length": 123,
+        "sha256": "6687f5940d7bb00dd42b691214c9b1e39bb8ad9838787718efca2f0400d18954"
+      }
+    },
+    {
+      "check": "Dose count, dosage form, administration and advice match original detail; no fabricated order remark",
+      "result": "passed"
+    },
+    {
+      "check": "Deselecting the real-data detail updates parent count and returns to empty confirm state",
+      "result": "passed"
+    },
+    {
+      "check": "Reopening preserves deselection; selecting real-data detail restores count one",
+      "result": "passed"
+    },
+    {
+      "check": "Real-data detail reopened at top and left selected for user review",
+      "result": "passed"
+    }
+  ],
+  "notCovered": [
+    "Network failure/retry runtime simulation",
+    "Other order types and granule switching",
+    "Cloud-case write/sync and full business acceptance"
+  ]
+}

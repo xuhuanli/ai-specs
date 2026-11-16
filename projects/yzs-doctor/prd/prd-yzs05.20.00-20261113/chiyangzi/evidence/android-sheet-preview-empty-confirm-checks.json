@@ -1,0 +1,211 @@
+{
+  "recordedAt": "2026-11-14T20:28:09.155868+08:00",
+  "requirementConfirmation": "CHG-002 / Q-007 / partial AC-021 UI preview",
+  "design": {
+    "fileKey": "aFKpQlzeW8NibL23OpY5lq",
+    "nodeId": "22850:46832"
+  },
+  "baseCommit": "8436d102ebc48fbe45463af5f244b82cf423cfab",
+  "build": {
+    "command": "./gradlew :app:assembleDebug --offline --console=plain",
+    "result": "BUILD SUCCESSFUL",
+    "duration": "2m 51s",
+    "log": "/private/tmp/ai-specs-android-preview-empty-confirm-build.log"
+  },
+  "installation": {
+    "result": "success",
+    "device": "2509FPN0BC / API 36",
+    "package": "com.igancao.doctor",
+    "apkSha256": "4aba86812bfdfdf9c1dd206bb7c2a5755f3214237afe4c1edb1904af40cace4b"
+  },
+  "sourceSha256": {
+    "app/src/main/java/com/igancao/doctor/ui/record/recorddetail/CloudCaseImportPreviewSheet.kt": "297031a642b4b55c20d000fa4ed1f4f39ef2f13f4841eb2047c863246731c003",
+    "app/src/main/res/drawable/bg_cloud_case_preview_confirm.xml": "901193246693c90066435b0b1c51883b2ff23feb290ce69475c029f353a99ed0",
+    "app/src/main/res/color/selector_cloud_case_preview_confirm_text.xml": "a9c074abc58620778d72b593f4d7a190539171a2dd086aee26a5a035584658a3",
+    "app/src/main/res/layout/sheet_cloud_case_import_preview.xml": "be86a201876700d5e241ee1a4237c3b5a922bccba316c36c25bdca3f21125b6c",
+    "app/src/main/res/values/strings.xml": "8b5b0939033d6023af51ad7ba19555463dc11da7acada8ba071c7b5bd203fd4f"
+  },
+  "runtime": {
+    "executor": "Codex via adb on physical device",
+    "checks": [
+      {
+        "check": "Zero selection shows 确认存入 and remains enabled/clickable",
+        "result": "passed",
+        "button": {
+          "index": "1",
+          "text": "确认存入",
+          "resource-id": "com.igancao.doctor:id/btn_confirm",
+          "class": "android.widget.TextView",
+          "package": "com.igancao.doctor",
+          "content-desc": "",
+          "checkable": "false",
+          "checked": "false",
+          "clickable": "true",
+          "enabled": "true",
+          "focusable": "true",
+          "focused": "false",
+          "scrollable": "false",
+          "long-clickable": "false",
+          "password": "false",
+          "selected": "false",
+          "bounds": "[38,2368][1162,2509]",
+          "drawing-order": "2",
+          "hint": ""
+        },
+        "geometry": {
+          "presented": {
+            "recordedAt": 1794659051665,
+            "windowHeight": 2608,
+            "density": 3.2,
+            "sourceX": 64,
+            "sourceY": 222,
+            "sourceWidth": 1072,
+            "sourceHeight": 2329.8132,
+            "sourceScaleX": 0.8933333,
+            "sourceScaleY": 0.8933333,
+            "sourceRestored": false,
+            "selectedCount": 0,
+            "autoSync": true,
+            "sheetX": 0,
+            "sheetY": 261,
+            "sheetWidth": 1200,
+            "sheetHeight": 2347,
+            "sheetScaleX": 1,
+            "sheetScaleY": 1,
+            "confirmEnabled": true,
+            "confirmBottomGap": 51,
+            "footerBottomInset": 48
+          }
+        }
+      },
+      {
+        "check": "Empty confirm clicked; screenshot captured for Toast verification",
+        "result": "captured"
+      },
+      {
+        "check": "Selecting restores selected styling and count",
+        "result": "passed",
+        "button": {
+          "index": "1",
+          "text": "确认存入 (1个诊次)",
+          "resource-id": "com.igancao.doctor:id/btn_confirm",
+          "class": "android.widget.TextView",
+          "package": "com.igancao.doctor",
+          "content-desc": "",
+          "checkable": "false",
+          "checked": "false",
+          "clickable": "true",
+          "enabled": "true",
+          "focusable": "true",
+          "focused": "false",
+          "scrollable": "false",
+          "long-clickable": "false",
+          "password": "false",
+          "selected": "true",
+          "bounds": "[38,2368][1162,2509]",
+          "drawing-order": "2",
+          "hint": ""
+        },
+        "geometry": {
+          "presented": {
+            "recordedAt": 1794659059634,
+            "windowHeight": 2608,
+            "density": 3.2,
+            "sourceX": 64,
+            "sourceY": 222,
+            "sourceWidth": 1072,
+            "sourceHeight": 2329.8132,
+            "sourceScaleX": 0.8933333,
+            "sourceScaleY": 0.8933333,
+            "sourceRestored": false,
+            "selectedCount": 1,
+            "autoSync": true,
+            "sheetX": 0,
+            "sheetY": 261,
+            "sheetWidth": 1200,
+            "sheetHeight": 2347,
+            "sheetScaleX": 1,
+            "sheetScaleY": 1,
+            "confirmEnabled": true,
+            "confirmBottomGap": 51,
+            "footerBottomInset": 48
+          }
+        }
+      },
+      {
+        "check": "Selected confirmation still opens local preview only",
+        "result": "passed"
+      },
+      {
+        "check": "Deselecting restores empty clickable state; left visible for user",
+        "result": "passed",
+        "geometry": {
+          "presented": {
+            "recordedAt": 1794659066977,
+            "windowHeight": 2608,
+            "density": 3.2,
+            "sourceX": 64,
+            "sourceY": 222,
+            "sourceWidth": 1072,
+            "sourceHeight": 2329.8132,
+            "sourceScaleX": 0.8933333,
+            "sourceScaleY": 0.8933333,
+            "sourceRestored": false,
+            "selectedCount": 0,
+            "autoSync": true,
+            "sheetX": 0,
+            "sheetY": 261,
+            "sheetWidth": 1200,
+            "sheetHeight": 2347,
+            "sheetScaleX": 1,
+            "sheetScaleY": 1,
+            "confirmEnabled": true,
+            "confirmBottomGap": 51,
+            "footerBottomInset": 48
+          }
+        }
+      }
+    ],
+    "visualVerification": {
+      "result": "passed",
+      "emptyButton": "Gray background colorButtonBackground and gray text colorTips; label 确认存入; enabled and clickable",
+      "toast": "请选择诊次 displayed via existing project Toast; screenshot visually checked",
+      "selectedButton": "Yellow background colorAccent and colorContent text; selected count restored; screenshot visually checked"
+    },
+    "finalGeometry": {
+      "presented": {
+        "recordedAt": 1794659066977,
+        "windowHeight": 2608,
+        "density": 3.2,
+        "sourceX": 64,
+        "sourceY": 222,
+        "sourceWidth": 1072,
+        "sourceHeight": 2329.8132,
+        "sourceScaleX": 0.8933333,
+        "sourceScaleY": 0.8933333,
+        "sourceRestored": false,
+        "selectedCount": 0,
+        "autoSync": true,
+        "sheetX": 0,
+        "sheetY": 261,
+        "sheetWidth": 1200,
+        "sheetHeight": 2347,
+        "sheetScaleX": 1,
+        "sheetScaleY": 1,
+        "confirmEnabled": true,
+        "confirmBottomGap": 51,
+        "footerBottomInset": 48
+      }
+    },
+    "leftInEmptyStateForUser": true
+  },
+  "git": {
+    "committed": false,
+    "pushed": false
+  },
+  "notCovered": [
+    "Actual synchronization or complete business acceptance",
+    "iOS or HarmonyOS implementation of CHG-002",
+    "Other Android device variants"
+  ]
+}

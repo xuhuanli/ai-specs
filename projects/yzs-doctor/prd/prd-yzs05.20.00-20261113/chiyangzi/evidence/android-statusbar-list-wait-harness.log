@@ -1,0 +1,11 @@
+fixed-baseline passed
+Traceback (most recent call last):
+  File "/private/tmp/ai_specs_android_statusbar_checks.py", line 59, in <module>
+    r,before=open_preview()
+             ~~~~~~~~~~~~^^
+  File "/private/tmp/ai_specs_android_statusbar_checks.py", line 41, in open_preview
+    r=wait_text('开方记录');tap(textnode(r,'开方记录'));r=wait_text('开方记录')
+                                                          ~~~~~~~~~^^^^^^^^^^^^
+  File "/private/tmp/ai_specs_android_statusbar_checks.py", line 18, in wait_text
+    raise AssertionError('Missing expected UI '+text)
+AssertionError: Missing expected UI 开方记录

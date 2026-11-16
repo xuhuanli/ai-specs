@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/private/tmp/ai_specs_android_visit_detail_checks.py", line 35, in <module>
+    root=detail(root,0,True)
+  File "/private/tmp/ai_specs_android_visit_detail_checks.py", line 15, in detail
+    assert textnode(root,'诊次详情') is not None
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

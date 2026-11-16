@@ -1,0 +1,83 @@
+{
+  "recordedAt": "2026-11-14T10:56:00.557280+00:00",
+  "branch": "feature/chiyz-cloud-records",
+  "baseCommit": "ddcc2f18a4e189c731f4a16aede21c5ae13d97b2",
+  "previewSourceSha256": "0f14c4f89c70918dd6ce1d9c2e7e7e82493d40633b030c692908dd5125d73afb",
+  "implementation": {
+    "presentation": "overFullScreen",
+    "foreground": "full window width, 90% window height, translation only",
+    "background": "scale and restore original view geometry",
+    "geometryReportMarker": "fixed90Foreground"
+  },
+  "build": {
+    "configuration": "Test",
+    "destination": "generic/platform=iOS",
+    "result": "BUILD SUCCEEDED",
+    "log": "/private/tmp/ai-specs-ios-fixed90-generic-build.log",
+    "experimentalBuildOverrides": false,
+    "temporaryCompatibilitySymlinkRemoved": true
+  },
+  "installation": {
+    "device": "HUAWEI Phone14 / iPhone14",
+    "result": "installed",
+    "attempts": 3,
+    "errors": [
+      "CoreDeviceError 4000: connection invalidated / network timeout",
+      "CoreDeviceError 4016: trusted connectivity unavailable"
+    ],
+    "recoveredAfterUserConnectedAndUnlocked": true,
+    "successfulInstallLog": "/private/tmp/ai-specs-ios-fixed90-install-connected.json",
+    "failedAttemptTransport": "localNetwork, tunnel disconnected"
+  },
+  "runtimeValidation": {
+    "result": "passed for foreground size and background restoration",
+    "manualAction": "User opened and closed popup on the connected iPhone 14",
+    "checks": {
+      "currentPackageMarker": true,
+      "foregroundFullWidth": true,
+      "foregroundNinetyPercentWithinOnePixel": true,
+      "foregroundUnscaled": true,
+      "foregroundBottomAligned": true,
+      "backgroundShrunkOnly": true,
+      "backgroundRestored": true,
+      "openBeforeClose": true
+    },
+    "geometryEvidence": "ios-fixed90-device-geometry.json",
+    "notExecuted": [
+      "Interactive dismissal cancellation",
+      "Complete business acceptance"
+    ]
+  },
+  "git": {
+    "committed": false,
+    "pushed": false
+  },
+  "previousPackageGeometryBeforeFix": {
+    "dismissed": {
+      "sourceFrame": "{{0, 0}, {390, 844}}",
+      "sourceTransform": "[1, 0, 0, 1, 0, 0]",
+      "windowFrame": "{{0, 0}, {390, 844}}",
+      "sourceTransformRestored": true
+    },
+    "presented": {
+      "sourceFrame": "{{20, 72.399999999999977}, {350, 757.43589743589746}}",
+      "sourceTransform": "[0.89743589743589747, 0, 0, 0.89743589743589747, 0, 29.117948717948707]",
+      "sourceTransformRestored": false,
+      "windowFrame": "{{0, 0}, {390, 844}}",
+      "sheetHeightRatio": 0.8631526714465103,
+      "sheetFrame": "{{8, 107.49914529914525}, {374, 728.50085470085469}}"
+    }
+  },
+  "launch": {
+    "result": "launched",
+    "log": "/private/tmp/ai-specs-ios-fixed90-launch.json",
+    "processIdentifier": 51780,
+    "bundleIdentifier": "com.gancaoDoctor.doctor"
+  },
+  "runtimeValidationHistory": [
+    {
+      "result": "pending",
+      "reason": "Installed and launched new package; waiting for popup open/close and fixed90Foreground geometry."
+    }
+  ]
+}

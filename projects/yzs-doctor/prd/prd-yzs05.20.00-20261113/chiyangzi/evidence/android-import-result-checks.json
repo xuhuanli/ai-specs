@@ -1,0 +1,469 @@
+{
+  "date": "2026-11-14",
+  "scope": "Android local import-result UI preview; no cloud-case write or Mini Program navigation",
+  "branch": "feature/chiyz-cloud-records",
+  "baseCommit": "7a2177fb0764a1911a34a8279c3badc69362b697",
+  "gitStatus": "uncommitted / not pushed",
+  "device": "2509FPN0BC / API 36 / 1200x2608",
+  "buildCommand": "./gradlew :app:assembleDebug --offline --console=plain",
+  "buildResult": "BUILD SUCCESSFUL in 1m 49s",
+  "apkSha256": "fa5ba6b222688e427f5607d1b300591a94285366b7dce1716e626ddfb009d5c1",
+  "assets": [
+    {
+      "file": "drawable_resource/src/main/res/drawable-xxhdpi/cloud_case_result_loading.png",
+      "designNode": "22993:13597",
+      "pixels": [
+        540,
+        390
+      ],
+      "bytes": 150134
+    },
+    {
+      "file": "drawable_resource/src/main/res/drawable-xxhdpi/cloud_case_result_success.png",
+      "designNode": "22993:13654",
+      "pixels": [
+        540,
+        390
+      ],
+      "bytes": 150736
+    },
+    {
+      "file": "drawable_resource/src/main/res/drawable-xxhdpi/cloud_case_result_failure.png",
+      "designNode": "22993:13764",
+      "pixels": [
+        540,
+        390
+      ],
+      "bytes": 152315
+    },
+    {
+      "file": "drawable_resource/src/main/res/drawable-xxhdpi/cloud_case_result_background.png",
+      "designNode": "22993:13577",
+      "pixels": [
+        1125,
+        480
+      ],
+      "bytes": 286566
+    }
+  ],
+  "checks": [
+    {
+      "check": "Zero-selection confirm still shows toast and does not enter result",
+      "result": "passed"
+    },
+    {
+      "check": "Auto-sync preview uses stack effect",
+      "result": "passed",
+      "sheetScaleX": 0.8933333
+    },
+    {
+      "check": "Closing help restores the list to full width",
+      "result": "passed"
+    },
+    {
+      "check": "Visit detail keeps stack effect and selection return behavior",
+      "result": "passed"
+    },
+    {
+      "check": "Confirm switches inside same sheet with unchanged source/sheet geometry and no extra stacked list",
+      "result": "passed",
+      "geometry": {
+        "presented": {
+          "recordedAt": 1794668585312,
+          "windowHeight": 2608,
+          "density": 3.2,
+          "sourceX": 64,
+          "sourceY": 222,
+          "sourceWidth": 1072,
+          "sourceHeight": 2329.8132,
+          "sourceScaleX": 0.8933333,
+          "sourceScaleY": 0.8933333,
+          "sourceRestored": false,
+          "selectedCount": 2,
+          "autoSync": true,
+          "resultStyle": 0,
+          "messageStacked": false,
+          "sheetX": 0,
+          "sheetY": 261,
+          "sheetWidth": 1200,
+          "sheetHeight": 2347,
+          "sheetScaleX": 1,
+          "sheetScaleY": 1,
+          "confirmEnabled": true,
+          "confirmBottomGap": 51,
+          "footerBottomInset": 48,
+          "resultCardWidth": 1124,
+          "resultCardHeight": 1261,
+          "resultImageWidth": 576,
+          "resultImageHeight": 416,
+          "resultImageScaleX": 1,
+          "resultImageScaleY": 1,
+          "resultTestBottomInset": 99
+        },
+        "beforeResult": {
+          "recordedAt": 1794668585291,
+          "windowHeight": 2608,
+          "density": 3.2,
+          "sourceX": 64,
+          "sourceY": 222,
+          "sourceWidth": 1072,
+          "sourceHeight": 2329.8132,
+          "sourceScaleX": 0.8933333,
+          "sourceScaleY": 0.8933333,
+          "sourceRestored": false,
+          "selectedCount": 2,
+          "autoSync": true,
+          "resultStyle": -1,
+          "messageStacked": false,
+          "sheetX": 0,
+          "sheetY": 261,
+          "sheetWidth": 1200,
+          "sheetHeight": 2347,
+          "sheetScaleX": 1,
+          "sheetScaleY": 1,
+          "confirmEnabled": true,
+          "confirmBottomGap": 51,
+          "footerBottomInset": 48
+        }
+      }
+    },
+    {
+      "check": "Design state loading has expected text, actions, artwork geometry and active selector",
+      "result": "passed",
+      "geometry": {
+        "recordedAt": 1794668585312,
+        "windowHeight": 2608,
+        "density": 3.2,
+        "sourceX": 64,
+        "sourceY": 222,
+        "sourceWidth": 1072,
+        "sourceHeight": 2329.8132,
+        "sourceScaleX": 0.8933333,
+        "sourceScaleY": 0.8933333,
+        "sourceRestored": false,
+        "selectedCount": 2,
+        "autoSync": true,
+        "resultStyle": 0,
+        "messageStacked": false,
+        "sheetX": 0,
+        "sheetY": 261,
+        "sheetWidth": 1200,
+        "sheetHeight": 2347,
+        "sheetScaleX": 1,
+        "sheetScaleY": 1,
+        "confirmEnabled": true,
+        "confirmBottomGap": 51,
+        "footerBottomInset": 48,
+        "resultCardWidth": 1124,
+        "resultCardHeight": 1261,
+        "resultImageWidth": 576,
+        "resultImageHeight": 416,
+        "resultImageScaleX": 1,
+        "resultImageScaleY": 1,
+        "resultTestBottomInset": 99
+      }
+    },
+    {
+      "check": "Design state new has expected text, actions, artwork geometry and active selector",
+      "result": "passed",
+      "geometry": {
+        "recordedAt": 1794668588198,
+        "windowHeight": 2608,
+        "density": 3.2,
+        "sourceX": 64,
+        "sourceY": 222,
+        "sourceWidth": 1072,
+        "sourceHeight": 2329.8132,
+        "sourceScaleX": 0.8933333,
+        "sourceScaleY": 0.8933333,
+        "sourceRestored": false,
+        "selectedCount": 2,
+        "autoSync": true,
+        "resultStyle": 1,
+        "messageStacked": false,
+        "sheetX": 0,
+        "sheetY": 261,
+        "sheetWidth": 1200,
+        "sheetHeight": 2347,
+        "sheetScaleX": 1,
+        "sheetScaleY": 1,
+        "confirmEnabled": true,
+        "confirmBottomGap": 51,
+        "footerBottomInset": 48,
+        "resultCardWidth": 1124,
+        "resultCardHeight": 1261,
+        "resultImageWidth": 576,
+        "resultImageHeight": 416,
+        "resultImageScaleX": 1,
+        "resultImageScaleY": 1,
+        "resultTestBottomInset": 99
+      }
+    },
+    {
+      "check": "View action in new only shows toast and stays in result",
+      "result": "passed"
+    },
+    {
+      "check": "Design state existing has expected text, actions, artwork geometry and active selector",
+      "result": "passed",
+      "geometry": {
+        "recordedAt": 1794668594119,
+        "windowHeight": 2608,
+        "density": 3.2,
+        "sourceX": 64,
+        "sourceY": 222,
+        "sourceWidth": 1072,
+        "sourceHeight": 2329.8132,
+        "sourceScaleX": 0.8933333,
+        "sourceScaleY": 0.8933333,
+        "sourceRestored": false,
+        "selectedCount": 2,
+        "autoSync": true,
+        "resultStyle": 2,
+        "messageStacked": false,
+        "sheetX": 0,
+        "sheetY": 261,
+        "sheetWidth": 1200,
+        "sheetHeight": 2347,
+        "sheetScaleX": 1,
+        "sheetScaleY": 1,
+        "confirmEnabled": true,
+        "confirmBottomGap": 51,
+        "footerBottomInset": 48,
+        "resultCardWidth": 1124,
+        "resultCardHeight": 1261,
+        "resultImageWidth": 576,
+        "resultImageHeight": 416,
+        "resultImageScaleX": 1,
+        "resultImageScaleY": 1,
+        "resultTestBottomInset": 99
+      }
+    },
+    {
+      "check": "View action in existing only shows toast and stays in result",
+      "result": "passed"
+    },
+    {
+      "check": "Design state failed has expected text, actions, artwork geometry and active selector",
+      "result": "passed",
+      "geometry": {
+        "recordedAt": 1794668600057,
+        "windowHeight": 2608,
+        "density": 3.2,
+        "sourceX": 64,
+        "sourceY": 222,
+        "sourceWidth": 1072,
+        "sourceHeight": 2329.8132,
+        "sourceScaleX": 0.8933333,
+        "sourceScaleY": 0.8933333,
+        "sourceRestored": false,
+        "selectedCount": 2,
+        "autoSync": true,
+        "resultStyle": 3,
+        "messageStacked": false,
+        "sheetX": 0,
+        "sheetY": 261,
+        "sheetWidth": 1200,
+        "sheetHeight": 2347,
+        "sheetScaleX": 1,
+        "sheetScaleY": 1,
+        "confirmEnabled": true,
+        "confirmBottomGap": 51,
+        "footerBottomInset": 48,
+        "resultCardWidth": 1124,
+        "resultCardHeight": 1261,
+        "resultImageWidth": 576,
+        "resultImageHeight": 416,
+        "resultImageScaleX": 1,
+        "resultImageScaleY": 1,
+        "resultTestBottomInset": 99
+      }
+    },
+    {
+      "check": "Retry switches failed preview to loading without changing selection count",
+      "result": "passed"
+    },
+    {
+      "check": "Rapid state switches both apply without debounce",
+      "result": "passed",
+      "intervalMs": 116
+    },
+    {
+      "check": "loading btn_back returns directly to trigger page and restores source",
+      "result": "passed",
+      "restored": {
+        "recordedAt": 1794668617403,
+        "windowHeight": 2608,
+        "density": 3.2,
+        "sourceX": 0,
+        "sourceY": 0,
+        "sourceWidth": 1200,
+        "sourceHeight": 2608,
+        "sourceScaleX": 1,
+        "sourceScaleY": 1,
+        "sourceRestored": true,
+        "selectedCount": 1,
+        "autoSync": true,
+        "resultStyle": 0,
+        "messageStacked": false
+      }
+    },
+    {
+      "check": "loading iv_close returns directly to trigger page and restores source",
+      "result": "passed",
+      "restored": {
+        "recordedAt": 1794668626739,
+        "windowHeight": 2608,
+        "density": 3.2,
+        "sourceX": 0,
+        "sourceY": 0,
+        "sourceWidth": 1200,
+        "sourceHeight": 2608,
+        "sourceScaleX": 1,
+        "sourceScaleY": 1,
+        "sourceRestored": true,
+        "selectedCount": 1,
+        "autoSync": true,
+        "resultStyle": 0,
+        "messageStacked": false
+      }
+    },
+    {
+      "check": "new btn_back returns directly to trigger page and restores source",
+      "result": "passed",
+      "restored": {
+        "recordedAt": 1794668638340,
+        "windowHeight": 2608,
+        "density": 3.2,
+        "sourceX": 0,
+        "sourceY": 0,
+        "sourceWidth": 1200,
+        "sourceHeight": 2608,
+        "sourceScaleX": 1,
+        "sourceScaleY": 1,
+        "sourceRestored": true,
+        "selectedCount": 1,
+        "autoSync": true,
+        "resultStyle": 1,
+        "messageStacked": false
+      }
+    },
+    {
+      "check": "new iv_close returns directly to trigger page and restores source",
+      "result": "passed",
+      "restored": {
+        "recordedAt": 1794668649981,
+        "windowHeight": 2608,
+        "density": 3.2,
+        "sourceX": 0,
+        "sourceY": 0,
+        "sourceWidth": 1200,
+        "sourceHeight": 2608,
+        "sourceScaleX": 1,
+        "sourceScaleY": 1,
+        "sourceRestored": true,
+        "selectedCount": 1,
+        "autoSync": true,
+        "resultStyle": 1,
+        "messageStacked": false
+      }
+    },
+    {
+      "check": "existing btn_back returns directly to trigger page and restores source",
+      "result": "passed",
+      "restored": {
+        "recordedAt": 1794668661591,
+        "windowHeight": 2608,
+        "density": 3.2,
+        "sourceX": 0,
+        "sourceY": 0,
+        "sourceWidth": 1200,
+        "sourceHeight": 2608,
+        "sourceScaleX": 1,
+        "sourceScaleY": 1,
+        "sourceRestored": true,
+        "selectedCount": 1,
+        "autoSync": true,
+        "resultStyle": 2,
+        "messageStacked": false
+      }
+    },
+    {
+      "check": "existing iv_close returns directly to trigger page and restores source",
+      "result": "passed",
+      "restored": {
+        "recordedAt": 1794668673183,
+        "windowHeight": 2608,
+        "density": 3.2,
+        "sourceX": 0,
+        "sourceY": 0,
+        "sourceWidth": 1200,
+        "sourceHeight": 2608,
+        "sourceScaleX": 1,
+        "sourceScaleY": 1,
+        "sourceRestored": true,
+        "selectedCount": 1,
+        "autoSync": true,
+        "resultStyle": 2,
+        "messageStacked": false
+      }
+    },
+    {
+      "check": "failed btn_back returns directly to trigger page and restores source",
+      "result": "passed",
+      "restored": {
+        "recordedAt": 1794668684764,
+        "windowHeight": 2608,
+        "density": 3.2,
+        "sourceX": 0,
+        "sourceY": 0,
+        "sourceWidth": 1200,
+        "sourceHeight": 2608,
+        "sourceScaleX": 1,
+        "sourceScaleY": 1,
+        "sourceRestored": true,
+        "selectedCount": 1,
+        "autoSync": true,
+        "resultStyle": 3,
+        "messageStacked": false
+      }
+    },
+    {
+      "check": "failed iv_close returns directly to trigger page and restores source",
+      "result": "passed",
+      "restored": {
+        "recordedAt": 1794668696340,
+        "windowHeight": 2608,
+        "density": 3.2,
+        "sourceX": 0,
+        "sourceY": 0,
+        "sourceWidth": 1200,
+        "sourceHeight": 2608,
+        "sourceScaleX": 1,
+        "sourceScaleY": 1,
+        "sourceRestored": true,
+        "selectedCount": 1,
+        "autoSync": true,
+        "resultStyle": 3,
+        "messageStacked": false
+      }
+    },
+    {
+      "check": "System Back exits the result flow directly to trigger page",
+      "result": "passed"
+    },
+    {
+      "check": "Swipe dismiss exits the result flow and restores source",
+      "result": "passed"
+    },
+    {
+      "check": "Fresh entry defaults to loading; new-patient result left open with four selectors for review",
+      "result": "passed"
+    }
+  ],
+  "notCovered": [
+    "Other future entry pages not yet wired",
+    "Process recreation and other devices",
+    "Real submission, status queries and Mini Program navigation"
+  ]
+}

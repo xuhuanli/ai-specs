@@ -1,0 +1,21 @@
+Multiple matches default to first same-name same-gender patient, no identity selected, current visit and sync remain selected passed
+Unconfirmed identity blocks result; identity toast screenshot captured passed
+Expand shows all three matching patients in source order, trims names, excludes other name and genders, without auto-selection passed
+Only patient-merge and visit-list region scrolls; title, close, patient header, warning and footer stay fixed passed
+Choosing one existing patient selects it exclusively and enables yellow confirm passed
+Collapse keeps selected non-first patient visible and preserves choice passed
+Rapid expand and collapse both apply without debounce and preserve selection passed
+New-patient option is exclusive with existing candidate, warning stays visible passed
+Rapid identity switches apply without debounce passed
+Visit-detail selection returns without losing patient choice or parent scroll position passed
+Confirmed identity plus zero visits keeps gray clickable confirm and blocks result; visit toast screenshot captured passed
+Both confirmations enter loading inside same full-size sheet without an extra stack passed
+Existing-patient result uses selected candidate group passed
+Single match shows one unselected candidate and warning, with no expand entry passed
+Explicit new-patient choice with current visit reaches new-patient result preview passed
+No matches retains original new-patient hint without merge or warning and requires no extra identity selection passed
+No-match branch still validates empty visits without requiring identity confirmation passed
+No-match branch can confirm selected current visit and close result normally passed
+Reopening normal test entry resets identity and restores default multi-match scene passed
+Returning all the way to MyRoom still restores white status background and dark icons passed
+Completed 20 checks; final preview ready

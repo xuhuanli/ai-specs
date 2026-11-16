@@ -1,0 +1,12 @@
+Import starts as full-width fixed 90 percent sheet with original source stacked passed
+detail-back exposes the import sheet above the full-size detail, with no clipping to its old top passed
+Detail Back restores the import container, patient choice, scroll and fixed regions passed
+detail-system-back exposes the import sheet above the full-size detail, with no clipping to its old top passed
+Detail system-back restores the import container, patient choice, scroll and fixed regions passed
+detail-swipe exposes the import sheet above the full-size detail, with no clipping to its old top passed
+detail-drag-rebound exposes the import sheet above the full-size detail, with no clipping to its old top passed
+Detail swipe restores the import container, patient choice, scroll and fixed regions passed
+Detail selection still returns to import and updates selected visit count passed
+Import-to-result still reuses the sheet without an added stack passed
+Closing flow and returning to MyRoom restores white status bar and dark icons passed
+Completed 11 checks; detail left open for visual inspection
